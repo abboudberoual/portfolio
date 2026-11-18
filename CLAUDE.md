@@ -11,18 +11,20 @@ index.html              All content, in English. Sections are marked with commen
 assets/css/site.css     All styles. Design tokens (light + dark) at the top.
 assets/js/i18n.js       French strings (I18N.fr), grouped by section, plus the few
                         English strings that scripts create (I18N.en).
-assets/js/site.js       Language switch, theme switch, lightbox, L1 build stepper,
-                        landing toy, VTOL landing-page link. Numbered blocks, one job each.
-assets/img/             Photos, print time-lapse (mp4 + poster), Lectern screenshots (WebP).
+assets/js/site.js       Language switch, theme switch, lightbox, L1 build slider,
+                        Lectern strip arrows, landing toy, VTOL landing-page link.
+                        Numbered blocks, one job each.
+assets/img/             Photos, print time-lapse (mp4 + poster), Lectern screenshots,
+                        simulator figures (vtol-*), CAD views and renders (WebP).
 assets/favicon.svg      Tab icon (flight arc with the apogee dot).
 assets/Aboud_Beroual_Resume.pdf
 .nojekyll               Tells GitHub Pages to serve files as they are.
 README.md               Short guide for humans.
 ```
 
-Page order: header, hero (with the flight line), four featured projects (Alchemy, Lectern,
-Averell 1, vertical landing simulator), "More projects" index, Research, Experience,
-About, Contact.
+Page order: header, hero (name, one line, photo), four featured projects (Averell 1, Lectern,
+Alchemy, vertical landing simulator), "More projects" index, Research, Experience,
+About, Contact. The project with the strongest pictures goes first.
 
 ## Rules that matter most
 
@@ -30,6 +32,9 @@ About, Contact.
    The text on the page was verified by the owner; treat it as the fact base. You may cut or
    rephrase; anything new must come from the owner. The landing toy is a simplified JavaScript
    illustration and must stay labelled that way; its output is never a project result.
+   The two `vtol-*.webp` figures are the opposite: real output of the Python simulator
+   (repo `scoudouc`, `sim/examples/land_s2.py`, seed 1), saved from its own Matplotlib
+   functions. Regenerate them from the repo; never redraw or restyle them by hand.
 2. **English and French move together.** Any change to an English string in `index.html`
    needs the matching change in `assets/js/i18n.js`, in the same commit. New text needs a
    `data-i18n` key and a French entry. Ask the owner (a native French speaker) to proofread.
@@ -67,7 +72,9 @@ About, Contact.
 - **A new featured project:** copy an `<article class="project">`. **A new index entry:**
   copy an `<article class="row">`. Images always carry real `width`/`height` and
   `loading="lazy"` (except the hero photo).
-- **L1 build photos:** the `<ol id="build-list">`; the script builds the stepper from it.
+- **L1 build photos:** the `<ol id="build-list">`; the script builds the slider from it.
+- **Pictures in an index entry:** a `<div class="row-media" data-zoom>` of links to 3:2 images
+  (three per line), then a one-line `<p class="row-cap">`.
 - **Toy constants:** block 7 of `site.js`. If they change, update the "How the toy works"
   note in `index.html` and `vtol.toyHow` in `i18n.js`.
 
@@ -82,7 +89,7 @@ The look is quiet and editorial: left-aligned, lots of whitespace, few boxes.
   hairlines (`--rule`), and ONE accent: flight yellow (`--accent`), from the Averell 1 rocket.
 - **Accent usage:** fills and marks only, never text colour. It appears on primary buttons
   (one per project at most: the landing-page / install / read call to action), status dots,
-  the apogee marker, the current build step, the key research bar and link hover. If a new
+  the apogee dot in the logo, the build slider thumb, the key research bar and link hover. If a new
   element wants the accent, something else should probably lose it.
 - **Type:** Radio Canada Big (display: hero line, project titles, big numbers) and Radio
   Canada (everything else), from Google Fonts, with system fallbacks. Two families, no third.
@@ -90,13 +97,21 @@ The look is quiet and editorial: left-aligned, lots of whitespace, few boxes.
 - **Spacing:** sections are separated by a hairline and generous padding
   (`clamp()` values in `.section`, `.project`). Wide screens use a 200 px left margin column
   (`--aside`) for section names and project status; keep it.
-- **Signature details:** the flight line under the hero (a schematic of the L1 flight, drawn
-  once on load) and the filled-dot / ring status marks. Keep them few. Do not add more
-  decorative motifs.
-- **Motion:** one moment only (the flight line). Everything else moves only in response to
-  the visitor. Respect `prefers-reduced-motion`.
-- **Widgets:** three, no more: L1 build stepper, landing toy, Lectern screenshot strip
-  (plus the lightbox they share). Everything must stay readable with JavaScript off.
+- **Signature details:** the apogee logo (flight arc with the yellow dot) and the filled-dot /
+  ring status marks. Keep them few. Do not add more decorative motifs. (The flight-line
+  diagram under the hero was removed at the owner's request; do not bring it back.)
+- **Hero:** the name is the headline. One short line under it, then the links. Keep it short.
+- **Icons:** one set, defined once as CSS masks at the top of `site.css` (16 px grid, 1.5 px
+  stroke, text colour). `data-ico="github|linkedin|mail|download|prev|next"` puts one before
+  the text; `class="ext"` adds the outbound arrow after it. Add to that set; no icon fonts,
+  no second style.
+- **Outside figures** (Matplotlib output, CAD views, app screenshots) are shown as they came
+  out of the tool, on their own background, inside a hairline border. Do not recolour them.
+- **Motion:** nothing moves on its own. Things move only in response to the visitor.
+  Respect `prefers-reduced-motion`.
+- **Widgets:** three, no more: L1 build slider (with previous / next arrows), Lectern
+  screenshot strip, landing toy (now folded inside a disclosure under the real simulator
+  figures), plus the lightbox they share. Everything must stay readable with JavaScript off.
 - **Do not drift into:** cream + serif + terracotta; near-black + neon accent; purple/blue
   gradients; Inter or Space Grotesk; emoji; centred everything; rounded shadow cards;
   hatching, title blocks or other "engineering drawing" ornaments (the previous design).

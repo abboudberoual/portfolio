@@ -8,8 +8,8 @@
      2. Language (EN/FR)  (strings live in assets/js/i18n.js)
      3. Theme             (light / dark / system)
      4. Lightbox
-     5. L1 build sequence
-     6. Lectern screenshots and other zoomable images
+     5. L1 build sequence (photo, slider, previous / next)
+     6. Zoomable images and the Lectern strip arrows
      7. Landing toy       (simplified illustration, NOT project results)
      8. VTOL landing-page link
 */
@@ -235,7 +235,8 @@
   }
 
   /* ------------------------------------------------------------------
-     5. L1 build sequence: one photo, six named steps, previous / next.
+     5. L1 build sequence: one photo and a slider through the six steps,
+        with previous / next arrows on either side of it.
         The content is the <ol id="build-list"> in index.html.
      ------------------------------------------------------------------ */
   safe('build', function () {
@@ -256,39 +257,52 @@
 
     var photo = el('img', { alt: '' });
     var photoBtn = el('button', { class: 'stage-photo', type: 'button' }, [photo]);
-    var nav = el('ol', { class: 'stage-steps' });
-    var stepBtns = links.map(function (a, i) {
-      var b = el('button', { type: 'button' });
-      b.addEventListener('click', function () { go(i); });
-      nav.appendChild(el('li', {}, [b]));
-      return b;
-    });
+    var count = el('p', { class: 'stage-count' });
+    var title = el('p', { class: 'stage-title' });
     var text = el('p', { class: 'stage-text' });
     var status = el('p', { class: 'visually-hidden', role: 'status' });
-    var prev = el('button', { class: 'btn btn-plain btn-small', type: 'button' });
-    var next = el('button', { class: 'btn btn-plain btn-small', type: 'button' });
+    var prev = el('button', { class: 'ibtn', type: 'button', 'data-ico': 'prev' });
+    var next = el('button', { class: 'ibtn', type: 'button', 'data-ico': 'next' });
+    var range = el('input', { class: 'scrub', type: 'range', min: '1', max: String(n), step: '1', value: '1' });
+    // Step names under the slider. Mouse shortcuts only: the slider and the
+    // arrows already cover the keyboard, so these stay out of the tab order.
+    var labels = el('div', { class: 'scrub-labels' });
+    var labelBtns = links.map(function (a, i) {
+      var b = el('button', { type: 'button', tabindex: '-1' });
+      b.style.setProperty('--p', String(n > 1 ? i / (n - 1) : 0));
+      b.addEventListener('click', function () { go(i); });
+      labels.appendChild(b);
+      return b;
+    });
     stage.appendChild(photoBtn);
-    stage.appendChild(el('div', { class: 'stage-side' }, [nav, text, status, el('div', { class: 'stage-ctl' }, [prev, next])]));
+    stage.appendChild(el('div', { class: 'stage-side' }, [count, title, text, status,
+      el('div', { class: 'stage-ctl' }, [prev, range, next, labels])]));
 
     function render(announce) {
-      var s = steps[cur];
+      var s = steps[cur], where = t('ui.stepStatus', { n: cur + 1, total: n, title: s.title });
       photo.srcset = s.thumb + ' ' + s.tw + 'w, ' + s.src + ' ' + s.w + 'w';
-      photo.sizes = '(max-width: 620px) min(92vw, 320px), 300px';
+      photo.sizes = '(max-width: 620px) min(92vw, 320px), 320px';
       photo.src = s.src; photo.width = s.w; photo.height = s.h; photo.alt = s.alt;
       photoBtn.setAttribute('aria-label', t('ui.enlarge', { title: s.title }));
-      nav.setAttribute('aria-label', t('ui.steps'));
-      stepBtns.forEach(function (b, i) {
+      count.textContent = t('ui.of', { n: cur + 1, total: n });
+      title.textContent = s.title;
+      text.textContent = s.text;
+      range.value = String(cur + 1);
+      range.setAttribute('aria-label', t('ui.steps'));
+      range.setAttribute('aria-valuetext', where);
+      labelBtns.forEach(function (b, i) {
         b.textContent = steps[i].title;
         if (i === cur) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current');
       });
-      text.textContent = s.text;
-      prev.textContent = t('ui.prev'); next.textContent = t('ui.next');
+      prev.setAttribute('aria-label', t('ui.prev')); next.setAttribute('aria-label', t('ui.next'));
+      prev.title = t('ui.prev'); next.title = t('ui.next');
       prev.disabled = cur === 0; next.disabled = cur === n - 1;
-      if (announce) status.textContent = t('ui.stepStatus', { n: cur + 1, total: n, title: s.title });
+      if (announce) status.textContent = where;
     }
-    function go(i) { cur = Math.max(0, Math.min(n - 1, i)); render(true); }
+    function go(i, quiet) { cur = Math.max(0, Math.min(n - 1, i)); render(!quiet); }
     prev.addEventListener('click', function () { go(cur - 1); });
     next.addEventListener('click', function () { go(cur + 1); });
+    range.addEventListener('input', function () { go(+range.value - 1, true); }); // the slider announces itself
     photoBtn.addEventListener('click', function () {
       if (lightbox) lightbox.open(steps, cur); else window.open(steps[cur].src);
     });
@@ -299,18 +313,48 @@
   });
 
   /* ------------------------------------------------------------------
-     6. Lectern screenshots (the strip scrolls natively; a click opens
-        the lightbox) and any other a.zoomable image.
+     6. Zoomable images. Inside a [data-zoom] group (the Lectern strip,
+        the pictures of an index entry) a click opens the lightbox on the
+        whole group; a lone a.zoomable opens by itself.
+        The Lectern strip scrolls natively; the arrows are a convenience.
      ------------------------------------------------------------------ */
   safe('zoom', function () {
     if (!lightbox) return;
-    var shots = $$('#shots a');
-    shots.forEach(function (a, i) {
-      a.addEventListener('click', function (e) { e.preventDefault(); lightbox.open(shots.map(itemFromLink), i); });
+    $$('[data-zoom]').forEach(function (group) {
+      var links = $$('a[data-w]', group);
+      links.forEach(function (a, i) {
+        a.addEventListener('click', function (e) { e.preventDefault(); lightbox.open(links.map(itemFromLink), i); });
+      });
     });
     $$('a.zoomable').forEach(function (a) {
       a.addEventListener('click', function (e) { e.preventDefault(); lightbox.open([itemFromLink(a)], 0); });
     });
+  });
+
+  safe('shots', function () {
+    var strip = $('#shots');
+    if (!strip) return;
+    var prev = el('button', { class: 'ibtn', type: 'button', 'data-ico': 'prev' });
+    var next = el('button', { class: 'ibtn', type: 'button', 'data-ico': 'next' });
+    strip.parentNode.insertBefore(el('div', { class: 'shots-ctl' }, [prev, next]), strip.nextSibling);
+    function step(dir) {
+      var fig = $('figure', strip), gap = parseFloat(getComputedStyle(strip).columnGap) || 0;
+      strip.scrollBy({ left: dir * (fig.getBoundingClientRect().width + gap), behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+    }
+    function sync() {
+      prev.disabled = strip.scrollLeft < 4;
+      next.disabled = strip.scrollLeft + strip.clientWidth > strip.scrollWidth - 4;
+    }
+    function label() {
+      prev.setAttribute('aria-label', t('ui.prev')); next.setAttribute('aria-label', t('ui.next'));
+      prev.title = t('ui.prev'); next.title = t('ui.next');
+    }
+    prev.addEventListener('click', function () { step(-1); });
+    next.addEventListener('click', function () { step(1); });
+    strip.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    document.addEventListener('langchange', label);
+    label(); sync();
   });
 
   /* ------------------------------------------------------------------

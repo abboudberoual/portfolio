@@ -8,7 +8,7 @@ No build step, no frameworks: plain HTML, CSS and JavaScript.
 index.html              all content, in English
 assets/css/site.css     styles and colour tokens (light and dark)
 assets/js/i18n.js       the French text, grouped by section
-assets/js/site.js       language and theme switches, photo viewer, build stepper, landing toy
+assets/js/site.js       language and theme switches, photo viewer, build slider, landing toy
 assets/img/             photos, the print time-lapse, Lectern screenshots
 assets/favicon.svg      browser tab icon
 assets/Aboud_Beroual_Resume.pdf

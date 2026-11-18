@@ -2,11 +2,12 @@
    Aboud Beroual – portfolio
    Quiet, editorial, left-aligned. Overcast-sky ground, slate ink and
    ONE accent: the flight yellow of the Averell 1 rocket, used only for
-   primary buttons, status dots, the apogee marker and link hover.
+   primary buttons, status dots, the apogee marker in the logo, the
+   build slider and link hover.
    Design rules live in CLAUDE.md. Sections below, in page order:
-   tokens, base, header, hero, flight line, sections, projects,
-   widgets (shots, build, toy), index, research, experience, about,
-   footer, lightbox, motion, print.
+   tokens, base, icons, header, hero, sections, projects,
+   widgets (build, shots, figures, toy), index, research, experience,
+   about, footer, lightbox, motion, print.
    ================================================================== */
 
 /* ---------- Tokens: light (default) ---------- */
@@ -230,6 +231,55 @@ a:hover {
 }
 .tools { color: var(--muted); font-size: .9375rem; }
 
+/* ---------- Icons ----------
+   One small set, drawn on a 16 px grid with a 1.5 px stroke, applied as a
+   CSS mask so they take the text colour and survive the language swap.
+   Usage: data-ico="github" puts the icon before the text;
+   class="ext" adds the "opens another site" arrow after it. */
+:root {
+  --i-ext: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.5 11.5l7-7M5.5 4.5h6v6'/%3E%3C/svg%3E");
+  --i-download: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 2.5v7.5M4.75 7L8 10.25 11.25 7M3 13.5h10'/%3E%3C/svg%3E");
+  --i-mail: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='1.75' y='3.25' width='12.5' height='9.5' rx='1.5'/%3E%3Cpath d='M2.25 4.75L8 9l5.75-4.25'/%3E%3C/svg%3E");
+  --i-prev: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 8H3M7 4L3 8l4 4'/%3E%3C/svg%3E");
+  --i-next: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 8h10M9 4l4 4-4 4'/%3E%3C/svg%3E");
+  --i-github: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z'/%3E%3C/svg%3E");
+  --i-linkedin: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M2.5 1h11A1.5 1.5 0 0 1 15 2.5v11a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 13.5v-11A1.5 1.5 0 0 1 2.5 1Zm.9 5.4v6.2h2V6.4h-2Zm1-3.1a1.15 1.15 0 1 0 0 2.3 1.15 1.15 0 0 0 0-2.3Zm2.3 3.1v6.2h2V9.4c0-.8.4-1.3 1.1-1.3s1 .5 1 1.3v3.2h2V9c0-1.8-.9-2.8-2.4-2.8-.8 0-1.4.4-1.8.9v-.7H6.7Z'/%3E%3C/svg%3E");
+}
+[data-ico]::before, .ext::after {
+  content: "";
+  display: inline-block;
+  flex: none;
+  width: 1em; height: 1em;
+  vertical-align: -.14em;
+  background: currentColor;
+  -webkit-mask: var(--ico) center / contain no-repeat;
+  mask: var(--ico) center / contain no-repeat;
+}
+[data-ico]:not(.ibtn)::before { margin-right: .45em; }
+.ext::after { --ico: var(--i-ext); margin-left: .3em; width: .9em; height: .9em; }
+[data-ico="download"] { --ico: var(--i-download); }
+[data-ico="mail"] { --ico: var(--i-mail); }
+[data-ico="github"] { --ico: var(--i-github); }
+[data-ico="linkedin"] { --ico: var(--i-linkedin); }
+[data-ico="prev"] { --ico: var(--i-prev); }
+[data-ico="next"] { --ico: var(--i-next); }
+
+/* Square icon button (previous / next). */
+.ibtn {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 2.5rem; height: 2.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  background: none;
+  box-shadow: inset 0 0 0 1px var(--rule);
+  cursor: pointer;
+}
+.ibtn:hover { background: var(--ink); color: var(--bg); box-shadow: none; }
+.ibtn[disabled] { opacity: .35; cursor: default; background: none; color: inherit; box-shadow: inset 0 0 0 1px var(--rule); }
+
 /* ---------- Header ---------- */
 .top {
   position: sticky;
@@ -288,7 +338,7 @@ a:hover {
 @media (max-width: 400px) { .brand span { display: none; } }
 
 /* ---------- Hero ---------- */
-.hero { padding: clamp(2.5rem, 7vw, 5.5rem) 0 clamp(3rem, 7vw, 5rem); }
+.hero { padding: clamp(2.5rem, 7vw, 5.5rem) 0 clamp(3.5rem, 8vw, 6rem); }
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 380px);
@@ -296,24 +346,21 @@ a:hover {
   align-items: end;
 }
 .hero-name {
-  display: block;
-  margin-bottom: 1.1rem;
-  font-family: var(--font-text);
-  font-size: 1.0625rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 1.3rem + 6vw, 5.5rem);
   font-weight: 600;
+  line-height: .98;
+  letter-spacing: -.03em;
 }
 .hero-line {
-  display: block;
-  max-width: 13em;
-  font-family: var(--font-display);
-  font-size: clamp(2.25rem, 1.1rem + 4.4vw, 4.5rem);
-  font-weight: 500;
-  line-height: 1.04;
-  letter-spacing: -.022em;
-  text-wrap: balance;
+  margin-top: 1.25rem;
+  max-width: 22em;
+  font-size: clamp(1.25rem, 1.05rem + .9vw, 1.625rem);
+  line-height: 1.35;
 }
-.hero-sub { margin-top: 1.5rem; color: var(--muted); font-size: 1.125rem; }
-.hero .actions { margin-top: 1.75rem; }
+.hero-line span { display: inline-block; } /* break between the sentences, not inside one */
+.hero-sub { margin-top: .6rem; color: var(--muted); }
+.hero .actions { margin-top: 2rem; }
 
 .now { margin-top: clamp(2.25rem, 5vw, 3.5rem); max-width: 34rem; }
 .now-h { font-size: .9375rem; font-weight: 400; color: var(--muted); margin-bottom: .35rem; }
@@ -327,50 +374,10 @@ a:hover {
 .now li span { color: var(--muted); }
 
 .hero-photo img { width: 100%; border-radius: var(--radius); }
-.hero-photo figcaption, .pair figcaption, .about-photo figcaption {
+.hero-photo figcaption, .pair figcaption, .plot figcaption, .about-photo figcaption {
   margin-top: .6rem;
   color: var(--muted);
   font-size: .875rem;
-}
-
-/* ---------- Flight line (signature detail) ----------
-   A schematic of the Averell 1 flight. The SVG stretches with the page;
-   the apogee dot is HTML so it stays round. Curve apex = 23% across. */
-.flight { position: relative; margin-top: clamp(2.5rem, 6vw, 4.5rem); }
-.flight-plot {
-  position: relative;
-  height: clamp(84px, 11vw, 132px);
-  border-bottom: 1px solid var(--rule);
-  color: var(--muted);
-}
-.flight-plot svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-.flight-apogee {
-  position: absolute;
-  left: 23%; top: 6%;
-  width: 11px; height: 11px;
-  margin: -5.5px 0 0 -5.5px;
-  border-radius: 50%;
-  background: var(--accent);
-  border: 1.5px solid var(--ink);
-}
-.flight-data {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-top: .6rem;
-  font-size: .875rem;
-  line-height: 1.35;
-}
-.flight-data dt { color: var(--muted); }
-.flight-data dd { font-weight: 600; font-variant-numeric: tabular-nums; }
-.flight-r { text-align: right; }
-.flight-a {
-  position: absolute;
-  left: 23%;
-  top: clamp(22px, 3.4vw, 38px);
-  transform: translateX(-50%);
-  text-align: center;
-  white-space: nowrap;
 }
 
 /* ---------- Sections ---------- */
@@ -441,7 +448,6 @@ h4 { font-size: 1rem; font-weight: 600; }
   font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem);
   font-weight: 500;
   line-height: 1.1;
-  font-variant-numeric: tabular-nums;
 }
 .figures dt { margin-top: .35rem; color: var(--muted); font-size: .9375rem; line-height: 1.4; }
 
@@ -471,11 +477,12 @@ h4 { font-size: 1rem; font-weight: 600; }
   scrollbar-width: thin;
   scrollbar-color: var(--rule) transparent;
 }
-.shots figure { flex: 0 0 min(82%, 34rem); scroll-snap-align: start; }
+.shots figure { flex: 0 0 min(86%, 42rem); scroll-snap-align: start; }
 .shots a { display: block; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--rule); cursor: zoom-in; }
 .shots a:hover { background: none; }
 .shots figcaption { margin-top: .6rem; font-size: .9375rem; color: var(--muted); }
 .shots figcaption b { color: var(--ink); margin-right: .3em; }
+.shots-ctl { display: flex; gap: .5rem; margin-top: .75rem; }
 
 /* ---------- L1 build sequence ---------- */
 .build { margin-top: 2.75rem; }
@@ -488,13 +495,13 @@ h4 { font-size: 1rem; font-weight: 600; }
 .build-list figcaption b { display: block; color: var(--ink); }
 .build-list a:hover { background: none; }
 
-/* With JavaScript: one photo, six named steps. */
+/* With JavaScript: one photo, and a slider through the six steps. */
 .build.is-enhanced .build-list { display: none; }
 .build-stage:empty { display: none; }
 .build-stage {
   display: grid;
-  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
-  gap: clamp(1.25rem, 4vw, 2.5rem);
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  gap: clamp(1.25rem, 4vw, 2.75rem);
   align-items: stretch;
 }
 .stage-photo {
@@ -509,40 +516,67 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 .stage-photo img { width: 100%; height: 100%; object-fit: cover; }
 .stage-side { display: flex; flex-direction: column; min-width: 0; }
-.stage-steps { counter-reset: step; }
-.stage-steps button {
-  counter-increment: step;
-  display: flex;
-  align-items: baseline;
-  gap: .9rem;
+.stage-count { color: var(--muted); font-size: .9375rem; font-variant-numeric: tabular-nums; }
+.stage-title {
+  margin-top: .2rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -.012em;
+}
+.stage-text { margin-top: .6rem; min-height: 4.8em; max-width: 30em; }
+.stage-ctl {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: .5rem .9rem;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+/* The slider. Its thumb is the current step, so it carries the accent. */
+.scrub {
+  -webkit-appearance: none; appearance: none;
   width: 100%;
-  padding: .45rem 0;
-  border: 0;
-  border-top: 1px solid var(--rule);
+  height: 2.5rem;
+  margin: 0;
   background: none;
-  color: var(--muted);
-  text-align: left;
   cursor: pointer;
 }
-.stage-steps button::before {
-  content: counter(step);
-  width: 1em;
-  font-variant-numeric: tabular-nums;
-  font-size: .875rem;
-}
-.stage-steps button:hover { color: var(--ink); }
-.stage-steps button[aria-current="true"] { color: var(--ink); font-weight: 600; }
-.stage-steps button[aria-current="true"]::after {
-  content: "";
-  align-self: center;
-  margin-left: auto;
-  width: .5em; height: .5em;
+.scrub::-webkit-slider-runnable-track { height: 2px; background: var(--muted); border-radius: 1px; }
+.scrub::-moz-range-track { height: 2px; background: var(--muted); border-radius: 1px; }
+.scrub::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 18px; height: 18px;
+  margin-top: -8px;
   border-radius: 50%;
   background: var(--accent);
   border: 1.5px solid var(--ink);
 }
-.stage-text { margin-top: 1.25rem; min-height: 3.2em; max-width: 30em; }
-.stage-ctl { display: flex; gap: .5rem; margin-top: auto; padding-top: 1.25rem; }
+.scrub::-moz-range-thumb {
+  box-sizing: border-box;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 1.5px solid var(--ink);
+}
+/* Step names under the slider, each centred on its stop (thumb = 18 px). */
+.scrub-labels { grid-column: 2; position: relative; height: 1.5rem; font-size: .8125rem; }
+.scrub-labels button {
+  position: absolute;
+  top: 0;
+  left: calc(9px + var(--p) * (100% - 18px));
+  transform: translateX(-50%);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.scrub-labels button:hover { color: var(--ink); }
+.scrub-labels button[aria-current="true"] { color: var(--ink); font-weight: 600; }
 
 .pair {
   display: grid;
@@ -555,14 +589,28 @@ h4 { font-size: 1rem; font-weight: 600; }
 .pair .zoomable { display: block; cursor: zoom-in; border-radius: var(--radius); }
 .pair .zoomable:hover { background: none; }
 
+/* ---------- Figures made elsewhere (Matplotlib output) ----------
+   Shown as they came out of the tool, on their own white ground. */
+.plots {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 2.5rem;
+}
+.plot a { display: block; border: 1px solid var(--rule); border-radius: var(--radius); overflow: hidden; cursor: zoom-in; }
+.plot a:hover { background: none; border-color: var(--muted); }
+.plot img { width: 100%; }
+.plot figcaption { max-width: 44em; }
+
 /* ---------- Landing toy ---------- */
 .toy {
-  margin-top: 2.75rem;
+  margin: 1rem 0 0 1.55em;
   padding: clamp(1rem, 3vw, 1.75rem);
   background: var(--surface);
   border-radius: var(--radius);
 }
-.toy-head p { margin-top: .25rem; color: var(--muted); font-size: .9375rem; max-width: 44em; }
+.toy-head { color: var(--muted); font-size: .9375rem; max-width: 44em; }
 .toy-head b { color: var(--ink); }
 .toy-body { margin-top: 1.25rem; }
 .toy-grid {
@@ -603,6 +651,25 @@ h4 { font-size: 1rem; font-weight: 600; }
 .row-meta .status { display: flex; margin-top: .35rem; font-weight: 400; }
 .row-sum { margin-top: .4rem; max-width: 36em; }
 .row-links { margin-top: .8rem; }
+/* Pictures in an index entry: a short row of tiles, all the same height. */
+.row-media { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; margin-top: 1.1rem; }
+.row-media a {
+  display: block;
+  aspect-ratio: 3 / 2;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: zoom-in;
+}
+.row-media a:hover { background: none; border-color: var(--muted); }
+.row-media img { width: 100%; height: 100%; object-fit: cover; }
+/* A phone screenshot that is cut off at the bottom: let it fade out instead. */
+.row-media > img {
+  width: auto; height: 23rem; grid-column: 1 / -1;
+  -webkit-mask-image: linear-gradient(#000 82%, transparent);
+  mask-image: linear-gradient(#000 82%, transparent);
+}
+.row-cap { margin-top: .5rem; color: var(--muted); font-size: .875rem; max-width: 40em; }
 .row .more { margin-top: .7rem; font-size: 1rem; }
 .row .more > summary { font-weight: 400; color: var(--muted); font-size: .9375rem; }
 
@@ -727,6 +794,7 @@ h4 { font-size: 1rem; font-weight: 600; }
   .hero-photo { max-width: 420px; }
   .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .toy-grid { grid-template-columns: 1fr; }
+  .plots { grid-template-columns: 1fr; }
   .toy-grid canvas { height: 240px; }
   .row { grid-template-columns: 1fr; }
   .row-meta { grid-column: 1; grid-row: auto; margin-top: .3rem; }
@@ -738,6 +806,9 @@ h4 { font-size: 1rem; font-weight: 600; }
   .build-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .build-stage { grid-template-columns: 1fr; }
   .stage-photo { max-width: 320px; }
+  .stage-text { min-height: 0; }
+  .scrub-labels button:not(:first-child):not(:last-child):not([aria-current="true"]) { display: none; }
+  .toy { margin-left: 0; }
   .pair { grid-template-columns: 1fr; }
   .ledger li { grid-template-columns: 1fr; }
   .ledger .when { order: 2; margin-top: .15rem; }
@@ -746,19 +817,13 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 /* ---------- Motion ----------
-   One orchestrated moment: the flight line draws once on load. */
-@media (prefers-reduced-motion: no-preference) {
-  .js .flight-plot svg { animation: draw 1.8s cubic-bezier(.3, .1, .3, 1) .15s both; }
-  .js .flight-apogee { animation: pop .4s ease-out .75s both; }
-  @keyframes draw { from { clip-path: inset(-10% 100% -10% 0); } to { clip-path: inset(-10% 0 -10% 0); } }
-  @keyframes pop { from { opacity: 0; transform: scale(.2); } to { opacity: 1; transform: none; } }
-}
+   Nothing moves on its own; things move only when the visitor acts. */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
 
 /* ---------- Print ---------- */
 @media print {
-  .top, .controls, .toy, .stage-ctl, .skip { display: none !important; }
+  .top, .controls, .toy, .stage-ctl, .shots-ctl, .skip { display: none !important; }
   body { background: #fff; color: #000; }
 }

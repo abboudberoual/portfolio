@@ -96,21 +96,18 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-text">
-      <h1>
-        <span class="hero-name">Aboud Beroual</span>
-        <span class="hero-line" data-i18n="hero.line">Aerospace engineering student who builds software and flight hardware.</span>
-      </h1>
+      <h1 class="hero-name">Aboud Beroual</h1>
+      <p class="hero-line" data-i18n="hero.line"><span>Aerospace engineering student.</span> <span>I build software and flight hardware.</span></p>
       <p class="hero-sub" data-i18n="hero.sub">Concordia University, Montreal. Class of 2028.</p>
       <p class="actions">
-        <a class="btn" href="assets/Aboud_Beroual_Resume.pdf" data-i18n="hero.resume">Resume (PDF)</a>
-        <a href="https://github.com/abboudberoual" rel="me">GitHub</a>
-        <a href="https://www.linkedin.com/in/aboudberoual/" rel="me">LinkedIn</a>
-        <a href="mailto:abboudberoual@gmail.com">abboudberoual@gmail.com</a>
+        <a class="btn" data-ico="download" href="assets/Aboud_Beroual_Resume.pdf" data-i18n="hero.resume">Resume (PDF)</a>
+        <a data-ico="github" href="https://github.com/abboudberoual" rel="me">GitHub</a>
+        <a data-ico="linkedin" href="https://www.linkedin.com/in/aboudberoual/" rel="me">LinkedIn</a>
+        <a data-ico="mail" href="mailto:abboudberoual@gmail.com">abboudberoual@gmail.com</a>
       </p>
       <div class="now">
         <h2 class="now-h" data-i18n="hero.now">Now</h2>
         <ul>
-          <li><b>Alchemy</b> <span data-i18n="hero.now1">Co-founder, pre-launch fintech</span></li>
           <li><b data-i18n="hero.now2org">Canadian Space Agency</b> <span data-i18n="hero.now2">Program Integration Intern</span></li>
           <li><b>Space Concordia</b> <span data-i18n="hero.now3">Structures, Solid Rocketry</span></li>
         </ul>
@@ -127,24 +124,6 @@
       <figcaption data-i18n="hero.photoCap">Averell 1 on its certification flight.</figcaption>
     </figure>
   </div>
-
-  <!-- The flight line: a schematic of the Averell 1 flight. The curve is
-       decorative (not to scale); the facts are in the list beside it. -->
-  <div class="wrap">
-    <div class="flight">
-      <div class="flight-plot" aria-hidden="true">
-        <svg viewBox="0 0 1000 100" preserveAspectRatio="none" focusable="false">
-          <path d="M20 99 C70 20 150 6 230 6 C420 6 760 60 980 99" fill="none" stroke="currentColor" stroke-width="1.25" vector-effect="non-scaling-stroke"/>
-        </svg>
-        <i class="flight-apogee"></i>
-      </div>
-      <dl class="flight-data">
-        <div class="flight-a"><dt data-i18n="flight.apogee">Apogee</dt><dd data-i18n="flight.apogeeV">2,100 ft</dd></div>
-        <div class="flight-l"><dt data-i18n="flight.liftoff">Liftoff</dt><dd data-i18n="flight.liftoffV">18 Oct 2026, H135 motor</dd></div>
-        <div class="flight-r"><dt data-i18n="flight.recovery">Recovery</dt><dd data-i18n="flight.recoveryV">Intact</dd></div>
-      </dl>
-    </div>
-  </div>
 </section>
 
 <!-- ================================================================
@@ -154,108 +133,6 @@
 <section class="section" id="work" aria-labelledby="work-h">
   <div class="wrap">
     <h2 class="section-h" id="work-h" data-i18n="projects.h">Projects</h2>
-
-    <!-- Alchemy -------------------------------------------------- -->
-    <article class="project" id="alchemy">
-      <div class="project-aside">
-        <p class="status" data-i18n="alchemy.status">Pre-launch</p>
-        <p data-i18n="alchemy.role">Co-founder<br>Canadian fintech</p>
-      </div>
-      <div class="project-main">
-        <h3>Alchemy</h3>
-        <p class="lede" data-i18n="alchemy.summary">Automatic credit-card rewards routing. At checkout, Alchemy picks the best card from the wallet you already have. The browser extension comes first.</p>
-        <p class="actions">
-          <a class="btn" href="https://abboudberoual.github.io/alchemy-site/" data-i18n="alchemy.cta">Alchemy landing page</a>
-          <span class="quiet" data-i18n="alchemy.private">The repository is private.</span>
-        </p>
-
-        <dl class="figures" aria-label="Verified data figures" data-i18n-attrs="aria-label:alchemy.figuresLabel">
-          <div><dd data-i18n="alchemy.n1">41</dd><dt data-i18n="alchemy.n1l">Canadian cards modelled, 39 verified</dt></div>
-          <div><dd data-i18n="alchemy.n2">1,085</dd><dt data-i18n="alchemy.n2l">ordered regex rules in the merchant dictionary</dt></div>
-          <div><dd data-i18n="alchemy.n3">844</dd><dt data-i18n="alchemy.n3l">brands on the coverage roster</dt></div>
-          <div><dd data-i18n="alchemy.n4">13</dd><dt data-i18n="alchemy.n4l">sourced spending profiles</dt></div>
-        </dl>
-
-        <div class="tiers">
-          <p class="tiers-h" data-i18n="alchemy.tiersH">Confidence of the 1,085 rules</p>
-          <div class="tiers-bar" role="img" aria-label="Rule confidence tiers: 24 dual-source verified, 78 community-sourced, 451 statement-sourced, 532 seed." data-i18n-attrs="aria-label:alchemy.tiersAlt">
-            <span class="t1" style="flex:24"></span><span class="t2" style="flex:78"></span><span class="t3" style="flex:451"></span><span class="t4" style="flex:532"></span>
-          </div>
-          <ul class="tiers-key">
-            <li><i class="t1"></i><b>24</b> <span data-i18n="alchemy.t1">dual-source verified</span></li>
-            <li><i class="t2"></i><b>78</b> <span data-i18n="alchemy.t2">community-sourced</span></li>
-            <li><i class="t3"></i><b>451</b> <span data-i18n="alchemy.t3">statement-sourced</span></li>
-            <li><i class="t4"></i><b>532</b> <span data-i18n="alchemy.t4">seed</span></li>
-          </ul>
-        </div>
-
-        <p class="aside-note" data-i18n="alchemy.sim"><b>Simulation result.</b> Across 13 household profiles, routing beat each wallet's best single card by $14 to $136 a year (median 8.8%, measured against a hindsight baseline) and beat default-card habit by $73 to $778 a year. These are simulated figures. Alchemy has no real users yet.</p>
-
-        <details class="more">
-          <summary data-i18n="projects.how">How it is built</summary>
-          <ul>
-            <li data-i18n="alchemy.b1">Pure-Python optimizer, a self-verifying simulator and a retroactive statement analyzer, with 17 unit tests and a data validator running in GitHub Actions.</li>
-            <li data-i18n="alchemy.b2">A merchant dictionary of ordered regex rules that maps raw card descriptors to a merchant category code (MCC) and category. Order is precedence, so Uber Eats matches before Uber rides.</li>
-            <li data-i18n="alchemy.b3">Descriptor anonymization and clustering tools, run over about 930 anonymized statement lines.</li>
-            <li data-i18n="alchemy.b4">A Manifest V3 TypeScript extension with a local card vault, and a Vitest test that proves no card number leaves the vault.</li>
-            <li data-i18n="alchemy.b5">I designed the agent operating model: scheduled AI agents run nightly (data maintenance, merchant dictionary, a retry pass) with a weekly orchestrator. Data commits go through CI checks; code arrives as pull requests the founders approve.</li>
-          </ul>
-          <p class="tools" data-i18n="alchemy.tools">Python, TypeScript, Manifest V3, Vitest, GitHub Actions, scheduled AI agents</p>
-        </details>
-      </div>
-    </article>
-
-    <!-- Lectern -------------------------------------------------- -->
-    <article class="project" id="lectern">
-      <div class="project-aside">
-        <p class="status is-on" data-i18n="lectern.status">Live</p>
-        <p data-i18n="lectern.role">Chrome extension<br>Personal project</p>
-      </div>
-      <div class="project-main">
-        <h3><img src="assets/img/lectern/icon128.png" width="128" height="128" alt="">Lectern</h3>
-        <p class="lede" data-i18n="lectern.summary">A Chrome extension for taking notes on YouTube lectures. It is on the Chrome Web Store and runs entirely on your machine: no server, no account.</p>
-        <p class="actions">
-          <a class="btn" href="https://chromewebstore.google.com/detail/lectern/bhgemnaiogekegbnldhenbfnanngfbob" data-i18n="lectern.cta">Install from the Chrome Web Store</a>
-          <a href="https://github.com/abboudberoual/lectern" data-i18n="projects.source">Source on GitHub</a>
-        </p>
-
-        <div class="shots" id="shots" tabindex="0" role="group" aria-label="Lectern screenshots, scroll sideways" data-i18n-attrs="aria-label:lectern.shotsLabel">
-          <figure>
-            <a href="assets/img/lectern/1-notes.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/1-notes.webp" width="1280" height="800" loading="lazy" alt="Lectern side panel next to a lecture video, with a summary and a list of time-stamped notes." data-i18n-attrs="alt:lectern.s1alt"></a>
-            <figcaption><b data-i18n="lectern.s1t">Notes</b> <span data-i18n="lectern.s1">Press Enter and the note is stamped with the video time.</span></figcaption>
-          </figure>
-          <figure>
-            <a href="assets/img/lectern/2-folders.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/2-folders.webp" width="1280" height="800" loading="lazy" alt="Lectern folder view listing videos grouped into folders." data-i18n-attrs="alt:lectern.s2alt"></a>
-            <figcaption><b data-i18n="lectern.s2t">Folders</b> <span data-i18n="lectern.s2">Group videos the way a course groups lectures.</span></figcaption>
-          </figure>
-          <figure>
-            <a href="assets/img/lectern/3-ask.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/3-ask.webp" width="1280" height="800" loading="lazy" alt="Lectern ask view showing a question about the video and an answer." data-i18n-attrs="alt:lectern.s3alt"></a>
-            <figcaption><b data-i18n="lectern.s3t">Ask</b> <span data-i18n="lectern.s3">Question the video with your own API key; answers cite timestamps.</span></figcaption>
-          </figure>
-          <figure>
-            <a href="assets/img/lectern/4-transcript.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/4-transcript.webp" width="1280" height="800" loading="lazy" alt="Lectern transcript tab showing the captured transcript of the video." data-i18n-attrs="alt:lectern.s4alt"></a>
-            <figcaption><b data-i18n="lectern.s4t">Transcript</b> <span data-i18n="lectern.s4">The captured transcript, line by line.</span></figcaption>
-          </figure>
-          <figure>
-            <a href="assets/img/lectern/5-search.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/5-search.webp" width="1280" height="800" loading="lazy" alt="Lectern search view showing search results." data-i18n-attrs="alt:lectern.s5alt"></a>
-            <figcaption><b data-i18n="lectern.s5t">Search</b> <span data-i18n="lectern.s5">Find a phrase and jump to where it was said.</span></figcaption>
-          </figure>
-        </div>
-
-        <details class="more">
-          <summary data-i18n="projects.what">What it does</summary>
-          <ul>
-            <li data-i18n="lectern.b1">Notes are stamped with the video time. Click a timestamp to jump back.</li>
-            <li data-i18n="lectern.b2">Captures the transcript and makes it searchable.</li>
-            <li data-i18n="lectern.b3">Folders work like courses.</li>
-            <li data-i18n="lectern.b4">Ask the video a question with your own Claude or OpenAI key. Answers cite clickable timestamps.</li>
-            <li data-i18n="lectern.b5">Syncs to Notion and Obsidian; exports Markdown, Word and PDF.</li>
-            <li data-i18n="lectern.b6">Chrome Manifest V3 in vanilla JavaScript, with Playwright end-to-end tests.</li>
-          </ul>
-          <p class="tools" data-i18n="lectern.tools">Chrome MV3, vanilla JS, Playwright, Notion and Obsidian sync</p>
-        </details>
-      </div>
-    </article>
 
     <!-- Averell 1, L1 rocket ------------------------------------- -->
     <article class="project" id="l1-rocket">
@@ -269,7 +146,7 @@
 
         <!-- Build sequence. The list is the content; site.js turns it into a stepper. -->
         <div class="build" id="build">
-          <h4 class="build-h" data-i18n="l1.buildH">Build sequence, parts table to recovery field</h4>
+          <h4 class="build-h" data-i18n="l1.buildH">The build, from the parts table to the recovery field</h4>
           <div class="build-stage" id="build-stage"></div>
           <ol class="build-list" id="build-list">
             <li><figure>
@@ -330,6 +207,108 @@
       </div>
     </article>
 
+    <!-- Lectern -------------------------------------------------- -->
+    <article class="project" id="lectern">
+      <div class="project-aside">
+        <p class="status is-on" data-i18n="lectern.status">Live</p>
+        <p data-i18n="lectern.role">Chrome extension<br>Personal project</p>
+      </div>
+      <div class="project-main">
+        <h3><img src="assets/img/lectern/icon128.png" width="128" height="128" alt="">Lectern</h3>
+        <p class="lede" data-i18n="lectern.summary">A Chrome extension for taking notes on YouTube lectures. It is on the Chrome Web Store and runs entirely on your machine: no server, no account.</p>
+        <p class="actions">
+          <a class="btn ext" href="https://chromewebstore.google.com/detail/bhgemnaiogekegbnldhenbfnanngfbob?utm_source=item-share-cb" data-i18n="lectern.cta">Get it on Chrome</a>
+          <a data-ico="github" href="https://github.com/abboudberoual/lectern" data-i18n="projects.source">Source on GitHub</a>
+        </p>
+
+        <div class="shots" id="shots" data-zoom tabindex="0" role="group" aria-label="Lectern screenshots, scroll sideways" data-i18n-attrs="aria-label:lectern.shotsLabel">
+          <figure>
+            <a href="assets/img/lectern/1-notes.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/1-notes.webp" width="1280" height="800" loading="lazy" alt="Lectern side panel next to a lecture video, with a summary and a list of time-stamped notes." data-i18n-attrs="alt:lectern.s1alt"></a>
+            <figcaption><b data-i18n="lectern.s1t">Notes</b> <span data-i18n="lectern.s1">Press Enter and the note is stamped with the video time. Click the time to jump back.</span></figcaption>
+          </figure>
+          <figure>
+            <a href="assets/img/lectern/2-folders.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/2-folders.webp" width="1280" height="800" loading="lazy" alt="Lectern folder view: four lecture videos in study order, each showing how far it was watched." data-i18n-attrs="alt:lectern.s2alt"></a>
+            <figcaption><b data-i18n="lectern.s2t">Folders</b> <span data-i18n="lectern.s2">Group videos the way a course groups lectures.</span></figcaption>
+          </figure>
+          <figure>
+            <a href="assets/img/lectern/3-ask.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/3-ask.webp" width="1280" height="800" loading="lazy" alt="Lectern ask view showing a question about the video and an answer that cites video times." data-i18n-attrs="alt:lectern.s3alt"></a>
+            <figcaption><b data-i18n="lectern.s3t">Ask</b> <span data-i18n="lectern.s3">Question the video with your own API key; answers cite timestamps.</span></figcaption>
+          </figure>
+          <figure>
+            <a href="assets/img/lectern/4-transcript.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/4-transcript.webp" width="1280" height="800" loading="lazy" alt="Lectern transcript tab with a search for one word and the matching lines highlighted." data-i18n-attrs="alt:lectern.s4alt"></a>
+            <figcaption><b data-i18n="lectern.s4t">Transcript</b> <span data-i18n="lectern.s4">Search the captured transcript and jump to where a phrase was said.</span></figcaption>
+          </figure>
+          <figure>
+            <a href="assets/img/lectern/5-sync.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/5-sync.webp" width="1280" height="800" loading="lazy" alt="Lecture notes from Lectern open as a Notion page, with summary and questions sections." data-i18n-attrs="alt:lectern.s5alt"></a>
+            <figcaption><b data-i18n="lectern.s5t">Sync</b> <span data-i18n="lectern.s5">Notes sync to Notion and Obsidian, and export to Markdown, Word and PDF.</span></figcaption>
+          </figure>
+        </div>
+
+        <details class="more">
+          <summary data-i18n="projects.what">What it does</summary>
+          <ul>
+            <li data-i18n="lectern.b1">Notes are stamped with the video time. Click a timestamp to jump back.</li>
+            <li data-i18n="lectern.b2">Captures the transcript and makes it searchable.</li>
+            <li data-i18n="lectern.b3">Folders work like courses.</li>
+            <li data-i18n="lectern.b4">Ask the video a question with your own Claude or OpenAI key. Answers cite clickable timestamps.</li>
+            <li data-i18n="lectern.b5">Syncs to Notion and Obsidian; exports Markdown, Word and PDF.</li>
+            <li data-i18n="lectern.b6">Chrome Manifest V3 in vanilla JavaScript, with Playwright end-to-end tests.</li>
+          </ul>
+          <p class="tools" data-i18n="lectern.tools">Chrome MV3, vanilla JS, Playwright, Notion and Obsidian sync</p>
+        </details>
+      </div>
+    </article>
+
+    <!-- Alchemy -------------------------------------------------- -->
+    <article class="project" id="alchemy">
+      <div class="project-aside">
+        <p class="status" data-i18n="alchemy.status">Pre-launch</p>
+        <p data-i18n="alchemy.role">Co-founder<br>Canadian fintech</p>
+      </div>
+      <div class="project-main">
+        <h3>Alchemy</h3>
+        <p class="lede" data-i18n="alchemy.summary">Automatic credit-card rewards routing. At checkout, Alchemy picks the best card from the wallet you already have. The browser extension comes first.</p>
+        <p class="actions">
+          <a class="btn ext" href="https://abboudberoual.github.io/alchemy-site/" data-i18n="alchemy.cta">Alchemy landing page</a>
+          <span class="quiet" data-i18n="alchemy.private">The repository is private.</span>
+        </p>
+
+        <dl class="figures" aria-label="Verified data figures" data-i18n-attrs="aria-label:alchemy.figuresLabel">
+          <div><dd data-i18n="alchemy.n1">41</dd><dt data-i18n="alchemy.n1l">Canadian cards modelled, 39 verified</dt></div>
+          <div><dd data-i18n="alchemy.n2">1,085</dd><dt data-i18n="alchemy.n2l">ordered regex rules in the merchant dictionary</dt></div>
+          <div><dd data-i18n="alchemy.n3">844</dd><dt data-i18n="alchemy.n3l">brands on the coverage roster</dt></div>
+          <div><dd data-i18n="alchemy.n4">13</dd><dt data-i18n="alchemy.n4l">sourced spending profiles</dt></div>
+        </dl>
+
+        <div class="tiers">
+          <p class="tiers-h" data-i18n="alchemy.tiersH">Confidence of the 1,085 rules</p>
+          <div class="tiers-bar" role="img" aria-label="Rule confidence tiers: 24 dual-source verified, 78 community-sourced, 451 statement-sourced, 532 seed." data-i18n-attrs="aria-label:alchemy.tiersAlt">
+            <span class="t1" style="flex:24"></span><span class="t2" style="flex:78"></span><span class="t3" style="flex:451"></span><span class="t4" style="flex:532"></span>
+          </div>
+          <ul class="tiers-key">
+            <li><i class="t1"></i><b>24</b> <span data-i18n="alchemy.t1">dual-source verified</span></li>
+            <li><i class="t2"></i><b>78</b> <span data-i18n="alchemy.t2">community-sourced</span></li>
+            <li><i class="t3"></i><b>451</b> <span data-i18n="alchemy.t3">statement-sourced</span></li>
+            <li><i class="t4"></i><b>532</b> <span data-i18n="alchemy.t4">seed</span></li>
+          </ul>
+        </div>
+
+        <p class="aside-note" data-i18n="alchemy.sim"><b>Simulation result.</b> Across 13 household profiles, routing beat each wallet's best single card by $14 to $136 a year (median 8.8%, measured against a hindsight baseline) and beat default-card habit by $73 to $778 a year. These are simulated figures. Alchemy has no real users yet.</p>
+
+        <details class="more">
+          <summary data-i18n="projects.how">How it is built</summary>
+          <ul>
+            <li data-i18n="alchemy.b1">Pure-Python optimizer, a self-verifying simulator and a retroactive statement analyzer, with 17 unit tests and a data validator running in GitHub Actions.</li>
+            <li data-i18n="alchemy.b2">A merchant dictionary of ordered regex rules that maps raw card descriptors to a merchant category code (MCC) and category. Order is precedence, so Uber Eats matches before Uber rides.</li>
+            <li data-i18n="alchemy.b3">Descriptor anonymization and clustering tools, run over about 930 anonymized statement lines.</li>
+            <li data-i18n="alchemy.b4">A Manifest V3 TypeScript extension with a local card vault, and a Vitest test that proves no card number leaves the vault.</li>
+            <li data-i18n="alchemy.b5">I designed the agent operating model: scheduled AI agents run nightly (data maintenance, merchant dictionary, a retry pass) with a weekly orchestrator. Data commits go through CI checks; code arrives as pull requests the founders approve.</li>
+          </ul>
+          <p class="tools" data-i18n="alchemy.tools">Python, TypeScript, Manifest V3, Vitest, GitHub Actions, scheduled AI agents</p>
+        </details>
+      </div>
+    </article>
+
     <!-- Vertical rocket landing simulator (VTOL) ----------------- -->
     <article class="project" id="lander">
       <div class="project-aside">
@@ -343,23 +322,36 @@
           <!-- The landing-page URL is set in ONE place: VTOL_LANDING_URL at the top of assets/js/site.js.
                While it is empty this stays a quiet "coming soon" note. -->
           <span class="soon" id="vtol-landing" data-i18n="vtol.soon">Landing page coming soon</span>
-          <a href="https://github.com/abboudberoual/scoudouc" data-i18n="projects.source">Source on GitHub</a>
+          <a data-ico="github" href="https://github.com/abboudberoual/scoudouc" data-i18n="projects.source">Source on GitHub</a>
         </p>
 
-        <div class="toy" id="toy">
-          <div class="toy-head">
-            <h4 data-i18n="vtol.toyH">Try the landing problem</h4>
-            <p data-i18n="vtol.toyFlag"><b>Toy model.</b> A simplified JavaScript illustration, not the project's Python simulator. Its numbers are not project results.</p>
-          </div>
-          <div class="toy-body" id="toy-body">
-            <p class="quiet" data-i18n="vtol.toyNoJs">With JavaScript on, this panel runs a small Monte Carlo toy: a point mass dropped from 40 m with a fixed-length burn that starts at an altitude you choose.</p>
-          </div>
-          <!-- The numbers in this note mirror the constants at the top of the toy block in site.js. -->
-          <details class="more">
-            <summary data-i18n="vtol.toyHowH">How the toy works</summary>
-            <p data-i18n="vtol.toyHow">A point mass falls from 40 m (the plot shows the last 27 m). At the trigger altitude a motor fires for a fixed 1.14 s and cannot throttle. Each trial draws a random thrust error and a random fixed tilt, with no attitude control. A trial counts as landed if it touches down slower than 2 m/s vertically and 1 m/s sideways. Set both spreads to zero and the fixed trigger lands every time; add spread and it stops working. These numbers come from this toy only. The project's own result so far is the 0 of 100 first sweep described below.</p>
-          </details>
+        <!-- Real output of the project's Python simulator (repo: scoudouc, sim/examples/land_s2.py),
+             saved from its own Matplotlib plotting functions. Not flight data. -->
+        <div class="plots">
+          <figure class="plot">
+            <a class="zoomable" href="assets/img/vtol-flight.webp" data-w="1600" data-h="1600"><img src="assets/img/vtol-flight.webp" width="1600" height="1600" loading="lazy" alt="Matplotlib figure with three stacked plots against time: tilt and gimbal angle, altitude, and speed, with the two motor burns shaded." data-i18n-attrs="alt:vtol.fig1alt"></a>
+            <figcaption data-i18n="vtol.fig1cap">One simulated flight, straight from the Python simulator: tilt and gimbal angle, altitude, and speed. The shaded areas are the two motor burns.</figcaption>
+          </figure>
+          <figure class="plot">
+            <a class="zoomable" href="assets/img/vtol-montecarlo.webp" data-w="1600" data-h="640"><img src="assets/img/vtol-montecarlo.webp" width="1600" height="640" loading="lazy" alt="Matplotlib figure titled 0 of 100 success: touchdown speed against landing-motor thrust for 100 simulated cases, all above the dashed limit line, and apogee against boost-motor thrust." data-i18n-attrs="alt:vtol.fig2alt"></a>
+            <figcaption data-i18n="vtol.fig2cap">The first Monte Carlo sweep: 100 simulated cases, none under the touchdown-speed limit (the dashed line).</figcaption>
+          </figure>
         </div>
+
+        <details class="more">
+          <summary data-i18n="vtol.toyH">Try the landing problem</summary>
+          <div class="toy" id="toy">
+            <p class="toy-head" data-i18n="vtol.toyFlag"><b>Toy model.</b> A simplified JavaScript illustration, not the project's Python simulator. Its numbers are not project results.</p>
+            <div class="toy-body" id="toy-body">
+              <p class="quiet" data-i18n="vtol.toyNoJs">With JavaScript on, this panel runs a small Monte Carlo toy: a point mass dropped from 40 m with a fixed-length burn that starts at an altitude you choose.</p>
+            </div>
+            <!-- The numbers in this note mirror the constants at the top of the toy block in site.js. -->
+            <details class="more">
+              <summary data-i18n="vtol.toyHowH">How the toy works</summary>
+              <p data-i18n="vtol.toyHow">A point mass falls from 40 m (the plot shows the last 27 m). At the trigger altitude a motor fires for a fixed 1.14 s and cannot throttle. Each trial draws a random thrust error and a random fixed tilt, with no attitude control. A trial counts as landed if it touches down slower than 2 m/s vertically and 1 m/s sideways. Set both spreads to zero and the fixed trigger lands every time; add spread and it stops working. These numbers come from this toy only. The project's own result so far is the 0 of 100 first sweep described below.</p>
+            </details>
+          </div>
+        </details>
 
         <details class="more">
           <summary data-i18n="projects.how">How it is built</summary>
@@ -389,6 +381,11 @@
         <h3 data-i18n="more.aft.title">Mach 3 aft section</h3>
         <p class="row-meta"><span data-i18n="more.aft.ctx">Space Concordia Solid Rocketry, structures team</span> <span data-i18n="more.aft.when">May 2026 – present</span> <span class="status" data-i18n="more.inProgress">In progress</span></p>
         <p class="row-sum" data-i18n="more.aft.sum">I am designing the carbon-fibre aft section, the boat tail and fins, of a two-stage rocket that targets Mach 3.</p>
+        <div class="row-media" data-zoom>
+          <a href="assets/img/sc-nosecone.webp" data-w="900" data-h="600"><img src="assets/img/sc-nosecone.webp" width="900" height="600" loading="lazy" alt="Siemens NX model of a long tapered nosecone with a cylindrical shoulder." data-i18n-attrs="alt:more.aft.i1alt"></a>
+          <a href="assets/img/sc-boat-tail.webp" data-w="1500" data-h="1000"><img src="assets/img/sc-boat-tail.webp" width="1500" height="1000" loading="lazy" alt="Siemens NX model of the boat tail, a short tapered ring seen from its wide end." data-i18n-attrs="alt:more.aft.i2alt"></a>
+        </div>
+        <p class="row-cap" data-i18n="more.aft.cap">Nosecone and boat tail in Siemens NX.</p>
         <details class="more">
           <summary data-i18n="projects.details">Details</summary>
           <ul>
@@ -422,6 +419,12 @@
         <h3 data-i18n="more.vt.title">VT-1 smart trainer controller</h3>
         <p class="row-meta"><span data-i18n="more.vt.ctx">Personal hardware project</span> <span data-i18n="more.vt.when">Oct 2026 – present</span> <span class="status" data-i18n="more.inProgress">In progress</span></p>
         <p class="row-sum" data-i18n="more.vt.sum">A handheld ESP32-S3 controller for a Bluetooth smart bike trainer, talking the Fitness Machine Service (FTMS) protocol.</p>
+        <div class="row-media" data-zoom>
+          <a href="assets/img/vt1-render.webp" data-w="1600" data-h="1035"><img src="assets/img/vt1-render.webp" width="1600" height="1035" loading="lazy" alt="Render of the VT-1: a wedge-shaped box with a round power gauge, a mode toggle, a button and a large knob." data-i18n-attrs="alt:more.vt.i1alt"></a>
+          <a href="assets/img/vt1-shell-top.webp" data-w="900" data-h="600"><img src="assets/img/vt1-shell-top.webp" width="900" height="600" loading="lazy" alt="CAD view of the printed shell from above, with cutouts for the display, knob and controls." data-i18n-attrs="alt:more.vt.i2alt"></a>
+          <a href="assets/img/vt1-shell-underside.webp" data-w="900" data-h="600"><img src="assets/img/vt1-shell-underside.webp" width="900" height="600" loading="lazy" alt="CAD view of the shell from below, with four corner bosses for the inserts." data-i18n-attrs="alt:more.vt.i3alt"></a>
+        </div>
+        <p class="row-cap" data-i18n="more.vt.cap">Concept render, and the printed shell in CAD from above and below.</p>
         <details class="more">
           <summary data-i18n="projects.details">Details</summary>
           <ul>
@@ -438,7 +441,10 @@
         <h3>Cadence</h3>
         <p class="row-meta"><span data-i18n="more.cad.ctx">AI triathlon coach</span> <span data-i18n="more.cad.when">2025 prototype</span></p>
         <p class="row-sum" data-i18n="more.cad.sum">A prototype web app that connects to Strava and generates training sessions.</p>
-        <p class="row-links"><a class="btn btn-small" href="https://cadencetrain.ca/" data-i18n="more.cad.cta">Visit cadencetrain.ca</a></p>
+        <div class="row-media">
+          <img src="assets/img/cadence-today.webp" width="459" height="925" loading="lazy" alt="Cadence on a phone: today's threshold session, a short daily digest, and three scores for sleep, body and training." data-i18n-attrs="alt:more.cad.i1alt">
+        </div>
+        <p class="row-links"><a class="btn btn-small ext" href="https://cadencetrain.ca/" data-i18n="more.cad.cta">Visit cadencetrain.ca</a></p>
         <details class="more">
           <summary data-i18n="projects.details">Details</summary>
           <ul>
@@ -453,7 +459,7 @@
         <h3 data-i18n="more.h2.title">Hydrogen aviation dashboard</h3>
         <p class="row-meta"><span data-i18n="more.h2.ctx">NSERC USRA research intern, Aircraft Systems Lab, Concordia</span> <span data-i18n="more.h2.when">May – Aug 2025</span></p>
         <p class="row-sum" data-i18n="more.h2.sum">A dashboard of electricity and hydrogen indicators for the top 20 US general-aviation airports.</p>
-        <p class="row-links"><a href="https://github.com/abboudberoual/hydrogen_aviation_dashboard" data-i18n="projects.source">Source on GitHub</a></p>
+        <p class="row-links"><a data-ico="github" href="https://github.com/abboudberoual/hydrogen_aviation_dashboard" data-i18n="projects.source">Source on GitHub</a></p>
         <details class="more">
           <summary data-i18n="projects.details">Details</summary>
           <ul>
@@ -468,7 +474,13 @@
         <h3 data-i18n="more.us.title">Cardiac ultrasound AI</h3>
         <p class="row-meta"><span data-i18n="more.us.ctx">Researcher, Healthcare for Extreme and Rural Environments (HERE)</span> <span data-i18n="more.us.when">Apr 2026 – present</span></p>
         <p class="row-sum" data-i18n="more.us.sum">Training data, procedures and CAD for an AI that classifies cardiac ultrasound views.</p>
-        <p class="row-links"><a href="https://www.heretech.ca/who-we-are" data-i18n="more.us.link">About HERE</a></p>
+        <div class="row-media" data-zoom>
+          <a href="assets/img/echo-primer.webp" data-w="1440" data-h="900"><img src="assets/img/echo-primer.webp" width="1440" height="900" loading="lazy" alt="Opening of a web primer titled Echocardiography, from the wave to the diagnosis, with a schematic four-chamber view and a list of eight sections." data-i18n-attrs="alt:more.us.i1alt"></a>
+          <a href="assets/img/echo-anatomy.webp" data-w="1600" data-h="1052"><img src="assets/img/echo-anatomy.webp" width="1600" height="1052" loading="lazy" alt="Primer section on heart structure: a four-chamber diagram and a diagram of blood flow through the heart and lungs." data-i18n-attrs="alt:more.us.i2alt"></a>
+          <a href="assets/img/echo-plax.webp" data-w="1600" data-h="622"><img src="assets/img/echo-plax-thumb.webp" width="735" height="490" loading="lazy" alt="Cheat sheet with two schematic parasternal long-axis views, diastole and systole, each with five numbered things to check." data-i18n-attrs="alt:more.us.i3alt"></a>
+        </div>
+        <p class="row-cap" data-i18n="more.us.cap">Training material I made: an echocardiography primer and a cheat sheet for telling systole from diastole in the parasternal long-axis view. Every diagram is a schematic; none is a patient image.</p>
+        <p class="row-links"><a class="ext" href="https://www.heretech.ca/who-we-are" data-i18n="more.us.link">About HERE</a></p>
         <details class="more">
           <summary data-i18n="projects.details">Details</summary>
           <ul>
@@ -484,7 +496,7 @@
         <h3 data-i18n="more.pat.title">Patent classification</h3>
         <p class="row-meta"><span data-i18n="more.pat.ctx">Small script</span></p>
         <p class="row-sum" data-i18n="more.pat.sum">A Python script that classifies patent records against a category definition using the OpenAI API.</p>
-        <p class="row-links"><a href="https://github.com/abboudberoual/patent-classification-with-openAI" data-i18n="projects.source">Source on GitHub</a></p>
+        <p class="row-links"><a data-ico="github" href="https://github.com/abboudberoual/patent-classification-with-openAI" data-i18n="projects.source">Source on GitHub</a></p>
       </article>
 
     </div>
@@ -502,7 +514,7 @@
       <h3 class="paper-title" lang="en">The Energy Transition Paradox and The Role of AI, Quantum Computing, and Mission-Oriented Industrial Policy in Navigating a Complex Landscape</h3>
       <p class="lede" data-i18n="research.thesis">Electrification cuts emissions where energy is used, but it drives up electricity demand, which strains grids and raises emissions upstream. Clean supply is not scaling fast enough to cover the gap.</p>
       <p data-i18n="research.argument">The article argues that AI and quantum computing can speed up innovation and cut costs, but only inside a mission-oriented industrial strategy that lines up public investment, regulation and private innovation.</p>
-      <p class="actions"><a class="btn" href="https://tr.ee/uSN9-UetFG" data-i18n="research.cta">Read the article</a></p>
+      <p class="actions"><a class="btn ext" href="https://tr.ee/uSN9-UetFG" data-i18n="research.cta">Read the article</a></p>
 
       <div class="paper-figs">
         <h4 data-i18n="research.figsH">Three figures the article starts from</h4>
@@ -611,9 +623,9 @@
     <div>
       <p class="foot-mail"><a href="mailto:abboudberoual@gmail.com">abboudberoual@gmail.com</a></p>
       <p class="actions">
-        <a href="assets/Aboud_Beroual_Resume.pdf" data-i18n="hero.resume">Resume (PDF)</a>
-        <a href="https://github.com/abboudberoual" rel="me">GitHub</a>
-        <a href="https://www.linkedin.com/in/aboudberoual/" rel="me">LinkedIn</a>
+        <a data-ico="download" href="assets/Aboud_Beroual_Resume.pdf" data-i18n="hero.resume">Resume (PDF)</a>
+        <a data-ico="github" href="https://github.com/abboudberoual" rel="me">GitHub</a>
+        <a data-ico="linkedin" href="https://www.linkedin.com/in/aboudberoual/" rel="me">LinkedIn</a>
       </p>
       <p class="foot-note"><span data-i18n="contact.place">Montreal, Quebec</span> <span data-i18n="contact.updated">Last updated <time datetime="2026-11">Nov 2026</time></span></p>
     </div>

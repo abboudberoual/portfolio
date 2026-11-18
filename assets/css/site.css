@@ -191,9 +191,9 @@ a:hover {
 .status::before {
   content: "";
   flex: none;
-  width: .56em; height: .56em;
+  width: .62em; height: .62em;
   border-radius: 50%;
-  border: 1.5px solid var(--muted);
+  border: 1px solid var(--muted);
 }
 .status.is-on::before { background: var(--accent); border-color: var(--ink); }
 
@@ -303,6 +303,7 @@ a:hover {
   text-decoration: none;
   white-space: nowrap;
 }
+.brand:hover { background: none; color: inherit; }
 .top-nav { display: flex; gap: 1.5rem; font-size: .9375rem; }
 .top-nav a { color: var(--muted); text-decoration: none; padding: .3em 0; }
 .top-nav a:hover { background: none; color: var(--ink); text-decoration: underline; text-decoration-color: currentColor; }
@@ -341,7 +342,7 @@ a:hover {
 .hero { padding: clamp(2.5rem, 7vw, 5.5rem) 0 clamp(3.5rem, 8vw, 6rem); }
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 380px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, clamp(260px, 30vw, 380px));
   gap: var(--gap);
   align-items: end;
 }
@@ -445,7 +446,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 .figures div { display: flex; flex-direction: column; }
 .figures dd {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem);
+  font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
   font-weight: 500;
   line-height: 1.1;
 }
@@ -480,9 +481,9 @@ h4 { font-size: 1rem; font-weight: 600; }
 .shots figure { flex: 0 0 min(86%, 42rem); scroll-snap-align: start; }
 .shots a { display: block; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--rule); cursor: zoom-in; }
 .shots a:hover { background: none; }
-.shots figcaption { margin-top: .6rem; font-size: .9375rem; color: var(--muted); }
+.shots figcaption { margin-top: .6rem; font-size: .875rem; color: var(--muted); }
 .shots figcaption b { color: var(--ink); margin-right: .3em; }
-.shots-ctl { display: flex; gap: .5rem; margin-top: .75rem; }
+.shots-ctl { display: flex; gap: .5rem; margin-top: .25rem; }
 
 /* ---------- L1 build sequence ---------- */
 .build { margin-top: 2.75rem; }
@@ -562,7 +563,7 @@ h4 { font-size: 1rem; font-weight: 600; }
   border: 1.5px solid var(--ink);
 }
 /* Step names under the slider, each centred on its stop (thumb = 18 px). */
-.scrub-labels { grid-column: 2; position: relative; height: 1.5rem; font-size: .8125rem; }
+.scrub-labels { grid-column: 2; position: relative; height: 2.6em; font-size: .8125rem; }
 .scrub-labels button {
   position: absolute;
   top: 0;
@@ -572,22 +573,31 @@ h4 { font-size: 1rem; font-weight: 600; }
   border: 0;
   background: none;
   color: var(--muted);
-  white-space: nowrap;
+  width: max-content;
+  max-width: 5.6em;
+  text-align: center;
+  line-height: 1.25;
   cursor: pointer;
 }
 .scrub-labels button:hover { color: var(--ink); }
 .scrub-labels button[aria-current="true"] { color: var(--ink); font-weight: 600; }
+/* When the slider is too short for six names, show only the current one. */
+.stage-side { container-type: inline-size; }
+@container (max-width: 500px) {
+  .scrub-labels button:not([aria-current="true"]) { display: none; }
+}
 
 .pair {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.557fr) minmax(0, 1.333fr); /* the two aspect ratios, so heights match */
   gap: 1.5rem;
   margin-top: 2.5rem;
   align-items: start;
 }
 .pair video, .pair img { width: 100%; border-radius: var(--radius); background: var(--surface); }
-.pair .zoomable { display: block; cursor: zoom-in; border-radius: var(--radius); }
-.pair .zoomable:hover { background: none; }
+.pair .zoomable { display: block; cursor: zoom-in; border: 1px solid var(--rule); border-radius: var(--radius); overflow: hidden; }
+.pair .zoomable:hover { background: none; border-color: var(--muted); }
+.pair .zoomable img { border-radius: 0; }
 
 /* ---------- Figures made elsewhere (Matplotlib output) ----------
    Shown as they came out of the tool, on their own white ground. */
@@ -623,10 +633,18 @@ h4 { font-size: 1rem; font-weight: 600; }
 .field { display: block; margin-bottom: 1rem; font-size: .9375rem; }
 .field span { display: flex; justify-content: space-between; gap: 1rem; }
 .field output { font-weight: 600; font-variant-numeric: tabular-nums; }
-.field input { display: block; width: 100%; margin: .35rem 0 0; accent-color: var(--ink); }
+.field input {
+  -webkit-appearance: none; appearance: none;
+  display: block; width: 100%; height: 1.5rem; margin: .1rem 0 0;
+  background: none; cursor: pointer;
+}
+.field input::-webkit-slider-runnable-track { height: 2px; background: var(--muted); border-radius: 1px; }
+.field input::-moz-range-track { height: 2px; background: var(--muted); border-radius: 1px; }
+.field input::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 14px; height: 14px; margin-top: -6px; border-radius: 50%; background: var(--ink); border: 0; }
+.field input::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: var(--ink); border: 0; }
 .tally { display: flex; gap: 2rem; margin-top: 1.25rem; }
 .tally dt { color: var(--muted); font-size: .875rem; }
-.tally dd { font-family: var(--font-display); font-size: 1.75rem; font-weight: 500; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.tally dd { font-family: var(--font-display); font-size: 1.625rem; font-weight: 500; line-height: 1.1; font-variant-numeric: tabular-nums; }
 .toy .more { margin-top: 1.25rem; font-size: .9375rem; }
 
 /* ---------- Index of other projects ---------- */
@@ -663,12 +681,15 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 .row-media a:hover { background: none; border-color: var(--muted); }
 .row-media img { width: 100%; height: 100%; object-fit: cover; }
-/* A phone screenshot that is cut off at the bottom: let it fade out instead. */
+/* A phone screenshot: cut it cleanly under the scores, on a hairline. */
 .row-media > img {
-  width: auto; height: 23rem; grid-column: 1 / -1;
-  -webkit-mask-image: linear-gradient(#000 82%, transparent);
-  mask-image: linear-gradient(#000 82%, transparent);
+  grid-column: 1 / -1;
+  width: auto; height: 17rem;
+  aspect-ratio: 459 / 720;
+  object-fit: cover; object-position: top;
+  border-bottom: 1px solid var(--rule);
 }
+#cadence .row-links { margin-top: 1.1rem; }
 .row-cap { margin-top: .5rem; color: var(--muted); font-size: .875rem; max-width: 40em; }
 .row .more { margin-top: .7rem; font-size: 1rem; }
 .row .more > summary { font-weight: 400; color: var(--muted); font-size: .9375rem; }
@@ -678,7 +699,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 .paper-title {
   margin-top: .75rem;
   max-width: 24em;
-  font-size: clamp(1.5rem, 1.15rem + 1.4vw, 2.125rem);
+  font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
   text-wrap: balance;
 }
 .paper > .lede { margin-top: 1.5rem; }
@@ -705,7 +726,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 .fig-bar { display: block; height: 5px; margin: .5rem 0 .5rem; background: var(--rule); border-radius: 1px; }
 .fig-bar i { display: block; height: 100%; background: var(--ink); border-radius: 1px; }
-.figs .is-key .fig-bar i { background: var(--accent); box-shadow: 0 0 0 1px var(--ink); }
+.figs .is-key .fig-bar i { background: var(--accent); box-shadow: inset 0 0 0 1px var(--ink); }
 
 /* ---------- Experience ---------- */
 .ledger li {
@@ -754,11 +775,12 @@ h4 { font-size: 1rem; font-weight: 600; }
 /* ---------- Footer / contact ---------- */
 .foot-mail {
   font-family: var(--font-display);
-  font-size: clamp(1.375rem, .9rem + 2.6vw, 2.75rem);
+  font-size: clamp(1.375rem, .9rem + 2.6vw, 2.875rem);
   font-weight: 500;
-  letter-spacing: -.015em;
+  letter-spacing: -.012em;
   line-height: 1.2;
 }
+.foot-mail a:hover { background: none; color: inherit; text-decoration-color: var(--accent); text-decoration-thickness: 3px; }
 .foot .actions { margin-top: 1.5rem; }
 .foot-note { margin-top: 2.5rem; color: var(--muted); font-size: .875rem; display: flex; flex-wrap: wrap; gap: .2rem 1.5rem; }
 
@@ -805,9 +827,10 @@ h4 { font-size: 1rem; font-weight: 600; }
 @media (max-width: 620px) {
   .build-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .build-stage { grid-template-columns: 1fr; }
-  .stage-photo { max-width: 320px; }
   .stage-text { min-height: 0; }
-  .scrub-labels button:not(:first-child):not(:last-child):not([aria-current="true"]) { display: none; }
+  .stage-photo { max-width: none; aspect-ratio: 4 / 5; }
+  .hero .actions { display: grid; grid-template-columns: auto auto 1fr; justify-items: start; }
+  .hero .actions .btn, .hero .actions [data-ico="mail"] { grid-column: 1 / -1; }
   .toy { margin-left: 0; }
   .pair { grid-template-columns: 1fr; }
   .ledger li { grid-template-columns: 1fr; }

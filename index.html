@@ -117,7 +117,7 @@
     <figure class="hero-photo">
       <img src="assets/img/l1-launch.jpg"
            srcset="assets/img/l1-launch-800.jpg 534w, assets/img/l1-launch.jpg 1068w"
-           sizes="(max-width: 820px) min(92vw, 420px), 380px"
+           sizes="(max-width: 820px) min(92vw, 420px), min(30vw, 380px)"
            width="1068" height="1600" fetchpriority="high"
            alt="A yellow and black rocket a few metres above the launch pad, trailing a column of white smoke over a field."
            data-i18n-attrs="alt:hero.photoAlt">
@@ -293,7 +293,7 @@
           </ul>
         </div>
 
-        <p class="aside-note" data-i18n="alchemy.sim"><b>Simulation result.</b> Across 13 household profiles, routing beat each wallet's best single card by $14 to $136 a year (median 8.8%, measured against a hindsight baseline) and beat default-card habit by $73 to $778 a year. These are simulated figures. Alchemy has no real users yet.</p>
+        <p class="aside-note" data-i18n="alchemy.sim"><b>Simulation result.</b> Across 13 household profiles, routing beat each wallet’s best single card by $14 to $136 a year (median 8.8%, measured against a hindsight baseline) and beat default-card habit by $73 to $778 a year. These are simulated figures. Alchemy has no real users yet.</p>
 
         <details class="more">
           <summary data-i18n="projects.how">How it is built</summary>
@@ -325,7 +325,7 @@
           <a data-ico="github" href="https://github.com/abboudberoual/scoudouc" data-i18n="projects.source">Source on GitHub</a>
         </p>
 
-        <!-- Real output of the project's Python simulator (repo: scoudouc, sim/examples/land_s2.py),
+        <!-- Real output of the project’s Python simulator (repo: scoudouc, sim/examples/land_s2.py),
              saved from its own Matplotlib plotting functions. Not flight data. -->
         <div class="plots">
           <figure class="plot">
@@ -341,14 +341,14 @@
         <details class="more">
           <summary data-i18n="vtol.toyH">Try the landing problem</summary>
           <div class="toy" id="toy">
-            <p class="toy-head" data-i18n="vtol.toyFlag"><b>Toy model.</b> A simplified JavaScript illustration, not the project's Python simulator. Its numbers are not project results.</p>
+            <p class="toy-head" data-i18n="vtol.toyFlag"><b>Toy model.</b> A simplified JavaScript illustration, not the project’s Python simulator. Its numbers are not project results.</p>
             <div class="toy-body" id="toy-body">
               <p class="quiet" data-i18n="vtol.toyNoJs">With JavaScript on, this panel runs a small Monte Carlo toy: a point mass dropped from 40 m with a fixed-length burn that starts at an altitude you choose.</p>
             </div>
             <!-- The numbers in this note mirror the constants at the top of the toy block in site.js. -->
             <details class="more">
               <summary data-i18n="vtol.toyHowH">How the toy works</summary>
-              <p data-i18n="vtol.toyHow">A point mass falls from 40 m (the plot shows the last 27 m). At the trigger altitude a motor fires for a fixed 1.14 s and cannot throttle. Each trial draws a random thrust error and a random fixed tilt, with no attitude control. A trial counts as landed if it touches down slower than 2 m/s vertically and 1 m/s sideways. Set both spreads to zero and the fixed trigger lands every time; add spread and it stops working. These numbers come from this toy only. The project's own result so far is the 0 of 100 first sweep described below.</p>
+              <p data-i18n="vtol.toyHow">A point mass falls from 40 m (the plot shows the last 27 m). At the trigger altitude a motor fires for a fixed 1.14 s and cannot throttle. Each trial draws a random thrust error and a random fixed tilt, with no attitude control. A trial counts as landed if it touches down slower than 2 m/s vertically and 1 m/s sideways. Set both spreads to zero and the fixed trigger lands every time; add spread and it stops working. These numbers come from this toy only. The project’s own result so far is the 0 of 100 first sweep described below.</p>
             </details>
           </div>
         </details>
@@ -442,7 +442,7 @@
         <p class="row-meta"><span data-i18n="more.cad.ctx">AI triathlon coach</span> <span data-i18n="more.cad.when">2025 prototype</span></p>
         <p class="row-sum" data-i18n="more.cad.sum">A prototype web app that connects to Strava and generates training sessions.</p>
         <div class="row-media">
-          <img src="assets/img/cadence-today.webp" width="459" height="925" loading="lazy" alt="Cadence on a phone: today's threshold session, a short daily digest, and three scores for sleep, body and training." data-i18n-attrs="alt:more.cad.i1alt">
+          <img src="assets/img/cadence-today.webp" width="459" height="925" loading="lazy" alt="Cadence on a phone: today’s threshold session, a short daily digest, and three scores for sleep, body and training." data-i18n-attrs="alt:more.cad.i1alt">
         </div>
         <p class="row-links"><a class="btn btn-small ext" href="https://cadencetrain.ca/" data-i18n="more.cad.cta">Visit cadencetrain.ca</a></p>
         <details class="more">
@@ -519,7 +519,7 @@
       <div class="paper-figs">
         <h4 data-i18n="research.figsH">Three figures the article starts from</h4>
         <ul class="figs">
-          <li><b data-i18n="research.f1n">76%</b><span class="fig-bar" aria-hidden="true"><i style="width:76%"></i></span><span data-i18n="research.f1">of Canada's total primary-energy supply still comes from fossil fuels.</span></li>
+          <li><b data-i18n="research.f1n">76%</b><span class="fig-bar" aria-hidden="true"><i style="width:76%"></i></span><span data-i18n="research.f1">of Canada’s total primary-energy supply still comes from fossil fuels.</span></li>
           <li><b data-i18n="research.f2n">82%</b><span class="fig-bar" aria-hidden="true"><i style="width:82%"></i></span><span data-i18n="research.f2">of electricity generation is non-emitting.</span></li>
           <li><b data-i18n="research.f3n">5%</b><span class="fig-bar" aria-hidden="true"><i style="width:5%"></i></span><span data-i18n="research.f3">of the generation mix is coal, yet</span></li>
           <li class="is-key"><b data-i18n="research.f4n">61%</b><span class="fig-bar" aria-hidden="true"><i style="width:61%"></i></span><span data-i18n="research.f4">of electricity-related greenhouse gases come from it.</span></li>
@@ -566,7 +566,7 @@
           <ul class="ledger ledger-tight">
             <li>
               <span class="when" data-i18n="exp.e1when">Class of 2028</span>
-              <p><strong data-i18n="exp.e1">B.Eng Aerospace Engineering</strong> <span data-i18n="exp.e1org">Concordia University</span><small data-i18n="exp.e1note">GPA 3.7 / 4.3, Dean's List.</small></p>
+              <p><strong data-i18n="exp.e1">B.Eng Aerospace Engineering</strong> <span data-i18n="exp.e1org">Concordia University</span><small data-i18n="exp.e1note">GPA 3.7 / 4.3, Dean’s List.</small></p>
             </li>
             <li>
               <span class="when" data-i18n="exp.e2when">Aug – Dec 2025</span>

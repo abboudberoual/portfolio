@@ -1,0 +1,407 @@
+/* Aboud Beroual – portfolio. Translations.
+
+   HOW THIS WORKS
+   - English lives in index.html. It is what search engines and visitors
+     without JavaScript read.
+   - French lives here, in I18N.fr, grouped by page section. An element with
+     data-i18n="alchemy.summary" gets I18N.fr.alchemy.summary as its HTML.
+     data-i18n-attrs="alt:hero.photoAlt" does the same for an attribute.
+   - I18N.en only holds the few strings that site.js creates itself
+     (button labels in the widgets). Their French twins are in fr.ui / fr.toy.
+
+   RULES
+   - Change an English string in index.html -> change its French twin here.
+   - Add a data-i18n key in index.html -> add the same key here.
+   - Write &nbsp; for a non-breaking space (before % $ : « », inside numbers).
+   - French number style: 2&nbsp;100 pi, 8,8&nbsp;%, 14&nbsp;$.
+   - Product names, code names and tech terms stay as they are
+     (React, Manifest V3, PID, Monte Carlo, ReviewHub...).
+   - Never add a number or a claim that is not in the English page.
+*/
+window.I18N = {
+
+  /* ---------------- English: script-made strings only ---------------- */
+  en: {
+    ui: {
+      viewer: 'Image viewer',
+      prev: 'Previous',
+      next: 'Next',
+      close: 'Close',
+      of: '{n} of {total}',
+      enlarge: 'Enlarge photo: {title}',
+      steps: 'Build steps',
+      stepStatus: 'Step {n} of {total}: {title}'
+    },
+    toy: {
+      thrust: 'Thrust spread',
+      tilt: 'Tilt spread',
+      trigger: 'Burn starts at',
+      run: 'Run {n} trials',
+      landed: 'Landed',
+      crashed: 'Crashed',
+      status: 'Toy result: {landed} of {n} landed, {crashed} crashed.',
+      canvas: 'Altitude against time for each simulated trial, showing the last 27 metres of the fall.',
+      burnAt: 'burn starts, {h}',
+      legendLanded: 'landed',
+      legendCrashed: 'crashed'
+    },
+    vtol: {
+      landingCta: 'Landing page'
+    }
+  },
+
+  /* ---------------- Français ---------------- */
+  fr: {
+
+    /* <head>: titre de l'onglet, description, cartes de partage */
+    meta: {
+      title: 'Aboud Beroual – logiciels et matériel de vol',
+      description: 'Aboud Beroual étudie le génie aérospatial à l’Université Concordia, à Montréal, et conçoit des logiciels et du matériel de vol&nbsp;: un moteur d’optimisation des récompenses, une extension Chrome, une fusée de haute puissance certifiée et un simulateur d’atterrissage.',
+      ogDescription: 'Étudiant en génie aérospatial à l’Université Concordia, à Montréal. Des projets de logiciel et de matériel de vol, avec les photos de fabrication et des démonstrations fonctionnelles.',
+      ogImageAlt: 'Une fusée de haute puissance jaune et noire quitte la rampe de lancement sur une colonne de fumée blanche.',
+      twDescription: 'Étudiant en génie aérospatial à l’Université Concordia, à Montréal. Des projets de logiciel et de matériel de vol.'
+    },
+
+    /* En-tête */
+    nav: {
+      skip: 'Aller aux projets',
+      home: 'Aboud Beroual, retour en haut de la page',
+      label: 'Sections',
+      projects: 'Projets',
+      research: 'Recherche',
+      experience: 'Expérience',
+      about: 'À propos',
+      contact: 'Contact'
+    },
+
+    /* Libellés d'interface (boutons, visionneuse) */
+    ui: {
+      language: 'Langue',
+      theme: 'Thème',
+      themeSystem: 'Suivre le thème du système',
+      themeLight: 'Thème clair',
+      themeDark: 'Thème sombre',
+      viewer: 'Visionneuse d’images',
+      prev: 'Précédent',
+      next: 'Suivant',
+      close: 'Fermer',
+      of: '{n} de {total}',
+      enlarge: 'Agrandir la photo&nbsp;: {title}',
+      steps: 'Étapes de fabrication',
+      stepStatus: 'Étape {n} de {total}&nbsp;: {title}'
+    },
+
+    /* Haut de page */
+    hero: {
+      line: 'Étudiant en génie aérospatial. Je conçois des logiciels et du matériel de vol.',
+      sub: 'Université Concordia, Montréal. Promotion 2028.',
+      resume: 'CV (PDF, en anglais)',
+      now: 'En ce moment',
+      now1: 'Cofondateur, fintech en prélancement',
+      now2org: 'Agence spatiale canadienne',
+      now2: 'Stagiaire en intégration de programme',
+      now3: 'Structures, division Solid Rocketry',
+      photoAlt: 'Une fusée jaune et noire à quelques mètres au-dessus de la rampe de lancement, suivie d’une colonne de fumée blanche au-dessus d’un champ.',
+      photoCap: 'Averell 1 pendant son vol de certification.'
+    },
+
+    /* Ligne de vol sous le haut de page */
+    flight: {
+      apogee: 'Apogée',
+      apogeeV: '2&nbsp;100&nbsp;pi',
+      liftoff: 'Décollage',
+      liftoffV: '18 oct. 2026, moteur H135',
+      recovery: 'Récupération',
+      recoveryV: 'Intacte'
+    },
+
+    /* Libellés communs aux projets */
+    projects: {
+      h: 'Projets',
+      how: 'Comment c’est construit',
+      what: 'Ce que ça fait',
+      details: 'Détails',
+      source: 'Code source sur GitHub'
+    },
+
+    alchemy: {
+      status: 'Prélancement',
+      role: 'Cofondateur<br>Fintech canadienne',
+      summary: 'Aiguillage automatique des récompenses de cartes de crédit. Au moment de payer, Alchemy choisit la meilleure carte parmi celles que vous avez déjà. L’extension de navigateur arrive en premier.',
+      cta: 'Page de présentation d’Alchemy',
+      private: 'Le dépôt de code est privé.',
+      figuresLabel: 'Chiffres vérifiés sur les données',
+      n1: '41',
+      n1l: 'cartes canadiennes modélisées, dont 39 vérifiées',
+      n2: '1&nbsp;085',
+      n2l: 'règles regex ordonnées dans le dictionnaire de marchands',
+      n3: '844',
+      n3l: 'marques sur la liste de couverture',
+      n4: '13',
+      n4l: 'profils de dépenses appuyés sur des sources',
+      tiersH: 'Niveau de confiance des 1&nbsp;085 règles',
+      tiersAlt: 'Niveaux de confiance des règles&nbsp;: 24 vérifiées par deux sources, 78 issues de la communauté, 451 tirées de relevés, 532 de départ.',
+      t1: 'vérifiées par deux sources',
+      t2: 'issues de la communauté',
+      t3: 'tirées de relevés',
+      t4: 'de départ',
+      sim: '<b>Résultat de simulation.</b> Sur 13 profils de ménages, l’aiguillage a rapporté de 14&nbsp;$ à 136&nbsp;$ de plus par année que la meilleure carte unique de chaque portefeuille (médiane de 8,8&nbsp;%, mesurée par rapport à une référence établie a posteriori) et de 73&nbsp;$ à 778&nbsp;$ de plus par année que l’habitude de payer avec une carte par défaut. Ce sont des chiffres simulés. Alchemy n’a pas encore d’utilisateurs réels.',
+      b1: 'Un optimiseur en Python pur, un simulateur autovérifiant et un analyseur rétroactif de relevés, avec 17 tests unitaires et un validateur de données exécutés dans GitHub Actions.',
+      b2: 'Un dictionnaire de marchands fait de règles regex ordonnées, qui associe les descripteurs bruts des relevés à un code de catégorie de marchand (MCC) et à une catégorie. L’ordre fait la priorité&nbsp;: Uber Eats est reconnu avant les courses Uber.',
+      b3: 'Des outils d’anonymisation et de regroupement des descripteurs, appliqués à environ 930 lignes de relevés anonymisées.',
+      b4: 'Une extension Manifest V3 en TypeScript avec un coffre local pour les cartes, et un test Vitest qui prouve qu’aucun numéro de carte ne quitte le coffre.',
+      b5: 'J’ai conçu le modèle d’exploitation des agents&nbsp;: des agents d’IA planifiés tournent chaque nuit (maintenance des données, dictionnaire de marchands, passe de reprise), sous un orchestrateur hebdomadaire. Les commits de données passent par les vérifications d’intégration continue; le code arrive sous forme de pull requests que les fondateurs approuvent.',
+      tools: 'Python, TypeScript, Manifest V3, Vitest, GitHub Actions, agents d’IA planifiés'
+    },
+
+    lectern: {
+      status: 'En ligne',
+      role: 'Extension Chrome<br>Projet personnel',
+      summary: 'Une extension Chrome pour prendre des notes sur des cours diffusés sur YouTube. Elle est offerte dans le Chrome Web Store et fonctionne entièrement sur votre ordinateur&nbsp;: aucun serveur, aucun compte.',
+      cta: 'Installer depuis le Chrome Web Store',
+      shotsLabel: 'Captures d’écran de Lectern, à faire défiler de côté',
+      s1alt: 'Le panneau latéral de Lectern à côté d’une vidéo de cours, avec un résumé et une liste de notes horodatées.',
+      s1t: 'Notes',
+      s1: 'Appuyez sur Entrée et la note porte l’horodatage de la vidéo.',
+      s2alt: 'La vue des dossiers de Lectern, avec des vidéos regroupées par dossier.',
+      s2t: 'Dossiers',
+      s2: 'Regroupez les vidéos comme un cours regroupe ses séances.',
+      s3alt: 'La vue Ask de Lectern, avec une question sur la vidéo et sa réponse.',
+      s3t: 'Questions',
+      s3: 'Interrogez la vidéo avec votre propre clé d’API; les réponses citent des horodatages.',
+      s4alt: 'L’onglet de transcription de Lectern, avec la transcription captée de la vidéo.',
+      s4t: 'Transcription',
+      s4: 'La transcription captée, ligne par ligne.',
+      s5alt: 'La vue de recherche de Lectern, avec des résultats de recherche.',
+      s5t: 'Recherche',
+      s5: 'Trouvez une phrase et sautez à l’endroit où elle a été dite.',
+      b1: 'Chaque note porte l’horodatage de la vidéo. Un clic sur l’horodatage y ramène.',
+      b2: 'Capte la transcription et permet d’y faire des recherches.',
+      b3: 'Les dossiers servent de cours.',
+      b4: 'Posez une question à la vidéo avec votre propre clé Claude ou OpenAI. Les réponses citent des horodatages cliquables.',
+      b5: 'Synchronisation avec Notion et Obsidian; exportation en Markdown, Word et PDF.',
+      b6: 'Chrome Manifest V3 en JavaScript pur, avec des tests de bout en bout Playwright.',
+      tools: 'Chrome MV3, JavaScript pur, Playwright, synchronisation Notion et Obsidian'
+    },
+
+    /* Averell 1, fusée de niveau 1 */
+    l1: {
+      status: 'A volé',
+      role: 'Projet personnel de certification<br>Octobre 2026',
+      title: 'Averell 1, fusée de haute puissance de niveau 1',
+      summary: 'J’ai conçu, construit et fait voler une fusée de certification de niveau 1. Elle a atteint 2&nbsp;100&nbsp;pi avec un moteur H135 le 18 octobre 2026 et est revenue intacte.',
+      buildH: 'Étapes de fabrication, de la table de pièces au champ de récupération',
+      s1alt: 'Des pièces de fusée sur un établi&nbsp;: un tube de corps blanc, une ogive rouge imprimée en 3D, trois ailerons noirs et une cloison.',
+      s1t: 'Pièces',
+      s1: 'Tout est étalé avant l’assemblage&nbsp;: tube de corps, ogive imprimée en 3D, ailerons et cloison.',
+      s2alt: 'Des ailerons noirs insérés autour d’un tube moteur, tenus par un bloc d’ailerons et un anneau de centrage rouges imprimés en 3D.',
+      s2t: 'Bloc d’ailerons',
+      s2: 'Ailerons et tube moteur montés sur le bloc d’ailerons et l’anneau de centrage imprimés en 3D.',
+      s3alt: 'La fusée assemblée, debout dans un atelier, corps blanc et ogive rouge.',
+      s3t: 'Assemblée',
+      s3: 'La cellule assemblée, debout dans l’atelier, avant la peinture.',
+      s4alt: 'La fusée dans une cabine de peinture, peinte en jaune avec une section d’ailerons noire.',
+      s4t: 'Peinte',
+      s4: 'Jaune et noir, dans la cabine de peinture.',
+      s5alt: 'La fusée quitte la rampe au-dessus d’un nuage de fumée blanche.',
+      s5t: 'Lancement',
+      s5: 'Départ de la rampe avec un moteur H135, le 18 octobre 2026.',
+      s6alt: 'La fusée couchée dans l’herbe, son parachute orange à côté.',
+      s6t: 'Récupérée',
+      s6: 'Retrouvée dans l’herbe, parachute attaché. Intacte.',
+      videoLabel: 'Accéléré de l’impression 3D du bloc d’ailerons rouge, 52 secondes, sans son.',
+      videoFallback: 'Télécharger l’accéléré (MP4, 6,9&nbsp;Mo)',
+      videoCap: 'Impression du bloc d’ailerons. Accéléré de 52 secondes, sans son.',
+      profileAlt: 'Graphique OpenRocket intitulé Averell 1 L1 Flight Profile, qui trace l’altitude, la vitesse verticale et l’accélération verticale en fonction du temps.',
+      profileCap: 'Le profil de vol OpenRocket qui a servi à planifier le vol.',
+      how: 'Conception et certification',
+      b1: 'Vol simulé dans OpenRocket, stabilité ajustée pour une journée de lancement venteuse.',
+      b2: 'Ailerons, cloison et dispositif de retenue du moteur conçus dans SolidWorks, ogive dans Onshape; pièces imprimées en 3D, puis cellule assemblée à l’époxy.',
+      b3: 'Certification de niveau 1 en fusées de haute puissance, obtenue après la réussite des examens de Transports Canada et de l’Association canadienne de fuséonautique (ACF). Membre de l’ACF et du CQF.',
+      tools: 'OpenRocket, SolidWorks, Onshape, impression 3D, assemblage à l’époxy'
+    },
+
+    /* Simulateur d'atterrissage vertical (projet VTOL) */
+    vtol: {
+      status: 'En conception',
+      role: 'Projet personnel<br>Simulateur Python et micrologiciel de banc d’essai ESP32',
+      title: 'Simulateur d’atterrissage vertical de fusée',
+      summary: 'Un simulateur 2D pour faire atterrir sous poussée une petite fusée à propergol solide. Un moteur à propergol solide ne peut pas moduler sa poussée&nbsp;: presque tout dépend donc du moment où commence la poussée d’atterrissage.',
+      soon: 'Page de présentation à venir',
+      landingCta: 'Page de présentation',
+      toyH: 'Essayez le problème de l’atterrissage',
+      toyFlag: '<b>Modèle jouet.</b> Une illustration simplifiée en JavaScript, pas le simulateur Python du projet. Ses chiffres ne sont pas des résultats du projet.',
+      toyNoJs: 'Avec JavaScript activé, ce panneau exécute un petit jouet Monte Carlo&nbsp;: une masse ponctuelle lâchée de 40&nbsp;m, avec une poussée de durée fixe qui commence à l’altitude de votre choix.',
+      toyHowH: 'Comment fonctionne le jouet',
+      toyHow: 'Une masse ponctuelle tombe de 40&nbsp;m (le graphique montre les 27 derniers mètres). À l’altitude de déclenchement, un moteur s’allume pour une durée fixe de 1,14&nbsp;s, sans pouvoir moduler sa poussée. Chaque essai tire au hasard une erreur de poussée et une inclinaison fixe, sans contrôle d’attitude. Un essai compte comme un atterrissage s’il touche le sol à moins de 2&nbsp;m/s à la verticale et de 1&nbsp;m/s de côté. Mettez les deux dispersions à zéro et le déclencheur fixe réussit à tout coup; ajoutez de la dispersion et il ne fonctionne plus. Ces chiffres viennent uniquement de ce jouet. Le seul résultat du projet à ce jour est le premier balayage décrit plus bas&nbsp;: 0 sur 100.',
+      b1: 'Python avec NumPy et Matplotlib, à un pas de 1&nbsp;ms.',
+      b2: 'Une boucle d’attitude PID à 200&nbsp;Hz, avec le retard et les limites de vitesse des servos.',
+      b3: 'Des séries Monte Carlo sur ±15&nbsp;% de poussée et ±5° d’inclinaison, avec un déclencheur de poussée d’atterrissage et une suite pytest.',
+      b4: 'Un micrologiciel de banc d’essai pour ESP32, en C++ avec PlatformIO.',
+      b5: 'Le premier balayage Monte Carlo a réussi 0 atterrissage sur 100 avec le déclencheur naïf. Je l’ajuste en ce moment.',
+      tools: 'Python, NumPy, Matplotlib, pytest, C++, PlatformIO, ESP32'
+    },
+
+    /* Jouet d'atterrissage (libellés créés par site.js) */
+    toy: {
+      thrust: 'Dispersion de la poussée',
+      tilt: 'Dispersion de l’inclinaison',
+      trigger: 'Allumage à',
+      run: 'Lancer {n} essais',
+      landed: 'Posées',
+      crashed: 'Écrasées',
+      status: 'Résultat du jouet&nbsp;: {landed} sur {n} posées, {crashed} écrasées.',
+      canvas: 'Altitude en fonction du temps pour chaque essai simulé, sur les 27 derniers mètres de la chute.',
+      burnAt: 'allumage, {h}',
+      legendLanded: 'posée',
+      legendCrashed: 'écrasée'
+    },
+
+    /* Autres projets (index compact) */
+    more: {
+      h: 'Autres projets',
+      inProgress: 'En cours',
+      aft: {
+        title: 'Section arrière Mach 3',
+        ctx: 'Space Concordia, division Solid Rocketry, équipe structures',
+        when: 'Mai 2026 – aujourd’hui',
+        sum: 'Je conçois la section arrière en fibre de carbone, soit le rétreint et les ailerons, d’une fusée à deux étages qui vise Mach 3.',
+        b1: 'Modélisée dans Siemens NX.',
+        b2: 'L’échauffement des bords d’attaque, près de 400&nbsp;°C, dicte le choix des matériaux et de la protection thermique.',
+        b3: 'Le flottement des ailerons à haute température est une vérification clé.',
+        tools: 'Siemens NX, fibre de carbone, protection thermique, flottement des ailerons'
+      },
+      rh: {
+        ctx: 'Agence spatiale canadienne, stagiaire en intégration de programme',
+        when: 'Janv. – déc. 2026, à temps partiel depuis septembre',
+        status: 'Déploiement à l’étude',
+        sum: 'Une application complète (full-stack) pour rédiger et commenter des écarts de revue (RID, Review Item Discrepancies) dans des livrables PDF et Word.',
+        b1: 'Point de départ&nbsp;: un sondage auprès d’une dizaine d’ingénieurs réviseurs.',
+        b2: 'React et TypeScript côté client; Node et Express avec SQLite côté serveur.',
+        b3: 'Déployée comme serveur d’équipe multiutilisateur et offerte en exécutable Windows.',
+        b4: 'Démonstrations aux réviseurs, aux TI et à la direction, et rédaction de la proposition d’hébergement. Une analyse de rentabilisation pour un déploiement dans tout le programme d’exploration lunaire est entre les mains de la direction générale.',
+        b5: 'Aussi, de l’automatisation interne&nbsp;: un extracteur de documents sans interface graphique (Selenium et pandas) qui exporte vers Excel et SharePoint, empaqueté avec PyInstaller, et des flux de gestion de la configuration dans Power Automate.',
+        note: 'Aucune capture d’écran&nbsp;: l’outil est interne à l’Agence.',
+        tools: 'React, TypeScript, Node, Express, SQLite, Selenium, pandas, Power Automate'
+      },
+      vt: {
+        title: 'VT-1, contrôleur de base d’entraînement intelligente',
+        ctx: 'Projet matériel personnel',
+        when: 'Oct. 2026 – aujourd’hui',
+        sum: 'Un contrôleur portatif à ESP32-S3 pour une base d’entraînement de vélo intelligente Bluetooth, qui parle le protocole Fitness Machine Service (FTMS).',
+        b1: 'J’ai d’abord validé la chaîne de commande avec un prototype dans le navigateur, qui a piloté une base Elite Tuo pendant un essai de 30 minutes&nbsp;: maintien de la puissance, réponse à l’échelon, mise à l’échelle de la résistance et reconnexion.',
+        b2: 'Un boîtier en biseau de 150&nbsp;×&nbsp;92&nbsp;mm, incliné à 11° pour la lecture, avec vérifications de dégagement, inserts filetés posés à chaud et éprouvette d’ajustement.',
+        b3: 'La nomenclature de l’électronique revient à environ 140&nbsp;$&nbsp;CA.',
+        b4: 'Prochaine étape&nbsp;: soudure et micrologiciel.',
+        tools: 'ESP32-S3, Bluetooth FTMS, impression 3D, CAO'
+      },
+      cad: {
+        ctx: 'Entraîneur de triathlon par IA',
+        when: 'Prototype de 2025',
+        sum: 'Un prototype d’application web qui se connecte à Strava et génère des séances d’entraînement.',
+        cta: 'Visiter cadencetrain.ca',
+        b1: 'Une application web Flask avec l’authentification OAuth et l’API de Strava, des séances d’entraînement générées par OpenAI et une vue horaire et calendrier.',
+        b2: 'Pour la recherche produit, un pipeline Python et GPT-5 avec découpage map-reduce a transformé 47 transcriptions de balados et de cours en rapports individuels et en méta-analyses couvrant plusieurs épisodes.',
+        tools: 'Flask, API Strava, API OpenAI, Python'
+      },
+      h2: {
+        title: 'Tableau de bord sur l’hydrogène en aviation',
+        ctx: 'Stagiaire de recherche (BRPC du CRSNG), Aircraft Systems Lab, Concordia',
+        when: 'Mai – août 2025',
+        sum: 'Un tableau de bord d’indicateurs sur l’électricité et l’hydrogène pour les 20 principaux aéroports d’aviation générale des États-Unis.',
+        b1: 'Des indicateurs par région du Electricity Market Module (EMM), selon trois scénarios de l’Energy Information Administration des États-Unis&nbsp;: référence, pétrole et gaz élevés, pétrole et gaz faibles.',
+        b2: 'Une analyse de sensibilité Monte Carlo pour une analyse du cycle de vie.'
+      },
+      us: {
+        title: 'IA pour l’échographie cardiaque',
+        ctx: 'Chercheur, Healthcare for Extreme and Rural Environments (HERE)',
+        when: 'Avr. 2026 – aujourd’hui',
+        sum: 'Des données d’entraînement, des procédures et de la CAO pour une IA qui classe les vues d’échographie cardiaque.',
+        link: 'À propos de HERE',
+        b1: 'Plus de 3&nbsp;000 échographies cardiaques étiquetées par vue standard, et rédaction des guides d’étiquetage qu’utilisent les nouveaux chercheurs.',
+        b2: 'Rédaction d’une procédure d’essai pour la pression de contact de la sonde. Les mesures n’ont pas encore été prises.',
+        b3: 'Effecteur terminal modélisé dans SolidWorks.',
+        tools: 'SolidWorks, étiquetage de données, procédures d’essai'
+      },
+      pat: {
+        title: 'Classification de brevets',
+        ctx: 'Petit script',
+        sum: 'Un script Python qui classe des fiches de brevets selon la définition d’une catégorie, à l’aide de l’API d’OpenAI.'
+      }
+    },
+
+    research: {
+      h: 'Recherche',
+      meta: 'EconomicSense Undergraduate Journal, avril 2025. Directeur de recherche&nbsp;: Hani Sarkis, Ph.&nbsp;D., professeur.',
+      thesis: 'L’électrification réduit les émissions là où l’énergie est consommée, mais elle fait grimper la demande d’électricité, ce qui met les réseaux sous pression et augmente les émissions en amont. L’offre d’énergie propre ne croît pas assez vite pour combler l’écart.',
+      argument: 'L’article soutient que l’IA et l’informatique quantique peuvent accélérer l’innovation et réduire les coûts, mais seulement dans le cadre d’une stratégie industrielle axée sur des missions, qui aligne l’investissement public, la réglementation et l’innovation privée.',
+      cta: 'Lire l’article (en anglais)',
+      figsH: 'Trois chiffres d’où part l’article',
+      f1n: '76&nbsp;%',
+      f1: 'de l’approvisionnement total en énergie primaire du Canada provient encore des combustibles fossiles.',
+      f2n: '82&nbsp;%',
+      f2: 'de la production d’électricité est non émettrice.',
+      f3n: '5&nbsp;%',
+      f3: 'de la production d’électricité vient du charbon, et pourtant',
+      f4n: '61&nbsp;%',
+      f4: 'des gaz à effet de serre liés à l’électricité en proviennent.',
+      source: 'Source&nbsp;: Ressources naturelles Canada (2023), cité dans l’article.'
+    },
+
+    /* Expérience, formation, distinctions */
+    exp: {
+      h: 'Expérience',
+      w1when: 'Janv. – déc. 2026',
+      w1org: 'Agence spatiale canadienne',
+      w1url: 'https://www.asc-csa.gc.ca/fra/',
+      w1role: 'Stagiaire en intégration de programme',
+      w1note: 'Création de ReviewHub et d’outils d’automatisation internes. À temps partiel depuis septembre.',
+      w2when: 'Avr. 2025 – mai 2026',
+      w2role: 'Associé en investissement',
+      w2note: 'Programme national de formation en capital de risque, avec un taux d’admission de moins de 15&nbsp;%. Plus de 50 entreprises en démarrage évaluées.',
+      w3when: 'Mai – août 2025',
+      w3role: 'Stagiaire de recherche, BRPC du CRSNG',
+      w3note: 'Tableau de bord sur l’hydrogène en aviation et analyse de sensibilité d’une analyse du cycle de vie.',
+      w4when: 'Mai 2023 – janv. 2025',
+      w4role: 'Stagiaire en gestion de projet',
+      w4note: 'Gestion de trois ingénieurs en apprentissage automatique sur un logiciel de diagnostic. 80&nbsp;000&nbsp;$ en crédits et en financement.',
+      w5when: 'Sept. 2022 – déc. 2023',
+      w5role: 'Analyste de recherche',
+      w5note: 'Commande prédictive par IA pour le CVC, avec l’ÉTS. Financement à six chiffres.',
+      eduH: 'Formation',
+      e1when: 'Promotion 2028',
+      e1: 'Baccalauréat en génie aérospatial (B.&nbsp;Ing.)',
+      e1org: 'Université Concordia',
+      e1note: 'Moyenne de 3,7&nbsp;/&nbsp;4,3, liste d’honneur du doyen.',
+      e2when: 'Août – déc. 2025',
+      e2: 'Échange',
+      e2org: 'Université nationale de Singapour',
+      e2note: 'Avec des travaux de simulation d’orbites dans FreeFlyer.',
+      e3: 'Diplôme en sciences prémédicales',
+      e3note: 'Moyenne de 4,06&nbsp;/&nbsp;4,3.',
+      recH: 'Distinctions',
+      r1: 'Concours de consultation de l’ECA de Concordia',
+      r1p: '1<sup>re</sup> place',
+      r2p: '2<sup>e</sup> place',
+      r3p: '3<sup>e</sup> place',
+      r4p: 'Parmi les 32 meilleurs sur 800',
+      r5: 'Concours d’essais de l’Association nucléaire canadienne',
+      r5p: 'Lauréat, 2025'
+    },
+
+    about: {
+      h: 'À propos',
+      p1: 'J’étudie le génie aérospatial à l’Université Concordia, à Montréal, et j’obtiendrai mon diplôme en 2028. Presque tout ce que je fais est soit un logiciel qu’on peut installer, soit du matériel qui doit réussir un essai.',
+      p2: 'Avant le génie, j’ai obtenu un diplôme en sciences prémédicales à l’Université de Moncton. Je travaille en français et en anglais.',
+      p3: 'Loin du bureau, j’ai atteint le sommet du Kilimandjaro, terminé deux Ironman 70.3 et parcouru Taïwan à vélo. Je suis la formation théorique en vue d’une licence de pilote privé.',
+      photoAlt: 'Aboud court sur le tapis rouge de l’arrivée d’un Ironman 70.3.',
+      photoCap: 'Ironman 70.3 Langkawi, l’arrivée de la course à pied.'
+    },
+
+    contact: {
+      h: 'Contact',
+      place: 'Montréal (Québec)',
+      updated: 'Dernière mise à jour&nbsp;: <time datetime="2026-11">nov. 2026</time>'
+    }
+  }
+};

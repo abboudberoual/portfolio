@@ -12,6 +12,7 @@
      6. Zoomable images and the Lectern strip arrows
      7. Landing toy       (simplified illustration, NOT project results)
      8. VTOL landing-page link
+     9. Contents          (left rail / "Contents" menu: marks where you are)
 */
 (function () {
   'use strict';
@@ -541,5 +542,75 @@
     note.parentNode.replaceChild(a, note);
     document.addEventListener('langchange', label);
     label();
+  });
+
+  /* ------------------------------------------------------------------
+     9. Contents. The left rail (wide screens) and the header's
+        "Contents" disclosure (small screens) are plain anchor links.
+        This block only (a) closes the disclosure after a choice and
+        (b) marks the part of the page being read: aria-current="location"
+        on its link, .is-current on its group. The targets are whatever
+        the links point to, so a new link needs no change here.
+     ------------------------------------------------------------------ */
+  safe('contents', function () {
+    var toc = $('#toc'), rail = $('#rail');
+    if (toc) {
+      toc.addEventListener('click', function (e) { if (e.target.closest('a')) toc.open = false; });
+      document.addEventListener('click', function (e) { if (toc.open && !toc.contains(e.target)) toc.open = false; });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && toc.open) { toc.open = false; $('summary', toc).focus(); }
+      });
+    }
+    if (!('IntersectionObserver' in window)) return;
+
+    var links = $$('#rail a[href^="#"], #toc a[href^="#"]');
+    var targets = [], seen = {};
+    links.forEach(function (a) {
+      var id = a.getAttribute('href').slice(1), node = document.getElementById(id);
+      if (!node || seen[id]) return;
+      seen[id] = true;
+      // A group heading (Hardware, Software, Research) points at a section that contains other targets.
+      targets.push({ id: id, node: node, group: !!a.nextElementSibling });
+    });
+    targets.sort(function (a, b) { return a.node.compareDocumentPosition(b.node) & 4 ? -1 : 1; });
+
+    var inBand = {}, atEnd = false, active = null;
+    function paint() {
+      var next = null, i;
+      for (i = 0; i < targets.length && !next; i++) if (!targets[i].group && inBand[targets[i].id]) next = targets[i].id;
+      for (i = 0; i < targets.length && !next; i++) if (inBand[targets[i].id]) next = targets[i].id;
+      if (atEnd && targets.length) next = targets[targets.length - 1].id;
+      if (next === active) return;
+      active = next;
+      links.forEach(function (a) {
+        if (a.getAttribute('href') === '#' + active) a.setAttribute('aria-current', 'location');
+        else a.removeAttribute('aria-current');
+      });
+      $$('.rail-list > li, .toc-list > li').forEach(function (li) {
+        li.classList.toggle('is-current', !!$('[aria-current]', li));
+      });
+      // Keep the mark in view if the rail itself has to scroll (short windows).
+      var cur = rail && $('[aria-current]', rail);
+      if (cur && rail.scrollHeight > rail.clientHeight) {
+        var r = rail.getBoundingClientRect(), c = cur.getBoundingClientRect();
+        if (c.top < r.top || c.bottom > r.bottom) rail.scrollTop += c.top - r.top - rail.clientHeight / 2;
+      }
+    }
+
+    // A reading band under the header: the first target that crosses it is "here".
+    var top = ($('.top') ? $('.top').offsetHeight : 56) + 34;
+    var band = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { inBand[e.target.id] = e.isIntersecting; });
+      paint();
+    }, { rootMargin: '-' + top + 'px 0px -60% 0px', threshold: 0 });
+    targets.forEach(function (x) { band.observe(x.node); });
+
+    // The last target (Contact) is short and cannot reach the band: it is "here" once it is all on screen.
+    if (targets.length) {
+      new IntersectionObserver(function (entries) {
+        atEnd = entries[entries.length - 1].intersectionRatio >= 0.98;
+        paint();
+      }, { threshold: [0.98, 1] }).observe(targets[targets.length - 1].node);
+    }
   });
 })();

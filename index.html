@@ -49,7 +49,7 @@
 </head>
 
 <body>
-<a class="skip" href="#work" data-i18n="nav.skip">Skip to projects</a>
+<a class="skip" href="#hardware" data-i18n="nav.skip">Skip to projects</a>
 
 <!-- ================================================================
      Header
@@ -60,12 +60,48 @@
       <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M4 27 C8 6 14 5 17 5 C22 5 26 14 28 27" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="17" cy="5" r="3.2" fill="var(--accent)"/></svg>
       <span>Aboud Beroual</span>
     </a>
-    <nav class="top-nav" aria-label="Sections" data-i18n-attrs="aria-label:nav.label">
-      <a href="#work" data-i18n="nav.projects">Projects</a>
-      <a href="#research" data-i18n="nav.research">Research</a>
-      <a href="#experience" data-i18n="nav.experience">Experience</a>
-      <a href="#about" data-i18n="nav.about">About</a>
-      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    <!-- Small screens: the page contents as a disclosure. Wide screens use the left rail instead.
+         Keep this list and the rail's list (nav#rail, below) identical. -->
+    <nav class="toc" aria-label="Contents" data-i18n-attrs="aria-label:rail.contents">
+      <details id="toc">
+        <summary data-i18n="rail.contents">Contents</summary>
+        <ul class="toc-list">
+          <li>
+            <a class="nav-group" href="#hardware" data-i18n="groups.hardware">Hardware</a>
+            <ul>
+              <li><a href="#l1-rocket">Averell 1</a></li>
+              <li><a href="#lander" data-i18n="rail.lander">Vertical rocket landing</a></li>
+              <li><a href="#aft-section" data-i18n="more.aft.title">Mach 3 aft section</a></li>
+              <li><a href="#vt-1" data-i18n="rail.vt">VT-1 controller</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="nav-group" href="#software" data-i18n="groups.software">Software</a>
+            <ul>
+              <li><a href="#alchemy">Alchemy</a></li>
+              <li><a href="#lectern">Lectern</a></li>
+              <li><a href="#reviewhub">ReviewHub</a></li>
+              <li><a href="#cadence">Cadence</a></li>
+              <li><a href="#patents" data-i18n="more.pat.title">Patent classification</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="nav-group" href="#research" data-i18n="groups.research">Research</a>
+            <ul>
+              <li><a href="#article" data-i18n="rail.article">EconomicSense article</a></li>
+              <li><a href="#hydrogen" data-i18n="more.h2.title">Hydrogen aviation dashboard</a></li>
+              <li><a href="#ultrasound" data-i18n="more.us.title">Cardiac ultrasound AI</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul class="nav-rest">
+              <li><a class="nav-group" href="#experience" data-i18n="nav.experience">Experience</a></li>
+              <li><a class="nav-group" href="#about" data-i18n="nav.about">About</a></li>
+              <li><a class="nav-group" href="#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+      </details>
     </nav>
     <!-- Controls need JavaScript, so they stay hidden until site.js shows them. -->
     <div class="controls" id="controls" hidden>
@@ -88,6 +124,54 @@
   </div>
 </header>
 
+<!-- .page: on wide screens a two-column grid, the rail and the page body. -->
+<div class="page">
+
+<!-- ================================================================
+     Left rail (wide screens): the page contents, grouped.
+     Plain anchor links; site.js (block 9) only marks where the visitor is.
+     To add a project: add its link here AND in the header's "Contents" list.
+     ================================================================ -->
+<nav class="rail" id="rail" aria-label="On this page" data-i18n-attrs="aria-label:rail.label">
+  <ul class="rail-list">
+    <li>
+      <a class="nav-group" href="#hardware" data-i18n="groups.hardware">Hardware</a>
+      <ul>
+        <li><a href="#l1-rocket">Averell 1</a></li>
+        <li><a href="#lander" data-i18n="rail.lander">Vertical rocket landing</a></li>
+        <li><a href="#aft-section" data-i18n="more.aft.title">Mach 3 aft section</a></li>
+        <li><a href="#vt-1" data-i18n="rail.vt">VT-1 controller</a></li>
+      </ul>
+    </li>
+    <li>
+      <a class="nav-group" href="#software" data-i18n="groups.software">Software</a>
+      <ul>
+        <li><a href="#alchemy">Alchemy</a></li>
+        <li><a href="#lectern">Lectern</a></li>
+        <li><a href="#reviewhub">ReviewHub</a></li>
+        <li><a href="#cadence">Cadence</a></li>
+        <li><a href="#patents" data-i18n="more.pat.title">Patent classification</a></li>
+      </ul>
+    </li>
+    <li>
+      <a class="nav-group" href="#research" data-i18n="groups.research">Research</a>
+      <ul>
+        <li><a href="#article" data-i18n="rail.article">EconomicSense article</a></li>
+        <li><a href="#hydrogen" data-i18n="more.h2.title">Hydrogen aviation dashboard</a></li>
+        <li><a href="#ultrasound" data-i18n="more.us.title">Cardiac ultrasound AI</a></li>
+      </ul>
+    </li>
+    <li>
+      <ul class="nav-rest">
+        <li><a class="nav-group" href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a class="nav-group" href="#about" data-i18n="nav.about">About</a></li>
+        <li><a class="nav-group" href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<div class="page-body">
 <main id="top">
 
 <!-- ================================================================
@@ -127,12 +211,14 @@
 </section>
 
 <!-- ================================================================
-     Featured projects
-     Each <article class="project"> = one featured project.
+     Hardware
+     Featured projects first (<article class="project">), then a compact
+     index (<article class="row"> inside .index). A new entry also needs its
+     link in the rail and in the header's "Contents" list.
      ================================================================ -->
-<section class="section" id="work" aria-labelledby="work-h">
+<section class="section group" id="hardware" aria-labelledby="hardware-h">
   <div class="wrap">
-    <h2 class="section-h" id="work-h" data-i18n="projects.h">Projects</h2>
+    <h2 class="section-h" id="hardware-h" data-i18n="groups.hardware">Hardware</h2>
 
     <!-- Averell 1, L1 rocket ------------------------------------- -->
     <article class="project" id="l1-rocket">
@@ -207,108 +293,6 @@
       </div>
     </article>
 
-    <!-- Lectern -------------------------------------------------- -->
-    <article class="project" id="lectern">
-      <div class="project-aside">
-        <p class="status is-on" data-i18n="lectern.status">Live</p>
-        <p data-i18n="lectern.role">Chrome extension<br>Personal project</p>
-      </div>
-      <div class="project-main">
-        <h3><img src="assets/img/lectern/icon128.png" width="128" height="128" alt="">Lectern</h3>
-        <p class="lede" data-i18n="lectern.summary">A Chrome extension for taking notes on YouTube lectures. It is on the Chrome Web Store and runs entirely on your machine: no server, no account.</p>
-        <p class="actions">
-          <a class="btn ext" href="https://chromewebstore.google.com/detail/bhgemnaiogekegbnldhenbfnanngfbob?utm_source=item-share-cb" data-i18n="lectern.cta">Get it on Chrome</a>
-          <a data-ico="github" href="https://github.com/abboudberoual/lectern" data-i18n="projects.source">Source on GitHub</a>
-        </p>
-
-        <div class="shots" id="shots" data-zoom tabindex="0" role="group" aria-label="Lectern screenshots, scroll sideways" data-i18n-attrs="aria-label:lectern.shotsLabel">
-          <figure>
-            <a href="assets/img/lectern/1-notes.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/1-notes.webp" width="1280" height="800" loading="lazy" alt="Lectern side panel next to a lecture video, with a summary and a list of time-stamped notes." data-i18n-attrs="alt:lectern.s1alt"></a>
-            <figcaption><b data-i18n="lectern.s1t">Notes</b> <span data-i18n="lectern.s1">Press Enter and the note is stamped with the video time. Click the time to jump back.</span></figcaption>
-          </figure>
-          <figure>
-            <a href="assets/img/lectern/2-folders.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/2-folders.webp" width="1280" height="800" loading="lazy" alt="Lectern folder view: four lecture videos in study order, each showing how far it was watched." data-i18n-attrs="alt:lectern.s2alt"></a>
-            <figcaption><b data-i18n="lectern.s2t">Folders</b> <span data-i18n="lectern.s2">Group videos the way a course groups lectures.</span></figcaption>
-          </figure>
-          <figure>
-            <a href="assets/img/lectern/3-ask.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/3-ask.webp" width="1280" height="800" loading="lazy" alt="Lectern ask view showing a question about the video and an answer that cites video times." data-i18n-attrs="alt:lectern.s3alt"></a>
-            <figcaption><b data-i18n="lectern.s3t">Ask</b> <span data-i18n="lectern.s3">Question the video with your own API key; answers cite timestamps.</span></figcaption>
-          </figure>
-          <figure>
-            <a href="assets/img/lectern/4-transcript.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/4-transcript.webp" width="1280" height="800" loading="lazy" alt="Lectern transcript tab with a search for one word and the matching lines highlighted." data-i18n-attrs="alt:lectern.s4alt"></a>
-            <figcaption><b data-i18n="lectern.s4t">Transcript</b> <span data-i18n="lectern.s4">Search the captured transcript and jump to where a phrase was said.</span></figcaption>
-          </figure>
-          <figure>
-            <a href="assets/img/lectern/5-sync.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/5-sync.webp" width="1280" height="800" loading="lazy" alt="Lecture notes from Lectern open as a Notion page, with summary and questions sections." data-i18n-attrs="alt:lectern.s5alt"></a>
-            <figcaption><b data-i18n="lectern.s5t">Sync</b> <span data-i18n="lectern.s5">Notes sync to Notion and Obsidian, and export to Markdown, Word and PDF.</span></figcaption>
-          </figure>
-        </div>
-
-        <details class="more">
-          <summary data-i18n="projects.what">What it does</summary>
-          <ul>
-            <li data-i18n="lectern.b1">Notes are stamped with the video time. Click a timestamp to jump back.</li>
-            <li data-i18n="lectern.b2">Captures the transcript and makes it searchable.</li>
-            <li data-i18n="lectern.b3">Folders work like courses.</li>
-            <li data-i18n="lectern.b4">Ask the video a question with your own Claude or OpenAI key. Answers cite clickable timestamps.</li>
-            <li data-i18n="lectern.b5">Syncs to Notion and Obsidian; exports Markdown, Word and PDF.</li>
-            <li data-i18n="lectern.b6">Chrome Manifest V3 in vanilla JavaScript, with Playwright end-to-end tests.</li>
-          </ul>
-          <p class="tools" data-i18n="lectern.tools">Chrome MV3, vanilla JS, Playwright, Notion and Obsidian sync</p>
-        </details>
-      </div>
-    </article>
-
-    <!-- Alchemy -------------------------------------------------- -->
-    <article class="project" id="alchemy">
-      <div class="project-aside">
-        <p class="status" data-i18n="alchemy.status">Pre-launch</p>
-        <p data-i18n="alchemy.role">Co-founder<br>Canadian fintech</p>
-      </div>
-      <div class="project-main">
-        <h3>Alchemy</h3>
-        <p class="lede" data-i18n="alchemy.summary">Automatic credit-card rewards routing. At checkout, Alchemy picks the best card from the wallet you already have. The browser extension comes first.</p>
-        <p class="actions">
-          <a class="btn ext" href="https://abboudberoual.github.io/alchemy-site/" data-i18n="alchemy.cta">Alchemy landing page</a>
-          <span class="quiet" data-i18n="alchemy.private">The repository is private.</span>
-        </p>
-
-        <dl class="figures" aria-label="Verified data figures" data-i18n-attrs="aria-label:alchemy.figuresLabel">
-          <div><dd data-i18n="alchemy.n1">41</dd><dt data-i18n="alchemy.n1l">Canadian cards modelled, 39 verified</dt></div>
-          <div><dd data-i18n="alchemy.n2">1,085</dd><dt data-i18n="alchemy.n2l">ordered regex rules in the merchant dictionary</dt></div>
-          <div><dd data-i18n="alchemy.n3">844</dd><dt data-i18n="alchemy.n3l">brands on the coverage roster</dt></div>
-          <div><dd data-i18n="alchemy.n4">13</dd><dt data-i18n="alchemy.n4l">sourced spending profiles</dt></div>
-        </dl>
-
-        <div class="tiers">
-          <p class="tiers-h" data-i18n="alchemy.tiersH">Confidence of the 1,085 rules</p>
-          <div class="tiers-bar" role="img" aria-label="Rule confidence tiers: 24 dual-source verified, 78 community-sourced, 451 statement-sourced, 532 seed." data-i18n-attrs="aria-label:alchemy.tiersAlt">
-            <span class="t1" style="flex:24"></span><span class="t2" style="flex:78"></span><span class="t3" style="flex:451"></span><span class="t4" style="flex:532"></span>
-          </div>
-          <ul class="tiers-key">
-            <li><i class="t1"></i><b>24</b> <span data-i18n="alchemy.t1">dual-source verified</span></li>
-            <li><i class="t2"></i><b>78</b> <span data-i18n="alchemy.t2">community-sourced</span></li>
-            <li><i class="t3"></i><b>451</b> <span data-i18n="alchemy.t3">statement-sourced</span></li>
-            <li><i class="t4"></i><b>532</b> <span data-i18n="alchemy.t4">seed</span></li>
-          </ul>
-        </div>
-
-        <p class="aside-note" data-i18n="alchemy.sim"><b>Simulation result.</b> Across 13 household profiles, routing beat each wallet's best single card by $14 to $136 a year (median 8.8%, measured against a hindsight baseline) and beat default-card habit by $73 to $778 a year. These are simulated figures. Alchemy has no real users yet.</p>
-
-        <details class="more">
-          <summary data-i18n="projects.how">How it is built</summary>
-          <ul>
-            <li data-i18n="alchemy.b1">Pure-Python optimizer, a self-verifying simulator and a retroactive statement analyzer, with 17 unit tests and a data validator running in GitHub Actions.</li>
-            <li data-i18n="alchemy.b2">A merchant dictionary of ordered regex rules that maps raw card descriptors to a merchant category code (MCC) and category. Order is precedence, so Uber Eats matches before Uber rides.</li>
-            <li data-i18n="alchemy.b3">Descriptor anonymization and clustering tools, run over about 930 anonymized statement lines.</li>
-            <li data-i18n="alchemy.b4">A Manifest V3 TypeScript extension with a local card vault, and a Vitest test that proves no card number leaves the vault.</li>
-            <li data-i18n="alchemy.b5">I designed the agent operating model: scheduled AI agents run nightly (data maintenance, merchant dictionary, a retry pass) with a weekly orchestrator. Data commits go through CI checks; code arrives as pull requests the founders approve.</li>
-          </ul>
-          <p class="tools" data-i18n="alchemy.tools">Python, TypeScript, Manifest V3, Vitest, GitHub Actions, scheduled AI agents</p>
-        </details>
-      </div>
-    </article>
-
     <!-- Vertical rocket landing simulator (VTOL) ----------------- -->
     <article class="project" id="lander">
       <div class="project-aside">
@@ -366,15 +350,7 @@
         </details>
       </div>
     </article>
-  </div>
-</section>
 
-<!-- ================================================================
-     More projects: a compact index. One <article class="row"> each.
-     ================================================================ -->
-<section class="section" id="more" aria-labelledby="more-h">
-  <div class="wrap split">
-    <h2 class="section-h" id="more-h" data-i18n="more.h">More projects</h2>
     <div class="index">
 
       <article class="row" id="aft-section">
@@ -394,24 +370,6 @@
             <li data-i18n="more.aft.b3">Fin flutter at temperature is a key check.</li>
           </ul>
           <p class="tools" data-i18n="more.aft.tools">Siemens NX, carbon fibre, thermal protection, fin flutter</p>
-        </details>
-      </article>
-
-      <article class="row" id="reviewhub">
-        <h3>ReviewHub</h3>
-        <p class="row-meta"><span data-i18n="more.rh.ctx">Canadian Space Agency, Program Integration Intern</span> <span data-i18n="more.rh.when">Jan – Dec 2026, part-time from September</span> <span class="status" data-i18n="more.rh.status">Rollout under review</span></p>
-        <p class="row-sum" data-i18n="more.rh.sum">A full-stack app for drafting and commenting on Review Item Discrepancies (RIDs) in PDF and Word deliverables.</p>
-        <details class="more">
-          <summary data-i18n="projects.details">Details</summary>
-          <ul>
-            <li data-i18n="more.rh.b1">Started by surveying about 10 engineering reviewers.</li>
-            <li data-i18n="more.rh.b2">Built with React and TypeScript on the front, Node and Express with SQLite behind.</li>
-            <li data-i18n="more.rh.b3">Deployed as a multi-user team server and packaged as a Windows executable.</li>
-            <li data-i18n="more.rh.b4">Demoed to reviewers, IT and management, and wrote the hosting proposal. A business case for rollout across the Lunar Exploration program is with the Director General.</li>
-            <li data-i18n="more.rh.b5">Also built internal automation: a headless Selenium and pandas document scraper that exports to Excel and SharePoint, packaged with PyInstaller, and configuration-management workflows in Power Automate.</li>
-          </ul>
-          <p class="quiet" data-i18n="more.rh.note">No screenshots: the tool is internal to the agency.</p>
-          <p class="tools" data-i18n="more.rh.tools">React, TypeScript, Node, Express, SQLite, Selenium, pandas, Power Automate</p>
         </details>
       </article>
 
@@ -453,6 +411,169 @@
         </details>
       </article>
 
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     Software (same structure as Hardware)
+     ================================================================ -->
+<section class="section group" id="software" aria-labelledby="software-h">
+  <div class="wrap">
+    <h2 class="section-h" id="software-h" data-i18n="groups.software">Software</h2>
+
+    <!-- Alchemy -------------------------------------------------- -->
+    <article class="project" id="alchemy">
+      <div class="project-aside">
+        <p class="status" data-i18n="alchemy.status">Pre-launch</p>
+        <p data-i18n="alchemy.role">Co-founder<br>Canadian fintech</p>
+      </div>
+      <div class="project-main">
+        <h3>Alchemy</h3>
+        <p class="lede" data-i18n="alchemy.summary">Automatic credit-card rewards routing. At checkout, Alchemy picks the best card from the wallet you already have. The browser extension comes first.</p>
+        <p class="actions">
+          <a class="btn ext" href="https://abboudberoual.github.io/alchemy-site/" data-i18n="alchemy.cta">Alchemy landing page</a>
+          <span class="quiet" data-i18n="alchemy.private">The repository is private.</span>
+        </p>
+
+        <dl class="figures" aria-label="Verified data figures" data-i18n-attrs="aria-label:alchemy.figuresLabel">
+          <div><dd data-i18n="alchemy.n1">41</dd><dt data-i18n="alchemy.n1l">Canadian cards modelled, 39 verified</dt></div>
+          <div><dd data-i18n="alchemy.n2">1,085</dd><dt data-i18n="alchemy.n2l">ordered regex rules in the merchant dictionary</dt></div>
+          <div><dd data-i18n="alchemy.n3">844</dd><dt data-i18n="alchemy.n3l">brands on the coverage roster</dt></div>
+          <div><dd data-i18n="alchemy.n4">13</dd><dt data-i18n="alchemy.n4l">sourced spending profiles</dt></div>
+        </dl>
+
+        <div class="tiers">
+          <p class="tiers-h" data-i18n="alchemy.tiersH">Confidence of the 1,085 rules</p>
+          <div class="tiers-bar" role="img" aria-label="Rule confidence tiers: 24 dual-source verified, 78 community-sourced, 451 statement-sourced, 532 seed." data-i18n-attrs="aria-label:alchemy.tiersAlt">
+            <span class="t1" style="flex:24"></span><span class="t2" style="flex:78"></span><span class="t3" style="flex:451"></span><span class="t4" style="flex:532"></span>
+          </div>
+          <ul class="tiers-key">
+            <li><i class="t1"></i><b>24</b> <span data-i18n="alchemy.t1">dual-source verified</span></li>
+            <li><i class="t2"></i><b>78</b> <span data-i18n="alchemy.t2">community-sourced</span></li>
+            <li><i class="t3"></i><b>451</b> <span data-i18n="alchemy.t3">statement-sourced</span></li>
+            <li><i class="t4"></i><b>532</b> <span data-i18n="alchemy.t4">seed</span></li>
+          </ul>
+        </div>
+
+        <p class="aside-note" data-i18n="alchemy.sim"><b>Simulation result.</b> Across 13 household profiles, routing beat each wallet's best single card by $14 to $136 a year (median 8.8%, measured against a hindsight baseline) and beat default-card habit by $73 to $778 a year. These are simulated figures. Alchemy has no real users yet.</p>
+
+        <!-- Real output of the Alchemy simulator (private repo, packages/engine/simulate.py), plotted with
+             Matplotlib from its per-profile results. Regenerate from the repo; never redraw by hand. -->
+        <figure class="plot plot-solo">
+          <a class="zoomable" href="assets/img/alchemy-sim.webp" data-w="1600" data-h="1024"><img src="assets/img/alchemy-sim.webp" width="1600" height="1024" loading="lazy" alt="Horizontal bar chart of 13 spending profiles. For each, a dark bar shows the extra rewards per year from routing against the wallet's best single card, from $14 to $136, and a light bar shows the same against always using the default card, from $73 to $778." data-i18n-attrs="alt:alchemy.chartAlt"></a>
+          <figcaption data-i18n="alchemy.chartCap">Simulator output for the 13 spending profiles: extra rewards per year from routing, against the wallet's best single card and against always using the default card. Simulated, not real users.</figcaption>
+        </figure>
+
+        <!-- The agent operating model, drawn in the page's own style. Every label is text and has a French twin. -->
+        <figure class="flow">
+          <h4 class="flow-h" data-i18n="alchemy.opsH">The agent operating model</h4>
+          <div class="flow-body">
+            <div class="flow-node flow-src">
+              <b data-i18n="alchemy.ops1">Scheduled AI agents</b>
+              <span data-i18n="alchemy.ops1a">Nightly: data maintenance, merchant dictionary, retry pass</span>
+              <span data-i18n="alchemy.ops1b">Weekly: orchestrator</span>
+            </div>
+            <ol class="flow-lane">
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="alchemy.ops2">Data changes</b></div></li>
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="alchemy.ops3">CI checks</b> <span data-i18n="alchemy.ops3a">Validator and 17 unit tests</span></div></li>
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="alchemy.ops4">Committed</b> <span data-i18n="alchemy.ops4a">Only if the checks pass</span></div></li>
+            </ol>
+            <ol class="flow-lane">
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="alchemy.ops5">Code changes</b></div></li>
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="alchemy.ops6">Pull request</b></div></li>
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="alchemy.ops7">Founders approve</b></div></li>
+            </ol>
+          </div>
+          <figcaption data-i18n="alchemy.opsCap">Scheduled agents propose the changes. Data is committed only if the CI checks pass; code arrives as a pull request that the founders approve.</figcaption>
+        </figure>
+
+        <details class="more">
+          <summary data-i18n="projects.how">How it is built</summary>
+          <ul>
+            <li data-i18n="alchemy.b1">Pure-Python optimizer, a self-verifying simulator and a retroactive statement analyzer, with 17 unit tests and a data validator running in GitHub Actions.</li>
+            <li data-i18n="alchemy.b2">A merchant dictionary of ordered regex rules that maps raw card descriptors to a merchant category code (MCC) and category. Order is precedence, so Uber Eats matches before Uber rides.</li>
+            <li data-i18n="alchemy.b3">Descriptor anonymization and clustering tools, run over about 930 anonymized statement lines.</li>
+            <li data-i18n="alchemy.b4">A Manifest V3 TypeScript extension with a local card vault, and a Vitest test that proves no card number leaves the vault.</li>
+            <li data-i18n="alchemy.b5">I designed the agent operating model: scheduled AI agents run nightly (data maintenance, merchant dictionary, a retry pass) with a weekly orchestrator. Data commits go through CI checks; code arrives as pull requests the founders approve.</li>
+          </ul>
+          <p class="tools" data-i18n="alchemy.tools">Python, TypeScript, Manifest V3, Vitest, GitHub Actions, scheduled AI agents</p>
+        </details>
+      </div>
+    </article>
+
+    <!-- Lectern -------------------------------------------------- -->
+    <article class="project" id="lectern">
+      <div class="project-aside">
+        <p class="status is-on" data-i18n="lectern.status">Live</p>
+        <p data-i18n="lectern.role">Chrome extension<br>Personal project</p>
+      </div>
+      <div class="project-main">
+        <h3><img src="assets/img/lectern/icon128.png" width="128" height="128" alt="">Lectern</h3>
+        <p class="lede" data-i18n="lectern.summary">A Chrome extension for taking notes on YouTube lectures. It is on the Chrome Web Store and runs entirely on your machine: no server, no account.</p>
+        <p class="actions">
+          <a class="btn ext" href="https://chromewebstore.google.com/detail/bhgemnaiogekegbnldhenbfnanngfbob?utm_source=item-share-cb" data-i18n="lectern.cta">Get it on Chrome</a>
+          <a data-ico="github" href="https://github.com/abboudberoual/lectern" data-i18n="projects.source">Source on GitHub</a>
+        </p>
+
+        <div class="shots" id="shots" data-zoom tabindex="0" role="group" aria-label="Lectern screenshots, scroll sideways" data-i18n-attrs="aria-label:lectern.shotsLabel">
+          <figure>
+            <a href="assets/img/lectern/1-notes.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/1-notes.webp" width="1280" height="800" loading="lazy" alt="Lectern side panel next to a lecture video, with a summary and a list of time-stamped notes." data-i18n-attrs="alt:lectern.s1alt"></a>
+            <figcaption><b data-i18n="lectern.s1t">Notes</b> <span data-i18n="lectern.s1">Press Enter and the note is stamped with the video time. Click the time to jump back.</span></figcaption>
+          </figure>
+          <figure>
+            <a href="assets/img/lectern/2-folders.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/2-folders.webp" width="1280" height="800" loading="lazy" alt="Lectern folder view: four lecture videos in study order, each showing how far it was watched." data-i18n-attrs="alt:lectern.s2alt"></a>
+            <figcaption><b data-i18n="lectern.s2t">Folders</b> <span data-i18n="lectern.s2">Group videos the way a course groups lectures.</span></figcaption>
+          </figure>
+          <figure>
+            <a href="assets/img/lectern/3-ask.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/3-ask.webp" width="1280" height="800" loading="lazy" alt="Lectern ask view showing a question about the video and an answer that cites video times." data-i18n-attrs="alt:lectern.s3alt"></a>
+            <figcaption><b data-i18n="lectern.s3t">Ask</b> <span data-i18n="lectern.s3">Question the video with your own API key; answers cite timestamps.</span></figcaption>
+          </figure>
+          <figure>
+            <a href="assets/img/lectern/4-transcript.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/4-transcript.webp" width="1280" height="800" loading="lazy" alt="Lectern transcript tab with a search for one word and the matching lines highlighted." data-i18n-attrs="alt:lectern.s4alt"></a>
+            <figcaption><b data-i18n="lectern.s4t">Transcript</b> <span data-i18n="lectern.s4">Search the captured transcript and jump to where a phrase was said.</span></figcaption>
+          </figure>
+          <figure>
+            <a href="assets/img/lectern/5-sync.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/5-sync.webp" width="1280" height="800" loading="lazy" alt="Lecture notes from Lectern open as a Notion page, with summary and questions sections." data-i18n-attrs="alt:lectern.s5alt"></a>
+            <figcaption><b data-i18n="lectern.s5t">Sync</b> <span data-i18n="lectern.s5">Notes sync to Notion and Obsidian, and export to Markdown, Word and PDF.</span></figcaption>
+          </figure>
+        </div>
+
+        <details class="more">
+          <summary data-i18n="projects.what">What it does</summary>
+          <ul>
+            <li data-i18n="lectern.b1">Notes are stamped with the video time. Click a timestamp to jump back.</li>
+            <li data-i18n="lectern.b2">Captures the transcript and makes it searchable.</li>
+            <li data-i18n="lectern.b3">Folders work like courses.</li>
+            <li data-i18n="lectern.b4">Ask the video a question with your own Claude or OpenAI key. Answers cite clickable timestamps.</li>
+            <li data-i18n="lectern.b5">Syncs to Notion and Obsidian; exports Markdown, Word and PDF.</li>
+            <li data-i18n="lectern.b6">Chrome Manifest V3 in vanilla JavaScript, with Playwright end-to-end tests.</li>
+          </ul>
+          <p class="tools" data-i18n="lectern.tools">Chrome MV3, vanilla JS, Playwright, Notion and Obsidian sync</p>
+        </details>
+      </div>
+    </article>
+
+    <div class="index">
+
+      <article class="row" id="reviewhub">
+        <h3>ReviewHub</h3>
+        <p class="row-meta"><span data-i18n="more.rh.ctx">Canadian Space Agency, Program Integration Intern</span> <span data-i18n="more.rh.when">Jan – Dec 2026, part-time from September</span> <span class="status" data-i18n="more.rh.status">Rollout under review</span></p>
+        <p class="row-sum" data-i18n="more.rh.sum">A full-stack app for drafting and commenting on Review Item Discrepancies (RIDs) in PDF and Word deliverables.</p>
+        <details class="more">
+          <summary data-i18n="projects.details">Details</summary>
+          <ul>
+            <li data-i18n="more.rh.b1">Started by surveying about 10 engineering reviewers.</li>
+            <li data-i18n="more.rh.b2">Built with React and TypeScript on the front, Node and Express with SQLite behind.</li>
+            <li data-i18n="more.rh.b3">Deployed as a multi-user team server and packaged as a Windows executable.</li>
+            <li data-i18n="more.rh.b4">Demoed to reviewers, IT and management, and wrote the hosting proposal. A business case for rollout across the Lunar Exploration program is with the Director General.</li>
+            <li data-i18n="more.rh.b5">Also built internal automation: a headless Selenium and pandas document scraper that exports to Excel and SharePoint, packaged with PyInstaller, and configuration-management workflows in Power Automate.</li>
+          </ul>
+          <p class="quiet" data-i18n="more.rh.note">No screenshots: the tool is internal to the agency.</p>
+          <p class="tools" data-i18n="more.rh.tools">React, TypeScript, Node, Express, SQLite, Selenium, pandas, Power Automate</p>
+        </details>
+      </article>
+
       <article class="row" id="cadence">
         <h3>Cadence</h3>
         <p class="row-meta"><span data-i18n="more.cad.ctx">AI triathlon coach</span> <span data-i18n="more.cad.when">2025 prototype</span></p>
@@ -471,11 +592,77 @@
         </details>
       </article>
 
+      <article class="row" id="patents">
+        <h3 data-i18n="more.pat.title">Patent classification</h3>
+        <p class="row-meta"><span data-i18n="more.pat.ctx">Small script</span></p>
+        <p class="row-sum" data-i18n="more.pat.sum">A Python script that classifies patent records against a category definition using the OpenAI API.</p>
+        <p class="row-links"><a data-ico="github" href="https://github.com/abboudberoual/patent-classification-with-openAI" data-i18n="projects.source">Source on GitHub</a></p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     Research (same structure: the article, then the index)
+     ================================================================ -->
+<section class="section group" id="research" aria-labelledby="research-h">
+  <div class="wrap">
+    <h2 class="section-h" id="research-h" data-i18n="groups.research">Research</h2>
+
+    <!-- EconomicSense article ------------------------------------ -->
+    <article class="project paper" id="article">
+      <div class="project-aside">
+        <p data-i18n="research.meta">EconomicSense Undergraduate Journal, Second Edition, pages 32–36. Research advisor: Prof. Hani Sarkis, PhD. Presented at the Second Edition ESJ Research Summit.</p>
+      </div>
+      <div class="project-main">
+        <h3 class="paper-title" lang="en">The Energy Transition Paradox and The Role of AI, Quantum Computing, and Mission-Oriented Industrial Policy in Navigating a Complex Landscape</h3>
+        <p class="lede" data-i18n="research.thesis">Electrification cuts emissions where energy is used, but it drives up electricity demand, which strains grids and raises emissions upstream. Clean supply is not scaling fast enough to cover the gap.</p>
+        <p class="paper-q" data-i18n="research.q"><span class="quiet">Research question:</span> how can strategic deep-technology development help scale clean energy fast enough to ensure that electrification truly reduces emissions?</p>
+        <p data-i18n="research.argument">The article argues that AI and quantum computing can speed up innovation and cut costs, but only inside a mission-oriented industrial strategy that lines up public investment, regulation and private innovation.</p>
+        <p class="actions"><a class="btn" data-ico="download" href="assets/Beroual_Energy_Transition_Paradox_ESJ.pdf" data-i18n="research.cta">Read the article (PDF, 1.1 MB)</a></p>
+
+        <figure class="paper-talk">
+          <a class="zoomable" href="assets/img/esj-summit-talk.webp" data-w="985" data-h="748">
+            <img src="assets/img/esj-summit-talk.webp" width="985" height="748" loading="lazy" alt="Aboud speaking with a microphone during the Q&amp;A, in front of a screen showing the talk's title slide." data-i18n-attrs="alt:research.talkAlt">
+          </a>
+          <figcaption data-i18n="research.talkCap">Taking questions at the Second Edition ESJ Research Summit.</figcaption>
+        </figure>
+
+        <div class="paper-figs">
+          <h4 data-i18n="research.figsH">Three figures the article starts from</h4>
+          <ul class="figs">
+            <li><b data-i18n="research.f1n">76%</b><span class="fig-bar" aria-hidden="true"><i style="width:76%"></i></span><span data-i18n="research.f1">of Canada's total primary-energy supply still comes from fossil fuels.</span></li>
+            <li><b data-i18n="research.f2n">82%</b><span class="fig-bar" aria-hidden="true"><i style="width:82%"></i></span><span data-i18n="research.f2">of electricity generation is non-emitting.</span></li>
+            <li><b data-i18n="research.f3n">5%</b><span class="fig-bar" aria-hidden="true"><i style="width:5%"></i></span><span data-i18n="research.f3">of the generation mix is coal, yet</span></li>
+            <li class="is-key"><b data-i18n="research.f4n">61%</b><span class="fig-bar" aria-hidden="true"><i style="width:61%"></i></span><span data-i18n="research.f4">of electricity-related greenhouse gases come from it.</span></li>
+          </ul>
+          <p class="quiet" data-i18n="research.source">Source: Natural Resources Canada (2023), as cited in the article.</p>
+        </div>
+      </div>
+    </article>
+
+    <div class="index">
+
       <article class="row" id="hydrogen">
         <h3 data-i18n="more.h2.title">Hydrogen aviation dashboard</h3>
         <p class="row-meta"><span data-i18n="more.h2.ctx">NSERC USRA research intern, Aircraft Systems Lab, Concordia</span> <span data-i18n="more.h2.when">May – Aug 2025</span></p>
         <p class="row-sum" data-i18n="more.h2.sum">A dashboard of electricity and hydrogen indicators for the top 20 US general-aviation airports.</p>
         <p class="row-links"><a data-ico="github" href="https://github.com/abboudberoual/hydrogen_aviation_dashboard" data-i18n="projects.source">Source on GitHub</a></p>
+        <!-- Redrawn with Matplotlib from the dashboard repo's own data files and functions
+             (data/emm_regions.kml, data/top_20_usa_ga_airports.kmz, get_electricity_kpis).
+             Regenerate from the repo; never redraw, recolour or crop by hand. -->
+        <div class="row-figs" data-zoom>
+          <figure class="plot">
+            <a href="assets/img/h2-map.webp" data-w="1600" data-h="992"><img src="assets/img/h2-map.webp" width="1600" height="992" loading="lazy" alt="Map of the contiguous United States divided into EIA electricity market regions, with 20 dots marking the top general-aviation airports." data-i18n-attrs="alt:more.h2.f1alt"></a>
+            <figcaption data-i18n="more.h2.f1cap">The 20 airports and the electricity regions behind them.</figcaption>
+          </figure>
+          <figure class="plot">
+            <a href="assets/img/h2-intensity.webp" data-w="1600" data-h="864"><img src="assets/img/h2-intensity.webp" width="1600" height="864" loading="lazy" alt="Line chart of median grid CO₂ intensity in g/kWh from 2024 to 2050 for three EIA scenarios. All three start near 290 and fall; in 2050 the reference line ends at 79, low oil and gas at 42, high oil and gas at 95." data-i18n-attrs="alt:more.h2.f2alt"></a>
+            <figcaption data-i18n="more.h2.f2cap">Median grid CO₂ intensity across the 13 regions that serve 19 of the airports, under three EIA scenarios, from the dashboard's data: about 290 g/kWh in 2024; in 2050, 79 (reference), 42 (low oil and gas) and 95 (high oil and gas).</figcaption>
+          </figure>
+        </div>
+        <p class="row-cap" data-i18n="more.h2.figNote">Figures redrawn with Matplotlib from the dashboard's data and functions.</p>
         <details class="more">
           <summary data-i18n="projects.details">Details</summary>
           <ul>
@@ -508,49 +695,7 @@
         </details>
       </article>
 
-      <article class="row" id="patents">
-        <h3 data-i18n="more.pat.title">Patent classification</h3>
-        <p class="row-meta"><span data-i18n="more.pat.ctx">Small script</span></p>
-        <p class="row-sum" data-i18n="more.pat.sum">A Python script that classifies patent records against a category definition using the OpenAI API.</p>
-        <p class="row-links"><a data-ico="github" href="https://github.com/abboudberoual/patent-classification-with-openAI" data-i18n="projects.source">Source on GitHub</a></p>
-      </article>
-
     </div>
-  </div>
-</section>
-
-<!-- ================================================================
-     Research
-     ================================================================ -->
-<section class="section" id="research" aria-labelledby="research-h">
-  <div class="wrap split">
-    <h2 class="section-h" id="research-h" data-i18n="research.h">Research</h2>
-    <article class="paper">
-      <p class="paper-meta" data-i18n="research.meta">EconomicSense Undergraduate Journal, Second Edition, pages 32–36. Research advisor: Prof. Hani Sarkis, PhD. Presented at the Second Edition ESJ Research Summit.</p>
-      <h3 class="paper-title" lang="en">The Energy Transition Paradox and The Role of AI, Quantum Computing, and Mission-Oriented Industrial Policy in Navigating a Complex Landscape</h3>
-      <p class="lede" data-i18n="research.thesis">Electrification cuts emissions where energy is used, but it drives up electricity demand, which strains grids and raises emissions upstream. Clean supply is not scaling fast enough to cover the gap.</p>
-      <p class="paper-q" data-i18n="research.q"><span class="quiet">Research question:</span> how can strategic deep-technology development help scale clean energy fast enough to ensure that electrification truly reduces emissions?</p>
-      <p data-i18n="research.argument">The article argues that AI and quantum computing can speed up innovation and cut costs, but only inside a mission-oriented industrial strategy that lines up public investment, regulation and private innovation.</p>
-      <p class="actions"><a class="btn" data-ico="download" href="assets/Beroual_Energy_Transition_Paradox_ESJ.pdf" data-i18n="research.cta">Read the article (PDF, 1.1 MB)</a></p>
-
-      <figure class="paper-talk">
-        <a class="zoomable" href="assets/img/esj-summit-talk.webp" data-w="985" data-h="748">
-          <img src="assets/img/esj-summit-talk.webp" width="985" height="748" loading="lazy" alt="Aboud speaking with a microphone during the Q&amp;A, in front of a screen showing the talk's title slide." data-i18n-attrs="alt:research.talkAlt">
-        </a>
-        <figcaption data-i18n="research.talkCap">Taking questions at the Second Edition ESJ Research Summit.</figcaption>
-      </figure>
-
-      <div class="paper-figs">
-        <h4 data-i18n="research.figsH">Three figures the article starts from</h4>
-        <ul class="figs">
-          <li><b data-i18n="research.f1n">76%</b><span class="fig-bar" aria-hidden="true"><i style="width:76%"></i></span><span data-i18n="research.f1">of Canada's total primary-energy supply still comes from fossil fuels.</span></li>
-          <li><b data-i18n="research.f2n">82%</b><span class="fig-bar" aria-hidden="true"><i style="width:82%"></i></span><span data-i18n="research.f2">of electricity generation is non-emitting.</span></li>
-          <li><b data-i18n="research.f3n">5%</b><span class="fig-bar" aria-hidden="true"><i style="width:5%"></i></span><span data-i18n="research.f3">of the generation mix is coal, yet</span></li>
-          <li class="is-key"><b data-i18n="research.f4n">61%</b><span class="fig-bar" aria-hidden="true"><i style="width:61%"></i></span><span data-i18n="research.f4">of electricity-related greenhouse gases come from it.</span></li>
-        </ul>
-        <p class="quiet" data-i18n="research.source">Source: Natural Resources Canada (2023), as cited in the article.</p>
-      </div>
-    </article>
   </div>
 </section>
 
@@ -655,6 +800,8 @@
     </div>
   </div>
 </footer>
+</div>
+</div>
 
 <script src="assets/js/i18n.js" defer></script>
 <script src="assets/js/site.js" defer></script>

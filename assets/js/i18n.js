@@ -66,12 +66,26 @@ window.I18N = {
     nav: {
       skip: 'Aller aux projets',
       home: 'Aboud Beroual, retour en haut de la page',
-      label: 'Sections',
-      projects: 'Projets',
-      research: 'Recherche',
       experience: 'Expérience',
       about: 'À propos',
       contact: 'Contact'
+    },
+
+    /* Sommaire : le rail de gauche (grands écrans) et le menu « Sommaire » (petits écrans).
+       Les autres libellés du sommaire réutilisent les titres des projets (more.*.title). */
+    rail: {
+      label: 'Sur cette page',
+      contents: 'Sommaire',
+      lander: 'Atterrissage vertical de fusée',
+      vt: 'Contrôleur VT-1',
+      article: 'Article EconomicSense'
+    },
+
+    /* Titres des trois groupes de projets */
+    groups: {
+      hardware: 'Matériel',
+      software: 'Logiciel',
+      research: 'Recherche'
     },
 
     /* Libellés d'interface (boutons, visionneuse) */
@@ -106,7 +120,6 @@ window.I18N = {
 
     /* Libellés communs aux projets */
     projects: {
-      h: 'Projets',
       how: 'Comment c’est construit',
       what: 'Ce que ça fait',
       details: 'Détails',
@@ -139,6 +152,21 @@ window.I18N = {
       b2: 'Un dictionnaire de marchands fait de règles regex ordonnées, qui associe les descripteurs bruts des relevés à un code de catégorie de marchand (MCC) et à une catégorie. L’ordre fait la priorité&nbsp;: Uber Eats est reconnu avant les courses Uber.',
       b3: 'Des outils d’anonymisation et de regroupement des descripteurs, appliqués à environ 930 lignes de relevés anonymisées.',
       b4: 'Une extension Manifest V3 en TypeScript avec un coffre local pour les cartes, et un test Vitest qui prouve qu’aucun numéro de carte ne quitte le coffre.',
+      chartAlt: 'Diagramme à barres horizontales de 13 profils de dépenses. Pour chacun, une barre foncée montre les récompenses supplémentaires par année obtenues par l’aiguillage par rapport à la meilleure carte unique du portefeuille, de 14&nbsp;$ à 136&nbsp;$, et une barre pâle montre la même chose par rapport à l’usage constant de la carte par défaut, de 73&nbsp;$ à 778&nbsp;$.',
+      chartCap: 'Sortie du simulateur pour les 13 profils de dépenses (graphique en anglais)&nbsp;: récompenses supplémentaires par année grâce à l’aiguillage, par rapport à la meilleure carte unique du portefeuille et par rapport à l’usage constant de la carte par défaut. Des chiffres simulés, pas des utilisateurs réels.',
+      opsH: 'Le modèle d’exploitation des agents',
+      ops1: 'Agents d’IA planifiés',
+      ops1a: 'Chaque nuit&nbsp;: maintenance des données, dictionnaire de marchands, passe de reprise',
+      ops1b: 'Chaque semaine&nbsp;: orchestrateur',
+      ops2: 'Changements de données',
+      ops3: 'Vérifications d’intégration continue',
+      ops3a: 'Validateur et 17 tests unitaires',
+      ops4: 'Commit',
+      ops4a: 'Seulement si les vérifications réussissent',
+      ops5: 'Changements de code',
+      ops6: 'Pull request',
+      ops7: 'Approbation des fondateurs',
+      opsCap: 'Les agents planifiés proposent les changements. Les données ne sont enregistrées que si les vérifications d’intégration continue réussissent; le code arrive sous forme de pull request que les fondateurs approuvent.',
       b5: 'J’ai conçu le modèle d’exploitation des agents&nbsp;: des agents d’IA planifiés tournent chaque nuit (maintenance des données, dictionnaire de marchands, passe de reprise), sous un orchestrateur hebdomadaire. Les commits de données passent par les vérifications d’intégration continue; le code arrive sous forme de pull requests que les fondateurs approuvent.',
       tools: 'Python, TypeScript, Manifest V3, Vitest, GitHub Actions, agents d’IA planifiés'
     },
@@ -250,9 +278,8 @@ window.I18N = {
       legendCrashed: 'écrasée'
     },
 
-    /* Autres projets (index compact) */
+    /* Projets de l'index compact (sous les projets vedettes de chaque groupe) */
     more: {
-      h: 'Autres projets',
       inProgress: 'En cours',
       aft: {
         title: 'Section arrière Mach 3',
@@ -319,7 +346,12 @@ window.I18N = {
         when: 'Mai – août 2025',
         sum: 'Un tableau de bord d’indicateurs sur l’électricité et l’hydrogène pour les 20 principaux aéroports d’aviation générale des États-Unis.',
         b1: 'Des indicateurs par région du Electricity Market Module (EMM), selon trois scénarios de l’Energy Information Administration des États-Unis&nbsp;: référence, pétrole et gaz élevés, pétrole et gaz faibles.',
-        b2: 'Une analyse de sensibilité Monte Carlo pour une analyse du cycle de vie.'
+        b2: 'Une analyse de sensibilité Monte Carlo pour une analyse du cycle de vie.',
+        f1alt: 'Carte des États-Unis contigus, divisée en régions du marché de l’électricité de l’EIA, avec 20 points qui marquent les principaux aéroports d’aviation générale.',
+        f1cap: 'Les 20 aéroports et les régions électriques qui les alimentent (figure en anglais).',
+        f2alt: 'Graphique linéaire de l’intensité médiane en CO₂ du réseau, en g/kWh, de 2024 à 2050, pour trois scénarios de l’EIA. Les trois courbes partent d’environ 290 et descendent; en 2050, le scénario de référence finit à 79, pétrole et gaz faibles à 42, pétrole et gaz élevés à 95.',
+        f2cap: 'Intensité médiane en CO₂ du réseau dans les 13 régions qui desservent 19 des aéroports, selon trois scénarios de l’EIA, d’après les données du tableau de bord&nbsp;: environ 290&nbsp;g/kWh en 2024; en 2050, 79 (référence), 42 (pétrole et gaz faibles) et 95 (pétrole et gaz élevés).',
+        figNote: 'Figures retracées avec Matplotlib à partir des données et des fonctions du tableau de bord.'
       },
       us: {
         title: 'IA pour l’échographie cardiaque',
@@ -344,7 +376,6 @@ window.I18N = {
     },
 
     research: {
-      h: 'Recherche',
       meta: 'EconomicSense Undergraduate Journal, deuxième édition, pages 32 à 36. Directeur de recherche&nbsp;: Hani Sarkis, Ph.&nbsp;D., professeur. Présenté au deuxième ESJ Research Summit.',
       q: '<span class="quiet">Question de recherche&nbsp;:</span> comment le développement stratégique des technologies de rupture peut-il faire croître l’énergie propre assez vite pour que l’électrification réduise vraiment les émissions&nbsp;?',
       talkAlt: 'Aboud parle au micro pendant la période de questions, devant un écran qui affiche la diapositive titre de la présentation.',

@@ -417,23 +417,39 @@
 
       <article class="row" id="vt-1">
         <h3 data-i18n="more.vt.title">VT-1 smart trainer controller</h3>
-        <p class="row-meta"><span data-i18n="more.vt.ctx">Personal hardware project</span> <span data-i18n="more.vt.when">Oct 2026 – present</span> <span class="status" data-i18n="more.inProgress">In progress</span></p>
-        <p class="row-sum" data-i18n="more.vt.sum">A handheld ESP32-S3 controller for a Bluetooth smart bike trainer, talking the Fitness Machine Service (FTMS) protocol.</p>
+        <p class="row-meta"><span data-i18n="more.vt.ctx">Personal hardware and web project</span> <span data-i18n="more.vt.when">Oct 2026 – present</span> <span class="status" data-i18n="more.inProgress">In progress</span></p>
+        <p class="row-sum" data-i18n="more.vt.sum">A one-screen controller for Bluetooth smart trainers: pick ERG, resistance or slope, turn the knob, pedal. It exists as an ESP32-S3 handheld with a round watt gauge, and as a web app you can try now.</p>
+        <p class="row-links actions">
+          <a class="btn btn-small ext" href="https://abboudberoual.github.io/VT1/" data-i18n="more.vt.cta">Open the VT-1 web app</a>
+          <a data-ico="github" href="https://github.com/abboudberoual/VT1" data-i18n="projects.source">Source on GitHub</a>
+        </p>
         <div class="row-media" data-zoom>
           <a href="assets/img/vt1-render.webp" data-w="1600" data-h="1035"><img src="assets/img/vt1-render.webp" width="1600" height="1035" loading="lazy" alt="Render of the VT-1: a wedge-shaped box with a round power gauge, a mode toggle, a button and a large knob." data-i18n-attrs="alt:more.vt.i1alt"></a>
           <a href="assets/img/vt1-shell-top.webp" data-w="900" data-h="600"><img src="assets/img/vt1-shell-top.webp" width="900" height="600" loading="lazy" alt="CAD view of the printed shell from above, with cutouts for the display, knob and controls." data-i18n-attrs="alt:more.vt.i2alt"></a>
           <a href="assets/img/vt1-shell-underside.webp" data-w="900" data-h="600"><img src="assets/img/vt1-shell-underside.webp" width="900" height="600" loading="lazy" alt="CAD view of the shell from below, with four corner bosses for the inserts." data-i18n-attrs="alt:more.vt.i3alt"></a>
+          <a href="assets/img/vt1-print-top.webp" data-w="1200" data-h="1600"><img src="assets/img/vt1-print-top.webp" width="1200" height="1600" loading="lazy" alt="The printed top deck of the case, with holes for the gauge, knob, toggle, lamps and hold button." data-i18n-attrs="alt:more.vt.i4alt"></a>
+          <a href="assets/img/vt1-display-fit.webp" data-w="1200" data-h="1600"><img src="assets/img/vt1-display-fit.webp" width="1200" height="1600" loading="lazy" alt="Inside the printed shell: the round display seated behind its opening." data-i18n-attrs="alt:more.vt.i5alt"></a>
+          <a href="assets/img/vt1-parts.webp" data-w="1200" data-h="1600"><img src="assets/img/vt1-parts.webp" width="1200" height="1600" loading="lazy" alt="The parts laid out: printed case and cover, blue knob and bezels, ribbon cable, encoder and other electronics." data-i18n-attrs="alt:more.vt.i6alt"></a>
         </div>
-        <p class="row-cap" data-i18n="more.vt.cap">Concept render, and the printed shell in CAD from above and below.</p>
+        <p class="row-cap" data-i18n="more.vt.cap">Concept render and CAD, then the printed case, the display test fit and the parts.</p>
+        <figure class="row-video">
+          <video controls muted playsinline loop preload="none" poster="assets/img/vt1-gauge-bench-poster.jpg" width="540" height="960"
+                 aria-label="The round watt gauge running on the bench, 7 seconds, no sound." data-i18n-attrs="aria-label:more.vt.videoLabel">
+            <source src="assets/img/vt1-gauge-bench.mp4" type="video/mp4">
+            <a href="assets/img/vt1-gauge-bench.mp4" data-i18n="more.vt.videoFallback">Download the clip (MP4, 1.7 MB)</a>
+          </video>
+          <figcaption data-i18n="more.vt.videoCap">The round gauge running on the bench. 7 seconds, no sound.</figcaption>
+        </figure>
         <details class="more">
           <summary data-i18n="projects.details">Details</summary>
           <ul>
             <li data-i18n="more.vt.b1">Validated the control path first with a browser prototype that commanded an Elite Tuo trainer through a 30-minute ride test: power hold, step response, resistance scaling and reconnection.</li>
-            <li data-i18n="more.vt.b2">Designed a 150 × 92 mm wedge enclosure with an 11° viewing angle, with clearance checks, heat-set inserts and a fit-test coupon.</li>
-            <li data-i18n="more.vt.b3">Electronics bill of materials is about $140 CAD.</li>
-            <li data-i18n="more.vt.b4">Next: soldering and firmware.</li>
+            <li data-i18n="more.vt.b5">Built the web app with Vite, TypeScript and Web Bluetooth. It runs in Chrome and Edge on desktop and Chrome on Android, with a demo mode for visitors without a trainer. FTMS encoders and decoders live in a shared, unit-tested core package.</li>
+            <li data-i18n="more.vt.b2">Designed a 150 × 92 mm wedge enclosure with an 11° viewing angle, with clearance checks, heat-set inserts and a fit-test coupon, then printed it: shell, bottom cover, display bezel, knob and LED bezels.</li>
+            <li data-i18n="more.vt.b6">Hardware: ESP32-S3, a 1.28-inch round display, a rotary encoder, an illuminated hold button and three status LEDs. The electronics bill of materials is about $140 CAD.</li>
+            <li data-i18n="more.vt.b4">Next: the firmware bench test.</li>
           </ul>
-          <p class="tools" data-i18n="more.vt.tools">ESP32-S3, Bluetooth FTMS, 3D printing, CAD</p>
+          <p class="tools" data-i18n="more.vt.tools">ESP32-S3, Arduino, Bluetooth FTMS, Web Bluetooth, TypeScript, Vite, 3D printing, SolidWorks</p>
         </details>
       </article>
 

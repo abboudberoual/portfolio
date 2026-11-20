@@ -827,3 +827,8 @@ h4 { font-size: 1rem; font-weight: 600; }
   .top, .controls, .toy, .stage-ctl, .shots-ctl, .skip { display: none !important; }
   body { background: #fff; color: #000; }
 }
+
+/* Short portrait clip inside an index entry (VT-1 gauge) */
+.row-video { margin: 1rem 0 0; max-width: 15rem; }
+.row-video video { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--bg); }
+.row-video figcaption { margin-top: .5rem; font-size: .875rem; color: var(--muted); }

@@ -345,7 +345,11 @@ window.I18N = {
 
     research: {
       h: 'Recherche',
-      meta: 'EconomicSense Undergraduate Journal, avril 2025. Directeur de recherche&nbsp;: Hani Sarkis, Ph.&nbsp;D., professeur.',
+      meta: 'EconomicSense Undergraduate Journal, deuxième édition, pages 32 à 36. Directeur de recherche&nbsp;: Hani Sarkis, Ph.&nbsp;D., professeur. Présenté au deuxième ESJ Research Summit.',
+      q: '<span class="quiet">Question de recherche&nbsp;:</span> comment le développement stratégique des technologies de rupture peut-il faire croître l’énergie propre assez vite pour que l’électrification réduise vraiment les émissions&nbsp;?',
+      pdf: 'Pages publiées (PDF, 1,1&nbsp;Mo, en anglais)',
+      talkAlt: 'Aboud parle au micro pendant la période de questions, devant un écran qui affiche la diapositive titre de la présentation.',
+      talkCap: 'Période de questions au deuxième ESJ Research Summit.',
       thesis: 'L’électrification réduit les émissions là où l’énergie est consommée, mais elle fait grimper la demande d’électricité, ce qui met les réseaux sous pression et augmente les émissions en amont. L’offre d’énergie propre ne croît pas assez vite pour combler l’écart.',
       argument: 'L’article soutient que l’IA et l’informatique quantique peuvent accélérer l’innovation et réduire les coûts, mais seulement dans le cadre d’une stratégie industrielle axée sur des missions, qui aligne l’investissement public, la réglementation et l’innovation privée.',
       cta: 'Lire l’article (en anglais)',

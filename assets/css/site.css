@@ -832,3 +832,11 @@ h4 { font-size: 1rem; font-weight: 600; }
 .row-video { margin: 1rem 0 0; max-width: 15rem; }
 .row-video video { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--bg); }
 .row-video figcaption { margin-top: .5rem; font-size: .875rem; color: var(--muted); }
+
+/* Research: question line and the summit photo */
+.paper-q { margin-top: 1rem; }
+.paper-talk { margin: 2rem 0 0; max-width: 40rem; }
+.paper-talk .zoomable { display: block; cursor: zoom-in; border-radius: var(--radius); }
+.paper-talk .zoomable:hover { background: none; }
+.paper-talk img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
+.paper-talk figcaption { margin-top: .5rem; font-size: .875rem; color: var(--muted); }

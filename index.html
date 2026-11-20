@@ -701,6 +701,10 @@
 
 <!-- ================================================================
      Experience, education, recognition
+     School logos: a small mark on a white tile (<span class="logo">), alt="" because
+     the school is named beside it. No Canadian Space Agency logo: it is a protected mark.
+     Photo strips: <figure class="strip" data-zoom>; each link's flex value is the
+     photo's width / height, so the photos share one height without being cropped.
      ================================================================ -->
 <section class="section" id="experience" aria-labelledby="exp-h">
   <div class="wrap split">
@@ -710,6 +714,13 @@
         <li>
           <span class="when" data-i18n="exp.w1when">Jan – Dec 2026</span>
           <p><strong><a href="https://www.asc-csa.gc.ca/eng/" data-i18n="exp.w1org" data-i18n-attrs="href:exp.w1url">Canadian Space Agency</a></strong> <span data-i18n="exp.w1role">Program Integration Intern</span><small data-i18n="exp.w1note">Built ReviewHub and internal automation. Part-time from September.</small></p>
+          <figure class="strip strip-pair" data-zoom>
+            <div class="strip-row">
+              <a href="assets/img/csa-welcome.webp" data-w="1049" data-h="1399" style="flex:.75"><img src="assets/img/csa-welcome.webp" width="1049" height="1399" loading="lazy" alt="Aboud, wearing his badge, in front of a wall that reads Bienvenue and Welcome at the Canadian Space Agency." data-i18n-attrs="alt:exp.csa1alt"></a>
+              <a href="assets/img/csa-moon.webp" data-w="1049" data-h="1399" style="flex:.75"><img src="assets/img/csa-moon.webp" width="1049" height="1399" loading="lazy" alt="Aboud, arms crossed and wearing his badge, in front of a lit display of the Moon above the Earth, between two flags." data-i18n-attrs="alt:exp.csa2alt"></a>
+            </div>
+            <figcaption data-i18n="exp.csaCap">At the Canadian Space Agency, 2026.</figcaption>
+          </figure>
         </li>
         <li>
           <span class="when" data-i18n="exp.w2when">Apr 2025 – May 2026</span>
@@ -733,15 +744,26 @@
         <div>
           <h3 class="minor-h" data-i18n="exp.eduH">Education</h3>
           <ul class="ledger ledger-tight">
-            <li>
+            <li class="has-logo">
+              <span class="logo"><img src="assets/img/logo-concordia.webp" width="800" height="255" loading="lazy" alt=""></span>
               <span class="when" data-i18n="exp.e1when">Class of 2028</span>
               <p><strong data-i18n="exp.e1">B.Eng Aerospace Engineering</strong> <span data-i18n="exp.e1org">Concordia University</span><small data-i18n="exp.e1note">GPA 3.7 / 4.3, Dean's List.</small></p>
             </li>
-            <li>
+            <li class="has-logo">
+              <span class="logo"><img src="assets/img/logo-nus.webp" width="549" height="283" loading="lazy" alt=""></span>
               <span class="when" data-i18n="exp.e2when">Aug – Dec 2025</span>
               <p><strong data-i18n="exp.e2">Exchange</strong> <span data-i18n="exp.e2org">National University of Singapore</span><small data-i18n="exp.e2note">Included orbit simulation work in FreeFlyer.</small></p>
+              <figure class="strip" data-zoom>
+                <div class="strip-row">
+                  <a href="assets/img/nus-campus.webp" data-w="1600" data-h="1201" style="flex:1.332"><img src="assets/img/nus-campus.webp" width="1600" height="1201" loading="lazy" alt="Aboud sitting in front of a large sign that reads NUS, The best campus life, at the National University of Singapore." data-i18n-attrs="alt:exp.nus1alt"></a>
+                  <a href="assets/img/singapore-marina-night.webp" data-w="1049" data-h="1399" style="flex:.75"><img src="assets/img/singapore-marina-night.webp" width="1049" height="1399" loading="lazy" alt="Marina Bay Sands and the Singapore waterfront at night." data-i18n-attrs="alt:exp.nus2alt"></a>
+                  <a href="assets/img/singapore-ride.webp" data-w="1600" data-h="1201" style="flex:1.332"><img src="assets/img/singapore-ride.webp" width="1600" height="1201" loading="lazy" alt="Selfie of Aboud in a cycling cap on a bike ride along Marina Bay, his bike on the left." data-i18n-attrs="alt:exp.nus3alt"></a>
+                </div>
+                <figcaption data-i18n="exp.nusCap">Exchange semester at NUS, Aug–Dec 2025.</figcaption>
+              </figure>
             </li>
-            <li>
+            <li class="has-logo">
+              <span class="logo"><img src="assets/img/logo-moncton.webp" width="697" height="400" loading="lazy" alt=""></span>
               <span class="when">2019 – 2021</span>
               <p><strong data-i18n="exp.e3">Pre-Medical Sciences diploma</strong> <span>Université de Moncton</span><small data-i18n="exp.e3note">GPA 4.06 / 4.3.</small></p>
             </li>

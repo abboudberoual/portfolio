@@ -8,8 +8,10 @@ No build step, no frameworks: plain HTML, CSS and JavaScript.
 index.html              all content, in English
 assets/css/site.css     styles and colour tokens (light and dark)
 assets/js/i18n.js       the French text, grouped by section
-assets/js/site.js       language and theme switches, photo viewer, build slider, landing toy
-assets/img/             photos, the print time-lapse, Lectern screenshots
+assets/js/site.js       language and theme switches, photo viewer, build slider, landing toy,
+                        contents highlighting
+assets/img/             photos, the print time-lapse, Lectern screenshots, figures made by
+                        the projects' own code, school logos
 assets/favicon.svg      browser tab icon
 assets/Aboud_Beroual_Resume.pdf
 CLAUDE.md               rules and file map for Claude Code sessions
@@ -18,7 +20,16 @@ CLAUDE.md               rules and file map for Claude Code sessions
 
 Every local path is relative (no leading `/`), so the site works under `/portfolio/`.
 
+The page is grouped into **Hardware**, **Software** and **Research**, then Experience, About
+and Contact. Wide screens show the contents in a left rail; smaller ones in a "Contents" menu
+in the header.
+
 ## Edit
+
+- **A new project:** add its `<article>` to the right group in `index.html`, then add its link
+  to both contents lists (`ul.toc-list` in the header and `ul.rail-list` in the rail).
+- **Charts** (`alchemy-sim`, `h2-map`, `h2-intensity`, `vtol-*`) are output of the projects'
+  own code. Regenerate them from those repositories; do not redraw them.
 
 - **Text:** change the English in `index.html`, then the French twin in `assets/js/i18n.js`
   (same key as the element's `data-i18n` attribute). Always both.

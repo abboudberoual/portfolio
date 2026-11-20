@@ -12,19 +12,56 @@ assets/css/site.css     All styles. Design tokens (light + dark) at the top.
 assets/js/i18n.js       French strings (I18N.fr), grouped by section, plus the few
                         English strings that scripts create (I18N.en).
 assets/js/site.js       Language switch, theme switch, lightbox, L1 build slider,
-                        Lectern strip arrows, landing toy, VTOL landing-page link.
-                        Numbered blocks, one job each.
+                        Lectern strip arrows, landing toy, VTOL landing-page link,
+                        contents rail highlighting. Numbered blocks, one job each.
 assets/img/             Photos, print time-lapse (mp4 + poster), Lectern screenshots,
-                        simulator figures (vtol-*), CAD views and renders (WebP).
+                        CAD views and renders (WebP), and:
+                        - figures made by the projects' own code: vtol-flight, vtol-montecarlo,
+                          alchemy-sim, h2-map, h2-intensity (see rule 1);
+                        - school logos on white: logo-concordia, logo-nus, logo-moncton
+                          (no Canadian Space Agency logo: it is a protected Government of
+                          Canada mark; the CSA photos are fine);
+                        - exchange photos: nus-campus, singapore-marina-night, singapore-ride;
+                        - CSA photos: csa-welcome, csa-moon.
 assets/favicon.svg      Tab icon (flight arc with the apogee dot).
 assets/Aboud_Beroual_Resume.pdf
 .nojekyll               Tells GitHub Pages to serve files as they are.
 README.md               Short guide for humans.
 ```
 
-Page order: header, hero (name, one line, photo), four featured projects (Averell 1, Lectern,
-Alchemy, vertical landing simulator), "More projects" index, Research, Experience,
-About, Contact. The project with the strongest pictures goes first.
+Page order: header, hero (name, one line, photo), then three groups, then Experience
+(with Education and Recognition), About, Contact (the footer).
+
+| Group (`<section class="section group">`) | Featured (`<article class="project">`) | Index (`<article class="row">` in `.index`) |
+|---|---|---|
+| Hardware `#hardware` | Averell 1 `#l1-rocket`, landing simulator `#lander` | Mach 3 aft section `#aft-section`, VT-1 `#vt-1` |
+| Software `#software` | Alchemy `#alchemy`, Lectern `#lectern` | ReviewHub `#reviewhub`, Cadence `#cadence`, patents `#patents` |
+| Research `#research` | EconomicSense article `#article` | hydrogen dashboard `#hydrogen`, cardiac ultrasound `#ultrasound` |
+
+Inside a group the featured projects come first, then the compact index. Hardware leads the
+page with Averell 1: the project with the strongest pictures goes first. The index entries
+keep their `more.*` translation keys.
+
+## Contents: the left rail and the "Contents" menu
+
+- **1100 px and up:** `nav#rail`, a sticky left column listing the groups and their projects,
+  then Experience, About, Contact. The header then holds only the name and the language and
+  theme controls.
+- **Below 1100 px:** no rail. The header has a "Contents" disclosure (`details#toc`) with the
+  same links; it opens as a panel under the header.
+- Both are plain anchor links and work without JavaScript. Block 9 of `site.js` only marks
+  where the visitor is (one IntersectionObserver band under the header): `aria-current="location"`
+  on the link, `.is-current` on its group. It reads its targets from the links, so it never
+  needs editing for a new entry.
+- **To add a project to the contents:** give its `<article>` an `id`, then add
+  `<li><a href="#id" data-i18n="...">Name</a></li>` under the right group in BOTH lists
+  (`ul.toc-list` in the header and `ul.rail-list` in `nav#rail`). Keep the two lists identical
+  and in page order. Reuse the project's title key when the label is the title; short labels
+  live in `I18N.fr.rail`, group names in `I18N.fr.groups`.
+- **The margin column** (`--aside`, section names and project status) sits beside the content
+  at 960–1099 px and from 1320 px (rail + margin column + content). From 1100 to 1319 px it
+  folds above the content so the rail and the text both have room. Change these breakpoints
+  together (`site.css`: "Contents" and "Sections").
 
 ## Rules that matter most
 
@@ -35,6 +72,12 @@ About, Contact. The project with the strongest pictures goes first.
    The two `vtol-*.webp` figures are the opposite: real output of the Python simulator
    (repo `scoudouc`, `sim/examples/land_s2.py`, seed 1), saved from its own Matplotlib
    functions. Regenerate them from the repo; never redraw or restyle them by hand.
+   The same goes for the three other code-made figures: `alchemy-sim.webp` (per-profile output
+   of the Alchemy simulator, `packages/engine/simulate.py` in the private Alchemy repo),
+   `h2-map.webp` and `h2-intensity.webp` (Matplotlib, from the hydrogen dashboard repo's own
+   data files and its `get_electricity_kpis` function). They come from the repos' own code and
+   data: regenerate them there, never redraw, recolour or crop them, and keep the numbers in
+   their captions equal to what the figures show.
 2. **English and French move together.** Any change to an English string in `index.html`
    needs the matching change in `assets/js/i18n.js`, in the same commit. New text needs a
    `data-i18n` key and a French entry. Ask the owner (a native French speaker) to proofread.
@@ -69,9 +112,17 @@ About, Contact. The project with the strongest pictures goes first.
   Empty string = the quiet "Landing page coming soon" note. Paste the full `https://` URL
   and the note becomes the project's primary button, in both languages. Nothing else to change.
 - **"Last updated"** date: `contact.updated` in `index.html` and in `i18n.js`.
-- **A new featured project:** copy an `<article class="project">`. **A new index entry:**
-  copy an `<article class="row">`. Images always carry real `width`/`height` and
-  `loading="lazy"` (except the hero photo).
+- **A new featured project:** copy an `<article class="project">` inside its group.
+  **A new index entry:** copy an `<article class="row">` inside the group's `.index`.
+  Then add it to the contents (both lists, see above). Images always carry real
+  `width`/`height` and `loading="lazy"` (except the hero photo).
+- **Charts and maps in an index entry** (must not be cropped): `<div class="row-figs" data-zoom>`
+  holding two `<figure class="plot">`, as in the hydrogen entry. A single chart in a featured
+  project: `<figure class="plot plot-solo">` with an `a.zoomable` (Alchemy).
+- **School logos** (Education): `<span class="logo">` with the image, `alt=""` (the school is
+  named beside it), on `li.has-logo`. Small white tile, hairline border, nothing else.
+- **Photo strips** (CSA entry, NUS exchange): `<figure class="strip" data-zoom>`; each link's
+  inline `flex` value is the photo's width / height, so the photos share one height uncropped.
 - **L1 build photos:** the `<ol id="build-list">`; the script builds the slider from it.
 - **Pictures in an index entry:** a `<div class="row-media" data-zoom>` of links to 3:2 images
   (three per line), then a one-line `<p class="row-cap">`.
@@ -91,12 +142,16 @@ The look is quiet and editorial: left-aligned, lots of whitespace, few boxes.
   (one per project at most: the landing-page / install / read call to action), status dots,
   the apogee dot in the logo, the build slider thumb, the key research bar and link hover. If a new
   element wants the accent, something else should probably lose it.
+- **The rail carries no accent.** Its "you are here" mark is a 2 px ink bar on the hairline
+  track, plus ink text; the current group's name turns from muted to ink. Do not add a yellow
+  dot or highlight there: the status dots sit right next to it.
 - **Type:** Radio Canada Big (display: hero line, project titles, big numbers) and Radio
   Canada (everything else), from Google Fonts, with system fallbacks. Two families, no third.
   Sentence case. No all-caps labels, no letter-spaced eyebrows.
 - **Spacing:** sections are separated by a hairline and generous padding
   (`clamp()` values in `.section`, `.project`). Wide screens use a 200 px left margin column
-  (`--aside`) for section names and project status; keep it.
+  (`--aside`) for section names and project status; keep it. The contents rail (`--rail`)
+  sits to its left from 1100 px.
 - **Signature details:** the apogee logo (flight arc with the yellow dot) and the filled-dot /
   ring status marks. Keep them few. Do not add more decorative motifs. (The flight-line
   diagram under the hero was removed at the owner's request; do not bring it back.)
@@ -112,6 +167,18 @@ The look is quiet and editorial: left-aligned, lots of whitespace, few boxes.
 - **Widgets:** three, no more: L1 build slider (with previous / next arrows), Lectern
   screenshot strip, landing toy (now folded inside a disclosure under the real simulator
   figures), plus the lightbox they share. Everything must stay readable with JavaScript off.
+  The contents rail / "Contents" menu is navigation, not a widget.
+- **Figures and diagrams on the page:**
+  - from the projects' own code (white ground, hairline border, zoomable, never redrawn):
+    the two VTOL simulator figures, the Alchemy simulator chart (`alchemy-sim.webp`) and the
+    two hydrogen dashboard figures (`h2-map.webp`, `h2-intensity.webp`);
+  - drawn in the page's own style: the Alchemy confidence-tier bar, the research bars, and
+    the Alchemy agent operating model (`<figure class="flow">`: hairline boxes of real text
+    joined by small inline-SVG arrows, theme tokens only, every label with a French twin).
+    The diagram shows only what the text states: scheduled AI agents (nightly: data
+    maintenance, merchant dictionary, retry pass; weekly: orchestrator); data changes are
+    committed only if the CI checks (validator and 17 unit tests) pass; code changes arrive
+    as pull requests the founders approve. Do not add components to it.
 - **Do not drift into:** cream + serif + terracotta; near-black + neon accent; purple/blue
   gradients; Inter or Space Grotesk; emoji; centred everything; rounded shadow cards;
   hatching, title blocks or other "engineering drawing" ornaments (the previous design).

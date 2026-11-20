@@ -180,12 +180,12 @@ window.I18N = {
       title: 'Averell 1, fusée de haute puissance de niveau 1',
       summary: 'J’ai conçu, construit et fait voler une fusée de certification de niveau 1. Elle a atteint 2&nbsp;100&nbsp;pi avec un moteur H135 le 18 octobre 2026 et est revenue intacte.',
       buildH: 'La fabrication, de la table de pièces au champ de récupération',
-      s1alt: 'Des pièces de fusée sur un établi&nbsp;: un tube de corps blanc, une ogive rouge imprimée en 3D, trois ailerons noirs et une cloison.',
+      s1alt: 'Des pièces de fusée sur un établi&nbsp;: un tube de corps blanc, une ogive rouge en PETG, trois ailerons noirs en contreplaqué et une cloison en contreplaqué.',
       s1t: 'Pièces',
-      s1: 'Tout est étalé avant l’assemblage&nbsp;: tube de corps, ogive imprimée en 3D, ailerons et cloison.',
-      s2alt: 'Des ailerons noirs insérés autour d’un tube moteur, tenus par un bloc d’ailerons et un anneau de centrage rouges imprimés en 3D.',
+      s1: 'Tout est étalé avant l’assemblage&nbsp;: tube de corps, ogive imprimée en PETG, ailerons et cloison en contreplaqué découpés au laser.',
+      s2alt: 'Des ailerons noirs en contreplaqué insérés autour d’un tube moteur, tenus par un bloc d’ailerons rouge imprimé en 3D.',
       s2t: 'Bloc d’ailerons',
-      s2: 'Ailerons et tube moteur montés sur le bloc d’ailerons et l’anneau de centrage imprimés en 3D.',
+      s2: 'Ailerons en contreplaqué et tube moteur montés sur le bloc d’ailerons imprimé en 3D.',
       s3alt: 'La fusée assemblée, debout dans un atelier, corps blanc et ogive rouge.',
       s3t: 'Assemblée',
       s3: 'La cellule assemblée, debout dans l’atelier, avant la peinture.',
@@ -205,9 +205,9 @@ window.I18N = {
       profileCap: 'Le profil de vol OpenRocket qui a servi à planifier le vol.',
       how: 'Conception et certification',
       b1: 'Vol simulé dans OpenRocket, stabilité ajustée pour une journée de lancement venteuse.',
-      b2: 'Ailerons, cloison et dispositif de retenue du moteur conçus dans SolidWorks, ogive dans Onshape; pièces imprimées en 3D, puis cellule assemblée à l’époxy.',
+      b2: 'Ailerons, cloison et dispositif de retenue du moteur conçus dans SolidWorks, ogive dans Onshape. Ogive et dispositif de retenue imprimés en PETG, ailerons et cloison découpés au laser dans du contreplaqué, puis cellule assemblée à l’époxy.',
       b3: 'Certification de niveau 1 en fusées de haute puissance, obtenue après la réussite des examens de Transports Canada et de l’Association canadienne de fuséonautique (ACF). Membre de l’ACF et du CQF.',
-      tools: 'OpenRocket, SolidWorks, Onshape, impression 3D, assemblage à l’époxy'
+      tools: 'OpenRocket, SolidWorks, Onshape, impression 3D en PETG, découpe laser, assemblage à l’époxy'
     },
 
     /* Simulateur d'atterrissage vertical (projet VTOL) */

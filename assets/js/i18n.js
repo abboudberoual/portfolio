@@ -450,6 +450,10 @@ window.I18N = {
       p1: 'J’étudie le génie aérospatial à l’Université Concordia, à Montréal, et j’obtiendrai mon diplôme en 2028. Presque tout ce que je fais est soit un logiciel qu’on peut installer, soit du matériel qui doit réussir un essai.',
       p2: 'Avant le génie, j’ai obtenu un diplôme en sciences prémédicales à l’Université de Moncton. Je travaille en français et en anglais.',
       p3: 'Loin du bureau, j’ai atteint le sommet du Kilimandjaro, terminé deux Ironman 70.3 et parcouru Taïwan à vélo. Je suis la formation théorique en vue d’une licence de pilote privé.',
+      nextH: 'Prochain défi&nbsp;: 24&nbsp;km sur un lac gelé',
+      next: 'Le 20 février 2027, je cours 24&nbsp;km sur le lac Saint-Jean gelé aux Courses CRYO, avec mon coéquipier <a href="https://www.linkedin.com/in/yanisdjeridi/">Yanis Djeridi</a>, sous le nom d’équipe Atlas. La course amasse des fonds pour Sur la pointe des pieds, une fondation qui emmène gratuitement des jeunes de 14 à 39 ans atteints de cancer en expédition d’aventure thérapeutique. Notre objectif est de 1&nbsp;500&nbsp;$, et 100&nbsp;% des dons vont à la fondation.',
+      nextTeam: 'Appuyer l’équipe Atlas',
+      nextMine: 'Ma page de collecte',
       photoAlt: 'Aboud court sur le tapis rouge de l’arrivée d’un Ironman 70.3.',
       photoCap: 'Ironman 70.3 Langkawi, l’arrivée de la course à pied.'
     },

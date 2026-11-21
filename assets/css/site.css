@@ -1032,3 +1032,8 @@ h4 { font-size: 1rem; font-weight: 600; }
 .paper-talk .zoomable:hover { background: none; }
 .paper-talk img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
 .paper-talk figcaption { margin-top: .5rem; font-size: .875rem; color: var(--muted); }
+
+/* About: the next challenge (fundraiser) */
+.about-next { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+.about-next h3 { font-size: 1.125rem; margin: 0 0 .5rem; }
+.about-next .actions { margin-top: 1rem; }

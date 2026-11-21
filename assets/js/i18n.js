@@ -113,7 +113,7 @@ window.I18N = {
       now: 'En ce moment',
       now2org: 'Agence spatiale canadienne',
       now2: 'Stagiaire en intégration de programme',
-      now3: 'Structures, division Solid Rocketry',
+      now3: 'Structures et liaison charge utile, division Solid Rocketry',
       photoAlt: 'Une fusée jaune et noire à quelques mètres au-dessus de la rampe de lancement, suivie d’une colonne de fumée blanche au-dessus d’un champ.',
       photoCap: 'Averell 1 pendant son vol de certification.'
     },
@@ -285,15 +285,20 @@ window.I18N = {
       inProgress: 'En cours',
       aft: {
         title: 'Section arrière Mach 3',
-        ctx: 'Space Concordia, division Solid Rocketry, équipe structures',
+        ctx: 'Space Concordia, division Solid Rocketry, équipe structures et liaison charge utile',
         when: 'Mai 2026 – aujourd’hui',
         sum: 'Je conçois la section arrière en fibre de carbone, soit le rétreint et les ailerons, d’une fusée à deux étages qui vise Mach 3.',
         i1alt: 'Modèle Siemens NX d’une longue ogive effilée, avec un épaulement cylindrique.',
         i2alt: 'Modèle Siemens NX du rétreint, un court anneau conique vu depuis son grand diamètre.',
         cap: 'Ogive et rétreint dans Siemens NX.',
-        b1: 'Modélisée dans Siemens NX.',
+        b1: 'J’ai modélisé le rétreint dans Siemens NX comme une pièce entièrement paramétrique, pilotée par des expressions nommées, ainsi que l’ogive et sa pointe, et j’ai produit les dessins de fabrication.',
         b2: 'L’échauffement des bords d’attaque, près de 400&nbsp;°C, dicte le choix des matériaux et de la protection thermique.',
         b3: 'Le flottement des ailerons à haute température est une vérification clé.',
+        b4: 'Je suis l’agent de liaison de l’équipe structures pour la charge utile.',
+        b5: 'Prochaine étape&nbsp;: l’analyse par éléments finis (FEA) des structures dans Siemens NX.',
+        videoLabel: 'Coupe d’une section de tube pour la fusée de compétition à la scie à eau, 12&nbsp;secondes, sans son.',
+        videoFallback: 'Télécharger la vidéo (MP4, 0,5&nbsp;Mo)',
+        videoCap: 'Coupe d’une section de tube pour la fusée de compétition, à l’atelier. 12&nbsp;secondes, sans son.',
         tools: 'Siemens NX, fibre de carbone, protection thermique, flottement des ailerons'
       },
       rh: {

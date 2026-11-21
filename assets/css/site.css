@@ -545,7 +545,6 @@ h4 { font-size: 1rem; font-weight: 600; }
 .project-main > h3 img { width: .85em; height: .85em; border-radius: 22%; }
 .project-main > .lede { margin-top: 1rem; }
 .project-main > .actions { margin-top: 1.5rem; }
-.soon { color: var(--muted); font-style: italic; }
 
 /* Alchemy: verified figures */
 .figures {

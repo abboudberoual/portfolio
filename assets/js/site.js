@@ -21,7 +21,7 @@
      0. Config
      ------------------------------------------------------------------ */
   // Landing page of the vertical rocket landing (VTOL) project.
-  // Leave '' to show the quiet "Landing page coming soon" note.
+  // Leave '' and nothing is shown (the site never shows placeholders).
   // Paste the full URL (https://...) when the page exists; nothing else to change.
   var VTOL_LANDING_URL = '';
 

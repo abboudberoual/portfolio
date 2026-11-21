@@ -65,6 +65,10 @@ keep their `more.*` translation keys.
 
 ## Rules that matter most
 
+Before every publish, scan the rendered page (English and French, `<details>` opened, alt text
+included) for placeholder words and for text addressed to the owner; fix any hit before pushing.
+
+
 1. **Facts.** Never invent or "improve" a number, date, claim, user count, quote or result.
    The text on the page was verified by the owner; treat it as the fact base. You may cut or
    rephrase; anything new must come from the owner. The landing toy is a simplified JavaScript
@@ -84,7 +88,17 @@ keep their `more.*` translation keys.
 3. **Privacy.** No phone number anywhere. No internal Canadian Space Agency system names or
    screenshots. The Alchemy repository is private: link only its landing page, never a repo.
    Any Alchemy example shown must use fictional cards and merchants.
-4. **Relative URLs only** for local files (`assets/...`). Absolute URLs are used only for the
+4. **The page is published (it is on the owner's LinkedIn). No placeholders, ever.** Nothing
+   visible may say "coming soon", "à venir", "TBD", "TODO", "[X]", "pending", "placeholder", or
+   show an empty frame or dummy text. If something is not ready, leave it out entirely and add it
+   when it exists. Unknown numbers are omitted, not bracketed.
+5. **Voice: the owner addressing the public.** All visible text is written by Aboud for visitors:
+   first person ("I designed…", "I built…") or neutral project description. Never text addressed
+   to the owner (no "check this", "add your…", "replace with…", "you should…", review notes or
+   instructions). "You" may only mean the visitor (e.g. "the wallet you already have").
+   Instructions for the owner belong in this file, the README or HTML comments, never on the page.
+   Alt text may describe him in the third person ("Aboud speaking…"), as alt text conventionally does.
+6. **Relative URLs only** for local files (`assets/...`). Absolute URLs are used only for the
    canonical / Open Graph tags in `<head>` and for external links.
 
 ## Content and translations
@@ -109,8 +123,8 @@ keep their `more.*` translation keys.
 ## Things the owner edits in one place
 
 - **VTOL landing-page URL:** `VTOL_LANDING_URL` at the top of `assets/js/site.js` (block 0).
-  Empty string = the quiet "Landing page coming soon" note. Paste the full `https://` URL
-  and the note becomes the project's primary button, in both languages. Nothing else to change.
+  Empty string = nothing is shown (no placeholder). Paste the full `https://` URL and the
+  project gets its primary "Landing page" button, in both languages. Nothing else to change.
 - **"Last updated"** date: `contact.updated` in `index.html` and in `i18n.js`.
 - **A new featured project:** copy an `<article class="project">` inside its group.
   **A new index entry:** copy an `<article class="row">` inside the group's `.index`.

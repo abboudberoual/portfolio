@@ -35,7 +35,7 @@ in the header.
   (same key as the element's `data-i18n` attribute). Always both.
 - **Facts:** nothing on the page is invented. Do not add numbers or claims that have not been checked.
 - **Rocket landing project page:** when it exists, paste its URL into `VTOL_LANDING_URL`
-  at the top of `assets/js/site.js`. The "Landing page coming soon" note becomes a button.
+  at the top of `assets/js/site.js`. While it is empty nothing shows; once set, a "Landing page" button appears.
 - **Colours and fonts:** the tokens at the top of `assets/css/site.css`. The dark values are
   listed twice (system setting, and explicit choice); change both.
 - **Last updated:** the `<time>` in the footer of `index.html`, and `contact.updated` in `i18n.js`.

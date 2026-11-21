@@ -244,7 +244,6 @@ window.I18N = {
       role: 'Projet personnel<br>Simulateur Python et micrologiciel de banc d’essai ESP32',
       title: 'Simulateur d’atterrissage vertical de fusée',
       summary: 'Un simulateur 2D pour faire atterrir sous poussée une petite fusée à propergol solide. Un moteur à propergol solide ne peut pas moduler sa poussée&nbsp;: presque tout dépend donc du moment où commence la poussée d’atterrissage.',
-      soon: 'Page de présentation à venir',
       landingCta: 'Page de présentation',
       fig1alt: 'Figure Matplotlib à trois graphiques superposés en fonction du temps&nbsp;: inclinaison et angle du cardan, altitude et vitesse, avec les deux poussées des moteurs en zones ombrées.',
       fig1cap: 'Un vol simulé, tel que le produit le simulateur Python&nbsp;: inclinaison et angle du cardan, altitude et vitesse. Les zones ombrées sont les deux poussées des moteurs.',

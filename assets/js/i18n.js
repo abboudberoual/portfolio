@@ -342,7 +342,7 @@ window.I18N = {
       cad: {
         ctx: 'Entraîneur par IA pour athlètes d’endurance',
         when: '2025 – aujourd’hui',
-        sum: 'Cadence est un entraîneur par IA pour les athlètes d’endurance. J’ai construit la première version, une application web qui se connecte à Strava et génère des séances d’entraînement; l’application iOS est maintenant en développement.',
+        sum: 'Cadence est un entraîneur par IA pour les athlètes d’endurance&nbsp;: une application web qui se connecte à Strava et génère des séances d’entraînement, et une application iOS maintenant en développement.',
         cta: 'Visiter cadencetrain.ca',
         c1t: 'Aujourd’hui',
         c1: 'Un résumé quotidien avec des scores pour le sommeil, le corps et l’entraînement.',

@@ -138,6 +138,7 @@ included) for placeholder words and for text addressed to the owner; fix any hit
 - **Photo strips** (CSA entry, NUS exchange): `<figure class="strip" data-zoom>`; each link's
   inline `flex` value is the photo's width / height, so the photos share one height uncropped.
 - **L1 build photos:** the `<ol id="build-list">`; the script builds the slider from it.
+- **Phone screenshot strip** (Cadence): the Lectern `.shots` component with `class="shots shots-phone"`; block of `site.js` handles every `.shots` strip. Cadence also has a click-to-play tour video (`assets/img/cadence/tour.mp4`, poster, `loop muted controls`, `preload="none"`); nothing autoplays.
 - **Pictures in an index entry:** a `<div class="row-media" data-zoom>` of links to 3:2 images
   (three per line), then a one-line `<p class="row-cap">`.
 - **Toy constants:** block 7 of `site.js`. If they change, update the "How the toy works"

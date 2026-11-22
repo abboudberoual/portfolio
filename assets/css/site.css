@@ -1040,3 +1040,9 @@ h4 { font-size: 1rem; font-weight: 600; }
 
 /* VT-1: two phone screenshots side by side, kept narrow */
 .row > .strip-app { grid-column: 1 / -1; order: 0; max-width: 24rem; margin-top: 1.25rem; }
+
+/* Phone screenshots in a strip (Cadence): narrow portrait cards, full row width */
+.row > .shots, .row > .shots-ctl { grid-column: 1 / -1; }
+.row > .shots { margin-top: 1.25rem; }
+.shots-phone figure { flex: 0 0 11.5rem; }
+@media (max-width: 560px) { .shots-phone figure { flex-basis: 44%; } }

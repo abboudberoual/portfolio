@@ -332,9 +332,7 @@
     });
   });
 
-  safe('shots', function () {
-    var strip = $('#shots');
-    if (!strip) return;
+  safe('shots', function () { $$('.shots').forEach(function (strip) {
     var prev = el('button', { class: 'ibtn', type: 'button', 'data-ico': 'prev' });
     var next = el('button', { class: 'ibtn', type: 'button', 'data-ico': 'next' });
     strip.parentNode.insertBefore(el('div', { class: 'shots-ctl' }, [prev, next]), strip.nextSibling);
@@ -356,7 +354,7 @@
     window.addEventListener('resize', sync);
     document.addEventListener('langchange', label);
     label(); sync();
-  });
+  }); });
 
   /* ------------------------------------------------------------------
      7. Landing toy. A SIMPLIFIED ILLUSTRATION, not the project's Python

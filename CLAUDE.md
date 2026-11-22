@@ -88,6 +88,8 @@ included) for placeholder words and for text addressed to the owner; fix any hit
 3. **Privacy.** No phone number anywhere. No internal Canadian Space Agency system names or
    screenshots. The Alchemy repository is private: link only its landing page, never a repo.
    Any Alchemy example shown must use fictional cards and merchants.
+   Do not name Yanis Djeridi (or any collaborator) on the page, and do not add "my idea" /
+   "mon idée" credit lines (owner's request, Nov 2026).
 4. **The page is published (it is on the owner's LinkedIn). No placeholders, ever.** Nothing
    visible may say "coming soon", "à venir", "TBD", "TODO", "[X]", "pending", "placeholder", or
    show an empty frame or dummy text. If something is not ready, leave it out entirely and add it

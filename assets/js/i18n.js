@@ -340,9 +340,9 @@ window.I18N = {
         tools: 'ESP32-S3, Arduino, Bluetooth FTMS, Web Bluetooth, TypeScript, Vite, impression 3D, SolidWorks'
       },
       cad: {
-        ctx: 'Entraîneur par IA pour athlètes d’endurance, mon idée',
+        ctx: 'Entraîneur par IA pour athlètes d’endurance',
         when: '2025 – aujourd’hui',
-        sum: 'Cadence est mon idée&nbsp;: un entraîneur par IA pour les athlètes d’endurance. J’ai construit la première version, une application web qui se connecte à Strava et génère des séances d’entraînement, et je construis maintenant l’application iOS avec Yanis Djeridi.',
+        sum: 'Cadence est un entraîneur par IA pour les athlètes d’endurance. J’ai construit la première version, une application web qui se connecte à Strava et génère des séances d’entraînement; l’application iOS est maintenant en développement.',
         cta: 'Visiter cadencetrain.ca',
         c1t: 'Aujourd’hui',
         c1: 'Un résumé quotidien avec des scores pour le sommeil, le corps et l’entraînement.',
@@ -368,7 +368,7 @@ window.I18N = {
         shotsLabel: 'Captures d’écran de Cadence, défiler horizontalement',
         shotsNote: 'Écrans du simulateur iOS, avec les données d’exemple intégrées à l’application.',
         b1: 'La V0 était une application web Flask avec l’authentification OAuth et l’API de Strava, des séances d’entraînement générées par OpenAI et une vue horaire et calendrier.',
-        b3: 'Je codéveloppe maintenant avec Yanis l’application iOS de Cadence&nbsp;: un entraîneur par IA qui prépare des plans d’entraînement en fonction du calendrier de l’athlète et lit les données WHOOP ou Apple Santé. Une fois offerte dans l’App Store, ses séances personnalisées pourront se faire sur une base d’entraînement intelligente grâce à VT-1.',
+        b3: 'Je codéveloppe maintenant l’application iOS de Cadence&nbsp;: un entraîneur par IA qui prépare des plans d’entraînement en fonction du calendrier de l’athlète et lit les données WHOOP ou Apple Santé. Une fois offerte dans l’App Store, ses séances personnalisées pourront se faire sur une base d’entraînement intelligente grâce à VT-1.',
         b2: 'Pour la recherche produit, un pipeline Python et GPT-5 avec découpage map-reduce a transformé 47 transcriptions de balados et de cours en rapports individuels et en méta-analyses couvrant plusieurs épisodes.',
         tools: 'Python, Flask, API Strava, API OpenAI, Swift (iOS)'
       },
@@ -481,7 +481,7 @@ window.I18N = {
       p2: 'Avant le génie, j’ai obtenu un diplôme en sciences prémédicales à l’Université de Moncton. Je travaille en français et en anglais.',
       p3: 'Loin du bureau, j’ai atteint le sommet du Kilimandjaro, terminé deux Ironman 70.3 et parcouru Taïwan à vélo. Je suis la formation théorique en vue d’une licence de pilote privé.',
       nextH: 'Prochain défi&nbsp;: 24&nbsp;km sur un lac gelé',
-      next: 'Le 20 février 2027, je cours 24&nbsp;km sur le lac Saint-Jean gelé aux Courses CRYO, avec mon coéquipier <a href="https://www.linkedin.com/in/yanisdjeridi/">Yanis Djeridi</a>, sous le nom d’équipe Atlas. La course amasse des fonds pour Sur la pointe des pieds, une fondation qui emmène gratuitement des jeunes de 14 à 39 ans atteints de cancer en expédition d’aventure thérapeutique. Notre objectif est de 1&nbsp;500&nbsp;$, et 100&nbsp;% des dons vont à la fondation.',
+      next: 'Le 20 février 2027, je cours 24&nbsp;km sur le lac Saint-Jean gelé aux Courses CRYO avec l’équipe Atlas. La course amasse des fonds pour Sur la pointe des pieds, une fondation qui emmène gratuitement des jeunes de 14 à 39 ans atteints de cancer en expédition d’aventure thérapeutique. Notre objectif est de 1&nbsp;500&nbsp;$, et 100&nbsp;% des dons vont à la fondation.',
       nextTeam: 'Appuyer l’équipe Atlas',
       nextMine: 'Ma page de collecte',
       photoAlt: 'Aboud court sur le tapis rouge de l’arrivée d’un Ironman 70.3.',

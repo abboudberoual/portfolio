@@ -367,8 +367,8 @@ window.I18N = {
         tourCap: 'Une visite de 15 secondes de l’application iOS. Sans son.',
         shotsLabel: 'Captures d’écran de Cadence, défiler horizontalement',
         shotsNote: 'Écrans du simulateur iOS, avec les données d’exemple intégrées à l’application.',
-        b1: 'La première version, que j’ai construite seul&nbsp;: une application web Flask avec l’authentification OAuth et l’API de Strava, des séances d’entraînement générées par OpenAI et une vue horaire et calendrier.',
-        b3: 'Avec Yanis, je construis maintenant Cadence comme application iOS&nbsp;: un entraîneur par IA qui prépare des plans d’entraînement en fonction du calendrier de l’athlète et lit les données WHOOP ou Apple Santé. Une fois offerte dans l’App Store, ses séances personnalisées pourront se faire sur une base d’entraînement intelligente grâce à VT-1.',
+        b1: 'La V0 était une application web Flask avec l’authentification OAuth et l’API de Strava, des séances d’entraînement générées par OpenAI et une vue horaire et calendrier.',
+        b3: 'Je codéveloppe maintenant avec Yanis l’application iOS de Cadence&nbsp;: un entraîneur par IA qui prépare des plans d’entraînement en fonction du calendrier de l’athlète et lit les données WHOOP ou Apple Santé. Une fois offerte dans l’App Store, ses séances personnalisées pourront se faire sur une base d’entraînement intelligente grâce à VT-1.',
         b2: 'Pour la recherche produit, un pipeline Python et GPT-5 avec découpage map-reduce a transformé 47 transcriptions de balados et de cours en rapports individuels et en méta-analyses couvrant plusieurs épisodes.',
         tools: 'Python, Flask, API Strava, API OpenAI, Swift (iOS)'
       },

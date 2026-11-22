@@ -1037,3 +1037,6 @@ h4 { font-size: 1rem; font-weight: 600; }
 .about-next { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
 .about-next h3 { font-size: 1.125rem; margin: 0 0 .5rem; }
 .about-next .actions { margin-top: 1rem; }
+
+/* VT-1: two phone screenshots side by side, kept narrow */
+.row > .strip-app { grid-column: 1 / -1; order: 0; max-width: 24rem; margin-top: 1.25rem; }

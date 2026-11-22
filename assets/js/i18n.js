@@ -333,6 +333,10 @@ window.I18N = {
         b2: 'Un boîtier en biseau de 150&nbsp;×&nbsp;92&nbsp;mm, incliné à 11° pour la lecture, avec vérifications de dégagement, inserts filetés posés à chaud et éprouvette d’ajustement, puis imprimé&nbsp;: coque, couvercle inférieur, collerette d’écran, molette et collerettes de voyants.',
         b6: 'Matériel&nbsp;: ESP32-S3, écran rond de 1,28&nbsp;po, encodeur rotatif, bouton de maintien lumineux et trois voyants d’état. La nomenclature de l’électronique revient à environ 140&nbsp;$&nbsp;CA.',
         b4: 'Prochaine étape&nbsp;: l’essai du micrologiciel sur banc.',
+        b7: 'Une fois Cadence offert dans l’App Store, VT-1 s’y connectera pour que les séances personnalisées de Cadence puissent se faire avec VT-1.',
+        app1alt: 'L’application web VT-1 sur un téléphone, en mode ERG&nbsp;: un cadran rond avec une cible de 150&nbsp;watts, la puissance, la cadence et le temps en direct, et des boutons moins et plus.',
+        app2alt: 'L’application web VT-1 sur un téléphone, en mode pente, réglée à 4&nbsp;% de pente.',
+        appCap: 'L’application web en mode démo sur un téléphone&nbsp;: ERG avec une cible de 150&nbsp;W, puis pente à +4&nbsp;%.',
         tools: 'ESP32-S3, Arduino, Bluetooth FTMS, Web Bluetooth, TypeScript, Vite, impression 3D, SolidWorks'
       },
       cad: {
@@ -342,6 +346,7 @@ window.I18N = {
         cta: 'Visiter cadencetrain.ca',
         i1alt: 'Cadence sur un téléphone&nbsp;: la séance au seuil du jour, un court résumé quotidien et trois scores pour le sommeil, le corps et l’entraînement.',
         b1: 'Une application web Flask avec l’authentification OAuth et l’API de Strava, des séances d’entraînement générées par OpenAI et une vue horaire et calendrier.',
+        b3: 'Cadence est maintenant en développement comme application iOS&nbsp;: un entraîneur par IA qui prépare des plans d’entraînement en fonction du calendrier de l’athlète et lit les données WHOOP ou Apple Santé. Une fois offerte dans l’App Store, ses séances personnalisées pourront se faire sur une base d’entraînement intelligente grâce à VT-1.',
         b2: 'Pour la recherche produit, un pipeline Python et GPT-5 avec découpage map-reduce a transformé 47 transcriptions de balados et de cours en rapports individuels et en méta-analyses couvrant plusieurs épisodes.',
         tools: 'Flask, API Strava, API OpenAI, Python'
       },

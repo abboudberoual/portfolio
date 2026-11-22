@@ -402,6 +402,13 @@
           <a href="assets/img/vt1-parts.webp" data-w="1200" data-h="1600"><img src="assets/img/vt1-parts.webp" width="1200" height="1600" loading="lazy" alt="The parts laid out: printed case and cover, blue knob and bezels, ribbon cable, encoder and other electronics." data-i18n-attrs="alt:more.vt.i6alt"></a>
         </div>
         <p class="row-cap" data-i18n="more.vt.cap">Concept render and CAD, then the printed case, the display test fit and the parts.</p>
+        <figure class="strip strip-app" data-zoom>
+          <div class="strip-row">
+            <a href="assets/img/vt1-app-erg.webp" data-w="780" data-h="1560" style="flex:.5"><img src="assets/img/vt1-app-erg.webp" width="780" height="1560" loading="lazy" alt="The VT-1 web app on a phone in ERG mode: a round gauge with a 150-watt target, live power, cadence and time, and minus and plus buttons." data-i18n-attrs="alt:more.vt.app1alt"></a>
+            <a href="assets/img/vt1-app-slope.webp" data-w="780" data-h="1560" style="flex:.5"><img src="assets/img/vt1-app-slope.webp" width="780" height="1560" loading="lazy" alt="The VT-1 web app on a phone in slope mode, set to a 4 percent grade." data-i18n-attrs="alt:more.vt.app2alt"></a>
+          </div>
+          <figcaption data-i18n="more.vt.appCap">The web app in demo mode on a phone: ERG at a 150 W target, then slope at +4%.</figcaption>
+        </figure>
         <figure class="row-video">
           <video controls muted playsinline loop preload="none" poster="assets/img/vt1-gauge-bench-poster.jpg" width="540" height="960"
                  aria-label="The round watt gauge running on the bench, 7 seconds, no sound." data-i18n-attrs="aria-label:more.vt.videoLabel">
@@ -417,6 +424,7 @@
             <li data-i18n="more.vt.b5">Built the web app with Vite, TypeScript and Web Bluetooth. It runs in Chrome and Edge on desktop and Chrome on Android, with a demo mode for visitors without a trainer. FTMS encoders and decoders live in a shared, unit-tested core package.</li>
             <li data-i18n="more.vt.b2">Designed a 150 × 92 mm wedge enclosure with an 11° viewing angle, with clearance checks, heat-set inserts and a fit-test coupon, then printed it: shell, bottom cover, display bezel, knob and LED bezels.</li>
             <li data-i18n="more.vt.b6">Hardware: ESP32-S3, a 1.28-inch round display, a rotary encoder, an illuminated hold button and three status LEDs. The electronics bill of materials is about $140 CAD.</li>
+            <li data-i18n="more.vt.b7">Once Cadence is on the App Store, VT-1 will link with it, so Cadence’s custom workouts can be ridden through VT-1.</li>
             <li data-i18n="more.vt.b4">Next: the firmware bench test.</li>
           </ul>
           <p class="tools" data-i18n="more.vt.tools">ESP32-S3, Arduino, Bluetooth FTMS, Web Bluetooth, TypeScript, Vite, 3D printing, SolidWorks</p>
@@ -598,6 +606,7 @@
           <summary data-i18n="projects.details">Details</summary>
           <ul>
             <li data-i18n="more.cad.b1">Flask web app with Strava OAuth and API, OpenAI-generated training sessions, and a schedule and calendar view.</li>
+            <li data-i18n="more.cad.b3">Cadence is now being built as an iOS app: an AI coach that drafts training plans around the athlete’s calendar and reads WHOOP or Apple Health data. Once it is on the App Store, its custom workouts will run on a smart trainer through VT-1.</li>
             <li data-i18n="more.cad.b2">For product research, a Python and GPT-5 pipeline with map-reduce chunking turned 47 podcast and lecture transcripts into individual reports and cross-episode meta-analyses.</li>
           </ul>
           <p class="tools" data-i18n="more.cad.tools">Flask, Strava API, OpenAI API, Python</p>

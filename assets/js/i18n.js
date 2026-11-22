@@ -363,7 +363,7 @@ window.I18N = {
         c6: 'Objectif de course, jours d’entraînement, moments préférés et applications connectées.',
         c6alt: 'L’onglet Profil&nbsp;: l’objectif de course, les jours d’entraînement choisis, le moment d’entraînement préféré et l’intégration Apple Santé.',
         tourLabel: 'Une visite de 15 secondes de l’application iOS Cadence&nbsp;: Aujourd’hui, bilan, plans de la semaine et du mois, l’entraîneur qui propose puis applique un plan, et le profil. Sans son.',
-        tourFallback: 'Télécharger la visite (MP4, 0,5&nbsp;Mo)',
+        tourFallback: 'Télécharger la visite (MP4, 0,8&nbsp;Mo)',
         tourCap: 'Une visite de 15 secondes de l’application iOS. Sans son.',
         shotsLabel: 'Captures d’écran de Cadence, défiler horizontalement',
         shotsNote: 'Écrans du simulateur iOS, avec les données d’exemple intégrées à l’application.',

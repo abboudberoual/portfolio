@@ -1021,7 +1021,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 /* Short portrait clip inside an index entry (VT-1 gauge) */
-.row-video { margin: 1rem 0 0; max-width: 15rem; }
+.row-video { margin: 1rem 0 0; max-width: 17rem; }
 .row-video video { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--bg); }
 .row-video figcaption { margin-top: .5rem; font-size: .875rem; color: var(--muted); }
 
@@ -1044,5 +1044,5 @@ h4 { font-size: 1rem; font-weight: 600; }
 /* Phone screenshots in a strip (Cadence): narrow portrait cards, full row width */
 .row > .shots, .row > .shots-ctl { grid-column: 1 / -1; }
 .row > .shots { margin-top: 1.25rem; }
-.shots-phone figure { flex: 0 0 11.5rem; }
-@media (max-width: 560px) { .shots-phone figure { flex-basis: 44%; } }
+.shots-phone figure { flex: 0 0 min(78%, 21rem); }
+@media (max-width: 560px) { .shots-phone figure { flex-basis: 78%; } }

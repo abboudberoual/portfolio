@@ -340,15 +340,15 @@ window.I18N = {
         tools: 'ESP32-S3, Arduino, Bluetooth FTMS, Web Bluetooth, TypeScript, Vite, impression 3D, SolidWorks'
       },
       cad: {
-        ctx: 'Entraîneur de triathlon par IA',
-        when: 'Prototype de 2025',
-        sum: 'Un prototype d’application web qui se connecte à Strava et génère des séances d’entraînement.',
+        ctx: 'Entraîneur par IA pour athlètes d’endurance, mon idée',
+        when: '2025 – aujourd’hui',
+        sum: 'Cadence est mon idée&nbsp;: un entraîneur par IA pour les athlètes d’endurance. J’ai construit la première version, une application web qui se connecte à Strava et génère des séances d’entraînement, et je construis maintenant l’application iOS avec Yanis Djeridi.',
         cta: 'Visiter cadencetrain.ca',
         i1alt: 'Cadence sur un téléphone&nbsp;: la séance au seuil du jour, un court résumé quotidien et trois scores pour le sommeil, le corps et l’entraînement.',
-        b1: 'Une application web Flask avec l’authentification OAuth et l’API de Strava, des séances d’entraînement générées par OpenAI et une vue horaire et calendrier.',
-        b3: 'Cadence est maintenant en développement comme application iOS&nbsp;: un entraîneur par IA qui prépare des plans d’entraînement en fonction du calendrier de l’athlète et lit les données WHOOP ou Apple Santé. Une fois offerte dans l’App Store, ses séances personnalisées pourront se faire sur une base d’entraînement intelligente grâce à VT-1.',
+        b1: 'La première version, que j’ai construite seul&nbsp;: une application web Flask avec l’authentification OAuth et l’API de Strava, des séances d’entraînement générées par OpenAI et une vue horaire et calendrier.',
+        b3: 'Avec Yanis, je construis maintenant Cadence comme application iOS&nbsp;: un entraîneur par IA qui prépare des plans d’entraînement en fonction du calendrier de l’athlète et lit les données WHOOP ou Apple Santé. Une fois offerte dans l’App Store, ses séances personnalisées pourront se faire sur une base d’entraînement intelligente grâce à VT-1.',
         b2: 'Pour la recherche produit, un pipeline Python et GPT-5 avec découpage map-reduce a transformé 47 transcriptions de balados et de cours en rapports individuels et en méta-analyses couvrant plusieurs épisodes.',
-        tools: 'Flask, API Strava, API OpenAI, Python'
+        tools: 'Python, Flask, API Strava, API OpenAI, Swift (iOS)'
       },
       h2: {
         title: 'Tableau de bord sur l’hydrogène en aviation',

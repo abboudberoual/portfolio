@@ -36,7 +36,7 @@ Page order: header, hero (name, one line, photo), then three groups, then Experi
 |---|---|---|
 | Hardware `#hardware` | Averell 1 `#l1-rocket`, landing simulator `#lander` | Mach 3 aft section `#aft-section`, VT-1 `#vt-1` |
 | Software `#software` | Alchemy `#alchemy`, Lectern `#lectern` | ReviewHub `#reviewhub`, Cadence `#cadence`, patents `#patents` |
-| Research `#research` | EconomicSense article `#article` | hydrogen dashboard `#hydrogen`, cardiac ultrasound `#ultrasound` |
+| Research `#research` | energy transition paradox article `#article` | hydrogen for general-aviation airports `#hydrogen`, cardiac view classification data `#ultrasound` |
 
 Inside a group the featured projects come first, then the compact index. Hardware leads the
 page with Averell 1: the project with the strongest pictures goes first. The index entries

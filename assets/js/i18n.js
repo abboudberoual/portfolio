@@ -78,7 +78,7 @@ window.I18N = {
       contents: 'Sommaire',
       lander: 'Atterrissage vertical de fusée',
       vt: 'Contrôleur VT-1',
-      article: 'Article EconomicSense'
+      article: 'Le paradoxe de la transition énergétique'
     },
 
     /* Titres des trois groupes de projets */
@@ -373,7 +373,7 @@ window.I18N = {
         tools: 'Python, Flask, API Strava, API OpenAI, Swift (iOS)'
       },
       h2: {
-        title: 'Tableau de bord sur l’hydrogène en aviation',
+        title: 'L’hydrogène pour les aéroports d’aviation générale',
         ctx: 'Stagiaire de recherche (BRPC du CRSNG), Aircraft Systems Lab, Concordia',
         when: 'Mai – août 2025',
         sum: 'Un tableau de bord d’indicateurs sur l’électricité et l’hydrogène pour les 20 principaux aéroports d’aviation générale des États-Unis.',
@@ -386,7 +386,7 @@ window.I18N = {
         figNote: 'Figures retracées avec Matplotlib à partir des données et des fonctions du tableau de bord.'
       },
       us: {
-        title: 'IA pour l’échographie cardiaque',
+        title: 'Données d’entraînement pour la classification des vues cardiaques',
         ctx: 'Chercheur, Healthcare for Extreme and Rural Environments (HERE)',
         when: 'Avr. 2026 – aujourd’hui',
         sum: 'Des données d’entraînement, des procédures et de la CAO pour une IA qui classe les vues d’échographie cardiaque.',

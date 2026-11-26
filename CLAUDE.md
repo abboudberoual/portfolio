@@ -42,6 +42,29 @@ Inside a group the featured projects come first, then the compact index. Hardwar
 page with Averell 1: the project with the strongest pictures goes first. The index entries
 keep their `more.*` translation keys.
 
+## Case cards (owner-approved option A, Nov 2026) — the current project layout
+
+- Each group opens with a chapter header: `header.chapter` (number `01`/`02`/`03`, the group
+  name, a one-line subtitle `case.ch.*`) over a dark rule.
+- Every project is an `<article class="case">` with the SAME anatomy, in this order:
+  `ul.chips` (role, dates, status chip with the dot) > `h3` (descriptive title) > `p.lede`
+  (one line anyone understands) > `dl.nums` (up to three REAL numbers, none invented) >
+  `div.stack` ("Tech stack", or "Methods" for research: short bullets) > `p.actions` > one lead
+  picture `figure.case-fig` > optional `figure.arch` > `details.case-more` holding everything else
+  (galleries, extra figures, widgets, long bullets).
+- Featured projects use `case case-lg` (text left, picture right from 960 px); the rest sit in
+  `div.cases`, a two-column grid of smaller cards with the picture on top.
+- `figure.arch` (self-landing rocket, Alchemy): lanes of nodes, each node a tool logo from
+  `assets/img/logos/` (Simple Icons, CC0, applied as a CSS mask so it takes the ink colour in
+  both themes), a name and one short line. The agentic workflow is always a lane.
+- `figure.illus` is the token-only illustration for projects with no screenshots (the CSA
+  review app, patent classification). It is labelled as an illustration.
+- Lead pictures: the rocket is shown whole (never cropped); the bike trainer and the AI coach
+  lead with their software screens; Alchemy leads with the extension at a fictional checkout
+  (`assets/img/alchemy/`, from the Alchemy repo's own store screenshots; fictional store and
+  cards only; never an image showing a real person's name).
+- New strings for the cards live in `I18N.fr.case` (keys `case.<project>.*`).
+
 ## Contents: the left rail and the "Contents" menu
 
 - **1100 px and up:** `nav#rail`, a sticky left column listing the groups and their projects,

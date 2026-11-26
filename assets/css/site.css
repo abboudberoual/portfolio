@@ -1046,3 +1046,98 @@ h4 { font-size: 1rem; font-weight: 600; }
 .row > .shots { margin-top: 1.25rem; }
 .shots-phone figure { flex: 0 0 min(78%, 21rem); }
 @media (max-width: 560px) { .shots-phone figure { flex-basis: 78%; } }
+
+/* ================================================================
+   Case cards (owner-approved option A, Nov 2026): every project uses the same anatomy:
+   chips (role, dates, status) > title > one line > key numbers > tech stack > links,
+   one lead picture, an optional architecture figure, then everything else behind "More".
+   ================================================================ */
+.chapter { display: flex; align-items: baseline; flex-wrap: wrap; gap: .3rem 1rem; padding-bottom: .9rem; border-bottom: 1px solid var(--ink); }
+.chapter-n { font-family: var(--font-display); color: var(--muted); font-size: 1rem; }
+.chapter-h { font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.375rem); font-weight: 500; }
+.chapter-sub { margin-left: auto; color: var(--muted); font-size: .9375rem; }
+.case { padding: clamp(2.5rem, 5vw, 3.75rem) 0; border-top: 1px solid var(--rule); }
+.chapter + .case { border-top: 0; }
+.case-body > * + * { margin-top: 1rem; }
+.case-body > .chips + h3 { margin-top: .9rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; padding: 0; margin: 0; }
+.chips li { font-size: .8125rem; line-height: 1.7; padding: 0 .65em; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted); }
+.chips li.status { color: var(--ink); font-weight: 500; }
+.case h3 { display: flex; align-items: center; gap: .4em; font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.125rem); font-weight: 600; }
+.case h3 img { width: .9em; height: .9em; border-radius: 22%; }
+.cases .case h3 { font-size: clamp(1.25rem, 1.1rem + .6vw, 1.5rem); }
+.case h3.paper-title { display: block; font-size: clamp(1.25rem, 1.05rem + .9vw, 1.625rem); line-height: 1.25; }
+.nums { display: flex; flex-wrap: wrap; gap: 1rem 2.25rem; margin-top: 1.4rem !important; }
+.nums div { display: flex; flex-direction: column; }
+.nums dd { margin: 0; font-family: var(--font-display); font-size: 1.75rem; line-height: 1.1; }
+.nums dt { font-size: .8125rem; color: var(--muted); max-width: 15em; margin-top: .2rem; }
+.stack h4 { font-size: .875rem; font-weight: 500; color: var(--muted); margin-bottom: .3rem; }
+.stack ul { margin: 0; padding-left: 1.1em; }
+.stack li { font-size: .9375rem; line-height: 1.5; }
+.stack li + li { margin-top: .15rem; }
+.case-body > .actions { margin-top: 1.25rem; }
+.case-fig { margin: 1.5rem 0 0; }
+.case-fig > a, .case-fig > img { display: block; }
+.case-fig img, .case-fig video { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface); }
+.case-fig figcaption { margin-top: .6rem; color: var(--muted); font-size: .875rem; line-height: 1.45; }
+.case-fig-tall img { width: auto; max-width: 100%; max-height: 34rem; }
+.case-fig-phone img { width: auto; max-width: 100%; max-height: 28rem; border: 0; background: none; }
+.case-fig.strip { margin-top: 1.5rem; }
+.case .row-figs { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.5rem; }
+.case-more { margin-top: 1.75rem; }
+.case-more[open] > *:not(summary) { margin-top: 1.25rem; }
+@media (min-width: 960px) {
+  .case-lg { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: clamp(2rem, 4vw, 3.5rem); align-items: start; }
+  .case-lg > .case-fig { margin-top: 0; }
+  .case-lg > :not(.case-body):not(.case-fig) { grid-column: 1 / -1; }
+}
+.cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 4vw, 3.5rem); border-top: 1px solid var(--rule); }
+.cases > .case { display: flex; flex-direction: column; }
+.cases > .case > .case-fig { order: -1; margin: 0 0 1.25rem; }
+@media (max-width: 760px) { .cases { grid-template-columns: 1fr; } }
+.pics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.pics img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: var(--radius); }
+.pics figcaption { margin-top: .5rem; color: var(--muted); font-size: .875rem; }
+@media (max-width: 560px) { .pics { grid-template-columns: 1fr; } }
+
+/* Architecture: lanes of nodes, each with the tools' logos (Simple Icons, CC0; one ink colour). */
+.arch { margin-top: 2.25rem; padding: 1.25rem 1.5rem; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface); }
+.arch-h { font-size: .9375rem; font-weight: 500; color: var(--muted); margin-bottom: .5rem; }
+.arch-lane { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1rem; align-items: center; padding: .85rem 0; border-top: 1px solid var(--rule); }
+.arch-h + .arch-lane { border-top: 0; }
+.arch-name { margin: 0; font-size: .8125rem; color: var(--muted); }
+.arch-lane ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+.arch-lane li { position: relative; display: flex; flex-direction: column; gap: .2rem; padding: .7rem .85rem; background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); }
+.arch-lane li b { font-size: .9375rem; font-weight: 600; }
+.arch-lane li > span:last-child { font-size: .8125rem; color: var(--muted); line-height: 1.35; }
+.arch-lane li + li::before { content: ""; position: absolute; left: -1.6rem; top: 50%; width: 1.1rem; height: 1px; background: var(--muted); }
+.arch-lane li + li::after { content: ""; position: absolute; left: -.55rem; top: calc(50% - 4px); border-style: solid; border-width: 4px 0 4px 5px; border-color: transparent transparent transparent var(--muted); }
+.lgs { display: flex; gap: .4rem; min-height: 18px; margin-bottom: .2rem; }
+.lg { display: inline-block; width: 18px; height: 18px; background: var(--ink); -webkit-mask-size: contain; mask-size: contain; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: center; mask-position: center; }
+.arch figcaption { margin-top: .75rem; color: var(--muted); font-size: .875rem; }
+@media (max-width: 760px) {
+  .arch-lane { grid-template-columns: 1fr; gap: .5rem; }
+  .arch-lane ol { grid-template-columns: 1fr; gap: 1.1rem; }
+  .arch-lane li + li::before { left: 1.2rem; top: -1.05rem; width: 1px; height: .8rem; }
+  .arch-lane li + li::after { left: calc(1.2rem - 4px); top: -.3rem; border-width: 5px 4px 0 4px; border-color: var(--muted) transparent transparent transparent; }
+}
+
+/* Illustrations for projects with no screenshots (internal or script-only): drawn with tokens only. */
+.illus { display: flex; flex-direction: column; justify-content: center; min-height: 11rem; padding: 1.5rem; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface); }
+.illus-row { display: flex; align-items: center; gap: .75rem; }
+.illus-doc { flex: 1 1 0; min-width: 0; padding: 1.4rem .75rem; text-align: center; font-size: .875rem; background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius); }
+.illus-notes { border-style: dashed; }
+.illus-list { border-color: var(--ink); }
+.illus-arrow { flex: 0 0 1.5rem; height: 1px; background: var(--muted); position: relative; }
+.illus-arrow::after { content: ""; position: absolute; right: -1px; top: -4px; border-style: solid; border-width: 4px 0 4px 5px; border-color: transparent transparent transparent var(--muted); }
+.illus figcaption { margin-top: .9rem; color: var(--muted); font-size: .875rem; }
+@media (max-width: 560px) {
+  .illus-row { flex-direction: column; align-items: stretch; }
+  .illus-arrow { flex: 0 0 1.25rem; width: 1px; height: 1.25rem; align-self: center; }
+  .illus-arrow::after { right: -4px; top: auto; bottom: -1px; border-width: 5px 4px 0 4px; border-color: var(--muted) transparent transparent transparent; }
+}
+
+/* Rocket photos are shown whole, never cropped. */
+.build-list img, .stage-photo img { object-fit: contain; background: var(--surface); }
+.cases > .case { min-width: 0; }
+@media (max-width: 760px) { .cases { grid-template-columns: minmax(0, 1fr); } }

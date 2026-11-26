@@ -205,7 +205,7 @@
            width="1068" height="1600" fetchpriority="high"
            alt="A yellow and black rocket a few metres above the launch pad, trailing a column of white smoke over a field."
            data-i18n-attrs="alt:hero.photoAlt">
-      <figcaption data-i18n="hero.photoCap">Averell 1 on its certification flight.</figcaption>
+      <figcaption data-i18n="hero.photoCap">My Level 1 rocket on its certification flight.</figcaption>
     </figure>
   </div>
 </section>
@@ -218,19 +218,13 @@
      ================================================================ -->
 <section class="section group" id="hardware" aria-labelledby="hardware-h">
   <div class="wrap">
-    <h2 class="section-h" id="hardware-h" data-i18n="groups.hardware">Hardware</h2>
+    <header class="chapter"><span class="chapter-n" aria-hidden="true">01</span><h2 class="section-h chapter-h" id="hardware-h" data-i18n="groups.hardware">Hardware</h2><p class="chapter-sub" data-i18n="case.ch.hardware">Rockets, test stands and a bike trainer</p></header>
 
     <!-- Averell 1, L1 rocket ------------------------------------- -->
-    <article class="project" id="l1-rocket">
-      <div class="project-aside">
-        <p class="status is-on" data-i18n="l1.status">Flown</p>
-        <p data-i18n="l1.role">Personal certification build<br>October 2026</p>
-      </div>
-      <div class="project-main">
-        <h3 data-i18n="l1.title">High-power rocketry: Level 1 certification flight</h3>
-        <p class="lede" data-i18n="l1.summary">I designed, built and flew a Level 1 certification rocket. It reached 2,100 ft on an H135 motor on 18 October 2026 and came back intact.</p>
-
-        <!-- Build sequence. The list is the content; site.js turns it into a stepper. -->
+<article class="case case-lg" id="l1-rocket">
+  <div class="case-body"><ul class="chips"><li data-i18n="case.l1.c1">Personal project</li><li data-i18n="case.l1.c2">October 2026</li><li class="status is-on" data-i18n="l1.status">Flown</li></ul><h3 data-i18n="l1.title">High-power rocketry: Level 1 certification flight</h3><p class="lede" data-i18n="case.l1.lede">I designed, built and flew a high-power rocket to earn my Level 1 certification. It reached 2,100 ft and came back intact.</p><dl class="nums"><div><dd data-i18n="case.l1.n1">2,100 ft</dd><dt data-i18n="case.l1.n1l">apogee</dt></div><div><dd data-i18n="case.l1.n2">H135</dd><dt data-i18n="case.l1.n2l">motor</dt></div><div><dd data-i18n="case.l1.n3">Level 1</dd><dt data-i18n="case.l1.n3l">high-power certification</dt></div></dl><div class="stack"><h4 data-i18n="projects.stack">Tech stack</h4><ul><li data-i18n="case.l1.s1">OpenRocket: flight simulation and stability for a windy day</li><li data-i18n="case.l1.s2">SolidWorks and Onshape: fins, bulkhead, motor retainer and nosecone</li><li data-i18n="case.l1.s3">PETG 3D printing, laser-cut plywood, epoxy assembly</li></ul></div></div>
+  <figure class="case-fig case-fig-tall"><a class="zoomable" href="assets/img/l1-field.jpg" data-w="1048" data-h="1397"><img src="assets/img/l1-field-800.jpg" width="600" height="800" loading="lazy" alt="Aboud kneeling in a harvested field beside the whole yellow and black rocket, nose to fins." data-i18n-attrs="alt:case.l1.figAlt"></a><figcaption data-i18n="case.l1.figCap">On the launch field before the certification flight.</figcaption></figure>
+  <details class="more case-more"><summary data-i18n="projects.more">More photos, figures and details</summary>
         <div class="build" id="build">
           <h4 class="build-h" data-i18n="l1.buildH">The build, from the parts table to the recovery field</h4>
           <div class="build-stage" id="build-stage"></div>
@@ -253,7 +247,7 @@
             </figure></li>
             <li><figure>
               <a href="assets/img/l1-field.jpg" data-w="1048" data-h="1397"><img src="assets/img/l1-field-800.jpg" width="600" height="800" loading="lazy" alt="Aboud kneeling in a harvested field beside the yellow and black rocket, with launch rails and other fliers in the background." data-i18n-attrs="alt:l1.s7alt"></a>
-              <figcaption><b data-i18n="l1.s7t">On the field</b> <span data-i18n="l1.s7">With Averell 1 at the Ciel d’Octobre launch.</span></figcaption>
+              <figcaption><b data-i18n="l1.s7t">On the field</b> <span data-i18n="l1.s7">At the Ciel d’Octobre launch.</span></figcaption>
             </figure></li>
             <li><figure>
               <a href="assets/img/l1-launch.jpg" data-w="1068" data-h="1600"><img src="assets/img/l1-launch-800.jpg" width="534" height="800" loading="lazy" alt="The rocket leaving the pad above a cloud of white smoke." data-i18n-attrs="alt:l1.s5alt"></a>
@@ -265,7 +259,6 @@
             </figure></li>
           </ol>
         </div>
-
         <div class="pair">
           <figure>
             <video controls muted playsinline loop preload="none"
@@ -279,12 +272,11 @@
           </figure>
           <figure>
             <a class="zoomable" href="assets/img/l1-openrocket-profile.png" data-w="1024" data-h="768">
-              <img src="assets/img/l1-openrocket-profile.png" width="1024" height="768" loading="lazy" alt="OpenRocket chart titled Averell 1 L1 Flight Profile, plotting altitude, vertical velocity and vertical acceleration against time." data-i18n-attrs="alt:l1.profileAlt">
+              <img src="assets/img/l1-openrocket-profile.png" width="1024" height="768" loading="lazy" alt="OpenRocket chart of the planned Level 1 flight, plotting altitude, vertical velocity and vertical acceleration against time." data-i18n-attrs="alt:l1.profileAlt">
             </a>
             <figcaption data-i18n="l1.profileCap">The OpenRocket flight profile used to plan the flight.</figcaption>
           </figure>
         </div>
-
         <details class="more">
           <summary data-i18n="l1.how">Design and certification</summary>
           <ul>
@@ -294,27 +286,19 @@
           </ul>
           <p class="tools" data-i18n="l1.tools">OpenRocket, SolidWorks, Onshape, PETG 3D printing, laser cutting, epoxy assembly</p>
         </details>
-      </div>
-    </article>
+</details>
+</article>
 
     <!-- Vertical rocket landing simulator (VTOL) ----------------- -->
-    <article class="project" id="lander">
-      <div class="project-aside">
-        <p class="status" data-i18n="vtol.status">Design phase</p>
-        <p data-i18n="vtol.role">Personal project<br>Program architecture, simulator, thrust stand and agents</p>
-      </div>
-      <div class="project-main">
-        <h3 data-i18n="vtol.title">Self-landing rocket: simulator and thrust stand</h3>
-        <p class="lede" data-i18n="vtol.summary">A small solid-fuel rocket meant to land upright under thrust. A solid motor cannot throttle, so I architected the program around one question: can the landing burn be timed precisely enough? A simulator, a thrust stand and scheduled AI agents all work from one sourced library.</p>
-        <p class="actions">
-          <!-- The landing-page URL is set in ONE place: VTOL_LANDING_URL at the top of assets/js/site.js.
-               While it is empty nothing shows here (no placeholder); once set, this becomes the button. -->
-          <span id="vtol-landing" hidden></span>
-          <a data-ico="github" href="https://github.com/abboudberoual/scoudouc" data-i18n="projects.source">Source on GitHub</a>
-        </p>
-
-        <!-- Real output of the project’s Python simulator (repo: scoudouc, sim/examples/land_s2.py),
-             saved from its own Matplotlib plotting functions. Not flight data. -->
+<article class="case case-lg" id="lander">
+  <div class="case-body"><ul class="chips"><li data-i18n="case.vt.c1">Personal project</li><li data-i18n="case.vt.c2">November 2026 – present</li><li class="status" data-i18n="vtol.status">Design phase</li></ul><h3 data-i18n="vtol.title">Self-landing rocket: simulator and thrust stand</h3><p class="lede" data-i18n="case.vt.lede">A small solid-fuel rocket meant to land upright under its own thrust. My simulator showed that timing the landing burn is not enough: real motors vary too much.</p><dl class="nums"><div><dd data-i18n="case.vt.n1">~2%</dd><dt data-i18n="case.vt.n1l">of landings succeed at ±15% motor variation</dt></div><div><dd data-i18n="case.vt.n2">200 Hz</dd><dt data-i18n="case.vt.n2l">attitude control loop</dt></div><div><dd data-i18n="case.vt.n3">17</dd><dt data-i18n="case.vt.n3l">tests run on every change</dt></div></dl><div class="stack"><h4 data-i18n="projects.stack">Tech stack</h4><ul><li data-i18n="case.vt.s1">Python and NumPy: 2D flight simulator, 1 ms steps</li><li data-i18n="case.vt.s2">pytest and GitHub Actions: 17 tests on every change</li><li data-i18n="case.vt.s3">C++ on an ESP32: thrust-stand recorder</li><li data-i18n="case.vt.s4">Python (trimesh): stand parts, bill of materials and strength checks</li><li data-i18n="case.vt.s5">Agentic workflow: Claude agents and local models open pull requests I review</li></ul></div><p class="actions"><span id="vtol-landing" hidden></span><a data-ico="github" href="https://github.com/abboudberoual/scoudouc" data-i18n="projects.source">Source on GitHub</a></p></div>
+          <figure class="case-fig plot">
+          <a class="zoomable" href="assets/img/vtol-spread.webp" data-w="720" data-h="480"><img src="assets/img/vtol-spread.webp" width="720" height="480" loading="lazy" alt="Line chart of landing success against motor-to-motor thrust spread for 660 g and 750 g vehicles: 100% at 0%, about 40% at 1%, under 10% from 5% on, near 0 at 15%, with a dashed 70% target line." data-i18n-attrs="alt:vtol.fig3alt"></a>
+          <figcaption data-i18n="vtol.fig3cap">Landing success falls fast as motors vary. Dashed: the 70% target.</figcaption>
+        </figure>
+  <figure class="arch"><h4 class="arch-h" data-i18n="case.vt.archH">How it is architected</h4><div class="arch-lane"><p class="arch-name" data-i18n="case.vt.l1">Simulation</p><ol><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/python.svg);mask-image:url(assets/img/logos/python.svg)" title="Python"></i><i class="lg" style="-webkit-mask-image:url(assets/img/logos/numpy.svg);mask-image:url(assets/img/logos/numpy.svg)" title="NumPy"></i></span><b data-i18n="case.vt.l1n1">Flight simulator</b><span data-i18n="case.vt.l1n1s">2D, 200 Hz control</span></li><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/pytest.svg);mask-image:url(assets/img/logos/pytest.svg)" title="pytest"></i><i class="lg" style="-webkit-mask-image:url(assets/img/logos/githubactions.svg);mask-image:url(assets/img/logos/githubactions.svg)" title="GitHub Actions"></i></span><b data-i18n="case.vt.l1n2">Tests in CI</b><span data-i18n="case.vt.l1n2s">17 tests, every change</span></li><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/python.svg);mask-image:url(assets/img/logos/python.svg)" title="Python"></i></span><b data-i18n="case.vt.l1n3">Monte Carlo sweeps</b><span data-i18n="case.vt.l1n3s">150 flights per case</span></li></ol></div><div class="arch-lane"><p class="arch-name" data-i18n="case.vt.l2">Hardware</p><ol><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/python.svg);mask-image:url(assets/img/logos/python.svg)" title="Python"></i></span><b data-i18n="case.vt.l2n1">Parts as code</b><span data-i18n="case.vt.l2n1s">STL, BOM, hand checks</span></li><li><span class="lgs" aria-hidden="true"></span><b data-i18n="case.vt.l2n2">Thrust stand</b><span data-i18n="case.vt.l2n2s">50 kg load cell</span></li><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/espressif.svg);mask-image:url(assets/img/logos/espressif.svg)" title="Espressif ESP32"></i><i class="lg" style="-webkit-mask-image:url(assets/img/logos/cplusplus.svg);mask-image:url(assets/img/logos/cplusplus.svg)" title="C++"></i></span><b data-i18n="case.vt.l2n3">Recorder</b><span data-i18n="case.vt.l2n3s">Logs each burn</span></li></ol></div><div class="arch-lane"><p class="arch-name" data-i18n="case.vt.l3">Agents</p><ol><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/ollama.svg);mask-image:url(assets/img/logos/ollama.svg)" title="Ollama"></i></span><b data-i18n="case.vt.l3n1">Local models</b><span data-i18n="case.vt.l3n1s">Drafts and conversions</span></li><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/claude.svg);mask-image:url(assets/img/logos/claude.svg)" title="Claude"></i></span><b data-i18n="case.vt.l3n2">Claude agents</b><span data-i18n="case.vt.l3n2s">Nightly build work</span></li><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/github.svg);mask-image:url(assets/img/logos/github.svg)" title="GitHub"></i></span><b data-i18n="case.vt.l3n3">Pull requests</b><span data-i18n="case.vt.l3n3s">I review and merge</span></li></ol></div><figcaption data-i18n="case.vt.archCap">One sourced library feeds both lanes. Measured thrust curves load back into the simulator.</figcaption></figure>
+<details class="more case-more"><summary data-i18n="projects.more">More photos, figures and details</summary>
+        <p class="aside-note" data-i18n="vtol.result"><b>Simulation result.</b> A well-timed burn lands softly (about 1 m/s) only if the motor matches its data sheet. Real motors vary, so timing alone almost never works: about 2% of landings succeed at ±15% variation. Next step: trimming thrust after ignition.</p>
         <div class="plots">
           <figure class="plot">
             <a class="zoomable" href="assets/img/vtol-flight.webp" data-w="1600" data-h="1600"><img src="assets/img/vtol-flight.webp" width="1600" height="1600" loading="lazy" alt="Matplotlib figure with three stacked plots against time: tilt and gimbal angle, altitude, and speed, with the two motor burns shaded." data-i18n-attrs="alt:vtol.fig1alt"></a>
@@ -325,59 +309,6 @@
             <figcaption data-i18n="vtol.fig2cap">First sweep: none of 100 simulated landings stayed under the speed limit (dashed).</figcaption>
           </figure>
         </div>
-
-        <!-- Program architecture, drawn in the page's own style from the repo (README, ops/agent-operating-model.md,
-             hardware/test-stand-v3, firmware/test-stand). Every label is text with a French twin. -->
-        <figure class="flow">
-          <h4 class="flow-h" data-i18n="vtol.archH">How I architected the program</h4>
-          <div class="flow-body">
-            <div class="flow-node flow-src">
-              <b data-i18n="vtol.a0">One shared library</b>
-              <span data-i18n="vtol.a0a">Motors, materials, vendors and rules as code, with two sources per value, validated in CI</span>
-            </div>
-            <ol class="flow-lane">
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.a1">Simulator</b><span data-i18n="vtol.a1a">2D rigid body at 1 ms steps, 200 Hz PID, servo lag and rate limits</span></div></li>
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.a2">Monte Carlo sweeps</b><span data-i18n="vtol.a2a">Motor-to-motor thrust spread and initial tilt</span></div></li>
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.a3">Decision records</b><span data-i18n="vtol.a3a">Weighted matrices; I make each call</span></div></li>
-            </ol>
-            <ol class="flow-lane">
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.a4">Thrust stand v3</b><span data-i18n="vtol.a4a">Aluminium extrusion tower and one 50 kg load cell, copied from stands that have fired</span></div></li>
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.a5">Parts as code</b><span data-i18n="vtol.a5a">Python scripts generate the STL files, bill of materials, drawings and hand checks</span></div></li>
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.a6">ESP32 recorder</b><span data-i18n="vtol.a6a">Arms, zeroes, triggers on thrust and logs to SD. It never fires the motor.</span></div></li>
-            </ol>
-          </div>
-          <figcaption data-i18n="vtol.archCap">The simulator and the test stand share one library of sourced data.</figcaption>
-        </figure>
-
-        <figure class="flow">
-          <h4 class="flow-h" data-i18n="vtol.agH">The agents that build it</h4>
-          <div class="flow-body">
-            <div class="flow-node flow-src">
-              <b data-i18n="vtol.g0">Scheduled AI agents</b>
-              <span data-i18n="vtol.g0a">Nightly: simulator, library, code, procurement, retry pass</span>
-              <span data-i18n="vtol.g0b">Weekly: orchestrator</span>
-            </div>
-            <ol class="flow-lane">
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.g1">Cheapest capable tier</b><span data-i18n="vtol.g1a">Code first, then local models, Haiku and Sonnet; Opus for safety and decisions</span></div></li>
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.g2">CI checks</b><span data-i18n="vtol.g2a">17 simulator tests and library validation</span></div></li>
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.g3">Library data committed</b></div></li>
-            </ol>
-            <ol class="flow-lane">
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.g4">Approved tickets</b></div></li>
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.g5">Pull requests</b><span data-i18n="vtol.g5a">At most three a night, each on its own branch</span></div></li>
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.g6">I merge</b><span data-i18n="vtol.g6a">Purchases, static fires and launches always wait for me</span></div></li>
-            </ol>
-          </div>
-          <figcaption data-i18n="vtol.agCap">Agents propose, tests check, I approve.</figcaption>
-        </figure>
-
-        <p class="aside-note" data-i18n="vtol.result"><b>Simulation result.</b> A well-timed burn lands softly (about 1 m/s) only if the motor matches its data sheet. Real motors vary, so timing alone almost never works: about 2% of landings succeed at ±15% variation. Next step: trimming thrust after ignition.</p>
-        <!-- Real output of the simulator (repo: scoudouc, sim/examples/t010_spread.py, data/sim/t010_success_vs_spread.png). -->
-        <figure class="plot plot-solo">
-          <a class="zoomable" href="assets/img/vtol-spread.webp" data-w="720" data-h="480"><img src="assets/img/vtol-spread.webp" width="720" height="480" loading="lazy" alt="Line chart of landing success against motor-to-motor thrust spread for 660 g and 750 g vehicles: 100% at 0%, about 40% at 1%, under 10% from 5% on, near 0 at 15%, with a dashed 70% target line." data-i18n-attrs="alt:vtol.fig3alt"></a>
-          <figcaption data-i18n="vtol.fig3cap">Landing success falls fast as motors vary. Dashed: the 70% target.</figcaption>
-        </figure>
-
         <details class="more">
           <summary data-i18n="vtol.toyH">Try the landing problem</summary>
           <div class="toy" id="toy">
@@ -392,7 +323,6 @@
             </details>
           </div>
         </details>
-
         <details class="more">
           <summary data-i18n="projects.how">Architecture and build</summary>
           <ul>
@@ -404,15 +334,15 @@
           </ul>
           <p class="tools" data-i18n="vtol.tools">Python, NumPy, Matplotlib, pytest, trimesh, C++, PlatformIO, ESP32, GitHub Actions, scheduled AI agents</p>
         </details>
-      </div>
-    </article>
+</details>
+</article>
 
-    <div class="index">
+    <div class="cases">
 
-      <article class="row" id="aft-section">
-        <h3 data-i18n="more.aft.title">Space Concordia: solid rocket structures designer</h3>
-        <p class="row-meta"><span data-i18n="more.aft.ctx">Space Concordia Solid Rocketry, structures team and payload liaison</span> <span data-i18n="more.aft.when">May 2026 – present</span> <span class="status" data-i18n="more.inProgress">In progress</span></p>
-        <p class="row-sum" data-i18n="more.aft.sum">I am designing the carbon-fibre boat tail of a two-stage rocket that targets Mach 3.</p>
+<article class="case" id="aft-section">
+  <div class="case-body"><ul class="chips"><li data-i18n="case.sc.c1">Space Concordia team</li><li data-i18n="more.aft.when">May 2026 – present</li><li class="status" data-i18n="more.inProgress">In progress</li></ul><h3 data-i18n="more.aft.title">Space Concordia: solid rocket structures designer</h3><p class="lede" data-i18n="more.aft.sum">I am designing the carbon-fibre boat tail of a two-stage rocket that targets Mach 3.</p><dl class="nums"><div><dd data-i18n="case.sc.n1">Mach 3</dd><dt data-i18n="case.sc.n1l">target speed</dt></div><div><dd data-i18n="case.sc.n2">2</dd><dt data-i18n="case.sc.n2l">stages</dt></div></dl><div class="stack"><h4 data-i18n="projects.stack">Tech stack</h4><ul><li data-i18n="case.sc.s1">Siemens NX: parametric boat tail, nose cone and tip</li><li data-i18n="case.sc.s2">Manufacturing drawings for the shop</li><li data-i18n="case.sc.s3">Payload liaison for the structures team</li></ul></div></div>
+  <figure class="case-fig"><a class="zoomable" href="assets/img/sc-boat-tail.webp" data-w="1500" data-h="1000"><img src="assets/img/sc-boat-tail.webp" width="1500" height="1000" loading="lazy" alt="Siemens NX model of the boat tail, a short tapered ring seen from its wide end." data-i18n-attrs="alt:more.aft.i2alt"></a><figcaption data-i18n="case.sc.figCap">The boat tail in Siemens NX.</figcaption></figure>
+  <details class="more case-more"><summary data-i18n="projects.more">More photos, figures and details</summary>
         <div class="row-media" data-zoom>
           <a href="assets/img/sc-nosecone.webp" data-w="900" data-h="600"><img src="assets/img/sc-nosecone.webp" width="900" height="600" loading="lazy" alt="Siemens NX model of a long tapered nosecone with a cylindrical shoulder." data-i18n-attrs="alt:more.aft.i1alt"></a>
           <a href="assets/img/sc-boat-tail.webp" data-w="1500" data-h="1000"><img src="assets/img/sc-boat-tail.webp" width="1500" height="1000" loading="lazy" alt="Siemens NX model of the boat tail, a short tapered ring seen from its wide end." data-i18n-attrs="alt:more.aft.i2alt"></a>
@@ -426,25 +356,28 @@
           </video>
           <figcaption data-i18n="more.aft.videoCap">Cutting a tube section in the shop. 12 seconds, no sound.</figcaption>
         </figure>
-        <details class="more">
-          <summary data-i18n="projects.details">Details</summary>
+        
+          
           <ul>
             <li data-i18n="more.aft.b1">Modelled the boat tail in Siemens NX as a fully parametric part driven by named expressions, plus the nose cone and nose tip, and produced the manufacturing drawings.</li>
             <li data-i18n="more.aft.b4">I am the structures team’s payload liaison.</li>
             <li data-i18n="more.aft.b5">Next: finite element analysis (FEA) of the structures in Siemens NX.</li>
           </ul>
           <p class="tools" data-i18n="more.aft.tools">Siemens NX, parametric modelling, manufacturing drawings, carbon fibre</p>
-        </details>
-      </article>
+        
+</details>
+</article>
 
-      <article class="row" id="vt-1">
-        <h3 data-i18n="more.vt.title">Smart bike trainer controller: hardware and web app</h3>
-        <p class="row-meta"><span data-i18n="more.vt.ctx">Personal hardware and web project</span> <span data-i18n="more.vt.when">Oct 2026 – present</span> <span class="status" data-i18n="more.inProgress">In progress</span></p>
-        <p class="row-sum" data-i18n="more.vt.sum">A one-screen controller for Bluetooth smart trainers: pick ERG, resistance or slope, turn the knob, pedal. It exists as an ESP32-S3 handheld with a round watt gauge, and as a web app you can try now.</p>
-        <p class="row-links actions">
-          <a class="btn btn-small ext" href="https://abboudberoual.github.io/VT1/" data-i18n="more.vt.cta">Open the web app</a>
-          <a data-ico="github" href="https://github.com/abboudberoual/VT1" data-i18n="projects.source">Source on GitHub</a>
-        </p>
+<article class="case" id="vt-1">
+  <div class="case-body"><ul class="chips"><li data-i18n="case.bt.c1">Personal project</li><li data-i18n="more.vt.when">Oct 2026 – present</li><li class="status is-on" data-i18n="case.bt.c3">Web app live</li></ul><h3 data-i18n="more.vt.title">Smart bike trainer controller: hardware and web app</h3><p class="lede" data-i18n="case.bt.lede">A web app that controls a Bluetooth smart bike trainer: pick power, resistance or slope, then adjust. A matching handheld controller runs the same modes.</p><dl class="nums"><div><dd data-i18n="case.bt.n1">3</dd><dt data-i18n="case.bt.n1l">control modes</dt></div><div><dd data-i18n="case.bt.n2">FTMS</dd><dt data-i18n="case.bt.n2l">Bluetooth fitness protocol</dt></div></dl><div class="stack"><h4 data-i18n="projects.stack">Tech stack</h4><ul><li data-i18n="case.bt.s1">TypeScript and Vite: the web app, with a demo mode</li><li data-i18n="case.bt.s2">Web Bluetooth and FTMS: talking to the trainer</li><li data-i18n="case.bt.s3">A unit-tested core package for the protocol</li><li data-i18n="case.bt.s4">C++ on an ESP32-S3: the handheld controller</li></ul></div><p class="actions"><a class="btn btn-small ext" href="https://abboudberoual.github.io/VT1/" data-i18n="more.vt.cta">Open the web app</a> <a data-ico="github" href="https://github.com/abboudberoual/VT1" data-i18n="projects.source">Source on GitHub</a></p></div>
+          <figure class="case-fig strip strip-app" data-zoom>
+          <div class="strip-row">
+            <a href="assets/img/vt1-app-erg.webp" data-w="780" data-h="1560" style="flex:.5"><img src="assets/img/vt1-app-erg.webp" width="780" height="1560" loading="lazy" alt="The VT-1 web app on a phone in ERG mode: a round gauge with a 150-watt target, live power, cadence and time, and minus and plus buttons." data-i18n-attrs="alt:more.vt.app1alt"></a>
+            <a href="assets/img/vt1-app-slope.webp" data-w="780" data-h="1560" style="flex:.5"><img src="assets/img/vt1-app-slope.webp" width="780" height="1560" loading="lazy" alt="The VT-1 web app on a phone in slope mode, set to a 4 percent grade." data-i18n-attrs="alt:more.vt.app2alt"></a>
+          </div>
+          <figcaption data-i18n="more.vt.appCap">The web app in demo mode on a phone: ERG at a 150 W target, then slope at +4%.</figcaption>
+        </figure>
+  <details class="more case-more"><summary data-i18n="projects.more">More photos, figures and details</summary>
         <div class="row-media" data-zoom>
           <a href="assets/img/vt1-render.webp" data-w="1600" data-h="1035"><img src="assets/img/vt1-render.webp" width="1600" height="1035" loading="lazy" alt="Render of the VT-1: a wedge-shaped box with a round power gauge, a mode toggle, a button and a large knob." data-i18n-attrs="alt:more.vt.i1alt"></a>
           <a href="assets/img/vt1-shell-top.webp" data-w="900" data-h="600"><img src="assets/img/vt1-shell-top.webp" width="900" height="600" loading="lazy" alt="CAD view of the printed shell from above, with cutouts for the display, knob and controls." data-i18n-attrs="alt:more.vt.i2alt"></a>
@@ -454,13 +387,6 @@
           <a href="assets/img/vt1-parts.webp" data-w="1200" data-h="1600"><img src="assets/img/vt1-parts.webp" width="1200" height="1600" loading="lazy" alt="The parts laid out: printed case and cover, blue knob and bezels, ribbon cable, encoder and other electronics." data-i18n-attrs="alt:more.vt.i6alt"></a>
         </div>
         <p class="row-cap" data-i18n="more.vt.cap">Concept render and CAD, then the printed case, the display test fit and the parts.</p>
-        <figure class="strip strip-app" data-zoom>
-          <div class="strip-row">
-            <a href="assets/img/vt1-app-erg.webp" data-w="780" data-h="1560" style="flex:.5"><img src="assets/img/vt1-app-erg.webp" width="780" height="1560" loading="lazy" alt="The VT-1 web app on a phone in ERG mode: a round gauge with a 150-watt target, live power, cadence and time, and minus and plus buttons." data-i18n-attrs="alt:more.vt.app1alt"></a>
-            <a href="assets/img/vt1-app-slope.webp" data-w="780" data-h="1560" style="flex:.5"><img src="assets/img/vt1-app-slope.webp" width="780" height="1560" loading="lazy" alt="The VT-1 web app on a phone in slope mode, set to a 4 percent grade." data-i18n-attrs="alt:more.vt.app2alt"></a>
-          </div>
-          <figcaption data-i18n="more.vt.appCap">The web app in demo mode on a phone: ERG at a 150 W target, then slope at +4%.</figcaption>
-        </figure>
         <figure class="row-video">
           <video controls muted playsinline loop preload="none" poster="assets/img/vt1-gauge-bench-poster.jpg" width="540" height="960"
                  aria-label="The round watt gauge running on the bench, 7 seconds, no sound." data-i18n-attrs="aria-label:more.vt.videoLabel">
@@ -469,8 +395,8 @@
           </video>
           <figcaption data-i18n="more.vt.videoCap">The round gauge running on the bench. 7 seconds, no sound.</figcaption>
         </figure>
-        <details class="more">
-          <summary data-i18n="projects.details">Details</summary>
+        
+          
           <ul>
             <li data-i18n="more.vt.arch">Architecture: one repository with a shared, unit-tested TypeScript core (FTMS encoders, decoders and mode limits) under the web app, ESP32-S3 firmware for the hardware controller, and the printed case files.</li>
             <li data-i18n="more.vt.b1">Validated the control path first with a browser prototype that commanded an Elite Tuo trainer through a 30-minute ride test: power hold, step response, resistance scaling and reconnection.</li>
@@ -481,8 +407,9 @@
             <li data-i18n="more.vt.b4">Next: the firmware bench test.</li>
           </ul>
           <p class="tools" data-i18n="more.vt.tools">ESP32-S3, Arduino, Bluetooth FTMS, Web Bluetooth, TypeScript, Vite, 3D printing, SolidWorks</p>
-        </details>
-      </article>
+        
+</details>
+</article>
 
     </div>
   </div>
@@ -493,29 +420,21 @@
      ================================================================ -->
 <section class="section group" id="software" aria-labelledby="software-h">
   <div class="wrap">
-    <h2 class="section-h" id="software-h" data-i18n="groups.software">Software</h2>
+    <header class="chapter"><span class="chapter-n" aria-hidden="true">02</span><h2 class="section-h chapter-h" id="software-h" data-i18n="groups.software">Software</h2><p class="chapter-sub" data-i18n="case.ch.software">Products, tools and AI</p></header>
 
     <!-- Alchemy -------------------------------------------------- -->
-    <article class="project" id="alchemy">
-      <div class="project-aside">
-        <p class="status" data-i18n="alchemy.status">Pre-launch</p>
-        <p data-i18n="alchemy.role">Co-founder<br>Canadian fintech</p>
-      </div>
-      <div class="project-main">
-        <h3 data-i18n="alchemy.title">Fintech startup: credit-card rewards routing</h3>
-        <p class="lede" data-i18n="alchemy.summary">At checkout, Alchemy picks the best card from the wallet you already have. The browser extension comes first.</p>
-        <p class="actions">
-          <a class="btn ext" href="https://abboudberoual.github.io/alchemy-site/" data-i18n="alchemy.cta">Alchemy landing page</a>
-          <span class="quiet" data-i18n="alchemy.private">The repository is private.</span>
-        </p>
-
+<article class="case case-lg" id="alchemy">
+  <div class="case-body"><ul class="chips"><li data-i18n="case.al.c1">Co-founder</li><li data-i18n="case.al.c2">Fintech startup</li><li class="status" data-i18n="alchemy.status">Pre-launch</li></ul><h3 data-i18n="alchemy.title">Fintech startup: credit-card rewards routing</h3><p class="lede" data-i18n="case.al.lede">At checkout, Alchemy picks the best card from the wallet you already have and fills it in. It never issues a card or touches the payment.</p><dl class="nums"><div><dd data-i18n="case.al.n1">8.8%</dd><dt data-i18n="case.al.n1l">median gain over the best single card (simulated)</dt></div><div><dd data-i18n="case.al.n2">41</dd><dt data-i18n="case.al.n2l">Canadian cards modelled</dt></div><div><dd data-i18n="case.al.n3">1,085</dd><dt data-i18n="case.al.n3l">merchant rules</dt></div></dl><div class="stack"><h4 data-i18n="projects.stack">Tech stack</h4><ul><li data-i18n="case.al.s1">Python: reward optimizer, simulator and statement analyzer</li><li data-i18n="case.al.s2">TypeScript, Manifest V3: the Chrome and Firefox extension</li><li data-i18n="case.al.s3">Swift: Safari on iPhone. Kotlin: Android wallet and tap-to-pay prototype</li><li data-i18n="case.al.s4">Agentic workflow: nightly Claude agents behind 17 unit tests; code arrives as pull requests</li></ul></div><p class="actions"><a class="btn ext" href="https://abboudberoual.github.io/alchemy-site/" data-i18n="alchemy.cta">Alchemy landing page</a> <span class="quiet" data-i18n="alchemy.private">The repository is private.</span></p></div>
+  <figure class="case-fig"><a class="zoomable" href="assets/img/alchemy/checkout-suggest.webp" data-w="1280" data-h="800"><img src="assets/img/alchemy/checkout-suggest.webp" width="1280" height="800" loading="lazy" alt="A demo store checkout with the Alchemy suggestion in the corner: pay with the Maple card for 1.5% cash back." data-i18n-attrs="alt:case.al.figAlt"></a><figcaption data-i18n="case.al.figCap">The extension at a demo checkout, suggesting the best card. Fictional store and cards.</figcaption></figure>
+  <figure class="arch"><h4 class="arch-h" data-i18n="case.al.archH">How it is architected</h4><div class="arch-lane"><p class="arch-name" data-i18n="case.al.l1">Engine</p><ol><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/python.svg);mask-image:url(assets/img/logos/python.svg)" title="Python"></i></span><b data-i18n="case.al.l1n1">Reward optimizer</b><span data-i18n="case.al.l1n1s">Picks the card per purchase</span></li><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/python.svg);mask-image:url(assets/img/logos/python.svg)" title="Python"></i></span><b data-i18n="case.al.l1n2">Simulator</b><span data-i18n="case.al.l1n2s">13 household profiles</span></li><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/githubactions.svg);mask-image:url(assets/img/logos/githubactions.svg)" title="GitHub Actions"></i></span><b data-i18n="case.al.l1n3">CI checks</b><span data-i18n="case.al.l1n3s">17 tests and a validator</span></li></ol></div><div class="arch-lane"><p class="arch-name" data-i18n="case.al.l2">Where it runs</p><ol><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/googlechrome.svg);mask-image:url(assets/img/logos/googlechrome.svg)" title="Chrome"></i><i class="lg" style="-webkit-mask-image:url(assets/img/logos/firefoxbrowser.svg);mask-image:url(assets/img/logos/firefoxbrowser.svg)" title="Firefox"></i><i class="lg" style="-webkit-mask-image:url(assets/img/logos/typescript.svg);mask-image:url(assets/img/logos/typescript.svg)" title="TypeScript"></i></span><b data-i18n="case.al.l2n1">Browser extension</b><span data-i18n="case.al.l2n1s">Fills the checkout</span></li><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/safari.svg);mask-image:url(assets/img/logos/safari.svg)" title="Safari"></i><i class="lg" style="-webkit-mask-image:url(assets/img/logos/swift.svg);mask-image:url(assets/img/logos/swift.svg)" title="Swift"></i></span><b data-i18n="case.al.l2n2">iPhone</b><span data-i18n="case.al.l2n2s">Safari extension</span></li><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/android.svg);mask-image:url(assets/img/logos/android.svg)" title="Android"></i><i class="lg" style="-webkit-mask-image:url(assets/img/logos/kotlin.svg);mask-image:url(assets/img/logos/kotlin.svg)" title="Kotlin"></i></span><b data-i18n="case.al.l2n3">Android</b><span data-i18n="case.al.l2n3s">Wallet and tap-to-pay</span></li></ol></div><div class="arch-lane"><p class="arch-name" data-i18n="case.al.l3">Agents</p><ol><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/claude.svg);mask-image:url(assets/img/logos/claude.svg)" title="Claude"></i></span><b data-i18n="case.al.l3n1">Nightly agents</b><span data-i18n="case.al.l3n1s">Card and merchant data</span></li><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/githubactions.svg);mask-image:url(assets/img/logos/githubactions.svg)" title="GitHub Actions"></i></span><b data-i18n="case.al.l3n2">Checks pass</b><span data-i18n="case.al.l3n2s">Or nothing is committed</span></li><li><span class="lgs" aria-hidden="true"><i class="lg" style="-webkit-mask-image:url(assets/img/logos/github.svg);mask-image:url(assets/img/logos/github.svg)" title="GitHub"></i></span><b data-i18n="case.al.l3n3">Pull requests</b><span data-i18n="case.al.l3n3s">Founders approve code</span></li></ol></div><figcaption data-i18n="case.al.archCap">Card numbers stay on the device in every client.</figcaption></figure>
+<details class="more case-more"><summary data-i18n="projects.more">More photos, figures and details</summary>
+<div class="pics"><figure><a class="zoomable" href="assets/img/alchemy/checkout-filled.webp" data-w="1280" data-h="800"><img src="assets/img/alchemy/checkout-filled.webp" width="1280" height="800" loading="lazy" alt="The same checkout after Alchemy filled the card details." data-i18n-attrs="alt:case.al.p1alt"></a><figcaption data-i18n="case.al.p1">Card filled in one click.</figcaption></figure><figure><a class="zoomable" href="assets/img/alchemy/vault.webp" data-w="1280" data-h="800"><img src="assets/img/alchemy/vault.webp" width="1280" height="800" loading="lazy" alt="The extension popup listing the user’s fictional cards, stored encrypted on the device." data-i18n-attrs="alt:case.al.p2alt"></a><figcaption data-i18n="case.al.p2">Cards stay encrypted on the device.</figcaption></figure><figure><a class="zoomable" href="assets/img/alchemy/android-tap.webp" data-w="786" data-h="716"><img src="assets/img/alchemy/android-tap.webp" width="786" height="716" loading="lazy" alt="Android app after a tap: paid with the Maple card at a grocery store, with the other cards ranked below." data-i18n-attrs="alt:case.al.p3alt"></a><figcaption data-i18n="case.al.p3">Android prototype: the best card answers each tap.</figcaption></figure></div>
         <dl class="figures" aria-label="Verified data figures" data-i18n-attrs="aria-label:alchemy.figuresLabel">
           <div><dd data-i18n="alchemy.n1">41</dd><dt data-i18n="alchemy.n1l">Canadian cards modelled, 39 verified</dt></div>
           <div><dd data-i18n="alchemy.n2">1,085</dd><dt data-i18n="alchemy.n2l">ordered regex rules in the merchant dictionary</dt></div>
           <div><dd data-i18n="alchemy.n3">844</dd><dt data-i18n="alchemy.n3l">brands on the coverage roster</dt></div>
           <div><dd data-i18n="alchemy.n4">13</dd><dt data-i18n="alchemy.n4l">sourced spending profiles</dt></div>
         </dl>
-
         <div class="tiers">
           <p class="tiers-h" data-i18n="alchemy.tiersH">Confidence of the 1,085 rules</p>
           <div class="tiers-bar" role="img" aria-label="Rule confidence tiers: 24 dual-source verified, 78 community-sourced, 451 statement-sourced, 532 seed." data-i18n-attrs="aria-label:alchemy.tiersAlt">
@@ -528,41 +447,13 @@
             <li><i class="t4"></i><b>532</b> <span data-i18n="alchemy.t4">seed</span></li>
           </ul>
         </div>
-
         <p class="aside-note" data-i18n="alchemy.sim"><b>Simulation result.</b> Across 13 households, routing earned $14 to $136 more a year than each wallet’s best card (median 8.8%), and $73 to $778 more than always using the default card. Simulated; no real users yet.</p>
-
-        <!-- Real output of the Alchemy simulator (private repo, packages/engine/simulate.py), plotted with
-             Matplotlib from its per-profile results. Regenerate from the repo; never redraw by hand. -->
         <figure class="plot plot-solo">
           <a class="zoomable" href="assets/img/alchemy-sim.webp" data-w="1600" data-h="1024"><img src="assets/img/alchemy-sim.webp" width="1600" height="1024" loading="lazy" alt="Horizontal bar chart of 13 spending profiles. For each, a dark bar shows the extra rewards per year from routing against the wallet's best single card, from $14 to $136, and a light bar shows the same against always using the default card, from $73 to $778." data-i18n-attrs="alt:alchemy.chartAlt"></a>
           <figcaption data-i18n="alchemy.chartCap">Extra rewards per year for each of the 13 simulated households.</figcaption>
         </figure>
-
-        <!-- The agent operating model, drawn in the page's own style. Every label is text and has a French twin. -->
-        <figure class="flow">
-          <h4 class="flow-h" data-i18n="alchemy.opsH">The agent operating model</h4>
-          <div class="flow-body">
-            <div class="flow-node flow-src">
-              <b data-i18n="alchemy.ops1">Scheduled AI agents</b>
-              <span data-i18n="alchemy.ops1a">Nightly: data maintenance, merchant dictionary, retry pass</span>
-              <span data-i18n="alchemy.ops1b">Weekly: orchestrator</span>
-            </div>
-            <ol class="flow-lane">
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="alchemy.ops2">Data changes</b></div></li>
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="alchemy.ops3">CI checks</b> <span data-i18n="alchemy.ops3a">Validator and 17 unit tests</span></div></li>
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="alchemy.ops4">Committed</b> <span data-i18n="alchemy.ops4a">Only if the checks pass</span></div></li>
-            </ol>
-            <ol class="flow-lane">
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="alchemy.ops5">Code changes</b></div></li>
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="alchemy.ops6">Pull request</b></div></li>
-              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="alchemy.ops7">Founders approve</b></div></li>
-            </ol>
-          </div>
-          <figcaption data-i18n="alchemy.opsCap">Agents propose, tests check, the founders approve code.</figcaption>
-        </figure>
-
-        <details class="more">
-          <summary data-i18n="projects.how">Architecture and build</summary>
+        
+          
           <ul>
             <li data-i18n="alchemy.b1">Pure-Python optimizer, a self-verifying simulator and a retroactive statement analyzer, with 17 unit tests and a data validator running in GitHub Actions.</li>
             <li data-i18n="alchemy.b2">A merchant dictionary of ordered regex rules that maps raw card descriptors to a merchant category code (MCC) and category. Order is precedence, so Uber Eats matches before Uber rides.</li>
@@ -571,25 +462,15 @@
             <li data-i18n="alchemy.b5">I designed the agent operating model: scheduled AI agents run nightly (data maintenance, merchant dictionary, a retry pass) with a weekly orchestrator. Data commits go through CI checks; code arrives as pull requests the founders approve.</li>
           </ul>
           <p class="tools" data-i18n="alchemy.tools">Python, TypeScript, Manifest V3, Vitest, GitHub Actions, scheduled AI agents</p>
-        </details>
-      </div>
-    </article>
+        
+</details>
+</article>
 
     <!-- Lectern -------------------------------------------------- -->
-    <article class="project" id="lectern">
-      <div class="project-aside">
-        <p class="status is-on" data-i18n="lectern.status">Live</p>
-        <p data-i18n="lectern.role">Chrome extension<br>Personal project</p>
-      </div>
-      <div class="project-main">
-        <h3><img src="assets/img/lectern/icon128.png" width="128" height="128" alt=""><span data-i18n="lectern.title">Chrome extension for YouTube lecture notes</span></h3>
-        <p class="lede" data-i18n="lectern.summary">Published on the Chrome Web Store as Lectern. It runs entirely on your machine: no server, no account.</p>
-        <p class="actions">
-          <a class="btn ext" href="https://chromewebstore.google.com/detail/bhgemnaiogekegbnldhenbfnanngfbob?utm_source=item-share-cb" data-i18n="lectern.cta">Get it on Chrome</a>
-          <a data-ico="github" href="https://github.com/abboudberoual/lectern" data-i18n="projects.source">Source on GitHub</a>
-        </p>
-
-        <div class="shots" id="shots" data-zoom tabindex="0" role="group" aria-label="Lectern screenshots, scroll sideways" data-i18n-attrs="aria-label:lectern.shotsLabel">
+<article class="case case-lg" id="lectern">
+  <div class="case-body"><ul class="chips"><li data-i18n="case.le.c1">Personal project</li><li data-i18n="case.le.c2">2026</li><li class="status is-on" data-i18n="lectern.status">Live</li></ul><h3><img src="assets/img/lectern/icon128.png" width="128" height="128" alt=""><span data-i18n="lectern.title">Chrome extension for YouTube lecture notes</span></h3><p class="lede" data-i18n="lectern.summary">Published on the Chrome Web Store as Lectern. It runs entirely on your machine: no server, no account.</p><div class="stack"><h4 data-i18n="projects.stack">Tech stack</h4><ul><li data-i18n="case.le.s1">JavaScript, Chrome Manifest V3: side panel, library and service worker</li><li data-i18n="case.le.s2">Claude or OpenAI API, with the user’s own key</li><li data-i18n="case.le.s3">Notion and Obsidian sync; Markdown, Word and PDF export</li><li data-i18n="case.le.s4">Playwright end-to-end tests</li></ul></div><p class="actions"><a class="btn ext" href="https://chromewebstore.google.com/detail/bhgemnaiogekegbnldhenbfnanngfbob?utm_source=item-share-cb" data-i18n="lectern.cta">Get it on Chrome</a> <a data-ico="github" href="https://github.com/abboudberoual/lectern" data-i18n="projects.source">Source on GitHub</a></p></div>
+  
+          <div class="shots" id="shots" data-zoom tabindex="0" role="group" aria-label="Lectern screenshots, scroll sideways" data-i18n-attrs="aria-label:lectern.shotsLabel">
           <figure>
             <a href="assets/img/lectern/1-notes.webp" data-w="1280" data-h="800"><img src="assets/img/lectern/1-notes.webp" width="1280" height="800" loading="lazy" alt="Lectern side panel next to a lecture video, with a summary and a list of time-stamped notes." data-i18n-attrs="alt:lectern.s1alt"></a>
             <figcaption><b data-i18n="lectern.s1t">Notes</b> <span data-i18n="lectern.s1">Press Enter and the note is stamped with the video time. Click the time to jump back.</span></figcaption>
@@ -611,9 +492,9 @@
             <figcaption><b data-i18n="lectern.s5t">Sync</b> <span data-i18n="lectern.s5">Notes sync to Notion and Obsidian, and export to Markdown, Word and PDF.</span></figcaption>
           </figure>
         </div>
-
-        <details class="more">
-          <summary data-i18n="projects.what">What it does</summary>
+<details class="more case-more"><summary data-i18n="projects.more">More photos, figures and details</summary>
+        
+          
           <ul>
             <li data-i18n="lectern.b1">Notes are stamped with the video time. Click a timestamp to jump back.</li>
             <li data-i18n="lectern.b2">Captures the transcript and makes it searchable.</li>
@@ -623,18 +504,20 @@
             <li data-i18n="lectern.b6">Architecture: a Chrome Manifest V3 service worker captures transcripts and runs the sync; the side panel and the library page share one local data layer and modules for AI, Notion, Markdown and Word export. Vanilla JavaScript, no server, with Playwright end-to-end tests.</li>
           </ul>
           <p class="tools" data-i18n="lectern.tools">Chrome MV3, vanilla JS, Playwright, Notion and Obsidian sync</p>
-        </details>
-      </div>
-    </article>
+        
+</details>
+</article>
 
-    <div class="index">
+    <div class="cases">
 
-      <article class="row" id="reviewhub">
-        <h3 data-i18n="more.rh.title">Canadian Space Agency: engineering document review app</h3>
-        <p class="row-meta"><span data-i18n="more.rh.ctx">Canadian Space Agency, Program Integration Intern</span> <span data-i18n="more.rh.when">Jan – Dec 2026, part-time from September</span> <span class="status" data-i18n="more.rh.status">Rollout under review</span></p>
-        <p class="row-sum" data-i18n="more.rh.sum">A full-stack app for drafting and commenting on Review Item Discrepancies (RIDs) in PDF and Word deliverables.</p>
-        <details class="more">
-          <summary data-i18n="projects.details">Details</summary>
+<article class="case" id="reviewhub">
+  <div class="case-body"><ul class="chips"><li data-i18n="case.rh.c1">Canadian Space Agency internship</li><li data-i18n="case.rh.c2">2026</li><li class="status" data-i18n="more.rh.status">Rollout under review</li></ul><h3 data-i18n="more.rh.title">Canadian Space Agency: engineering document review app</h3><p class="lede" data-i18n="case.rh.lede">A web app where engineers draft and comment on review discrepancies in PDF and Word deliverables, instead of passing files around.</p><dl class="nums"><div><dd data-i18n="case.rh.n1">~10</dd><dt data-i18n="case.rh.n1l">reviewers surveyed to scope it</dt></div></dl><div class="stack"><h4 data-i18n="projects.stack">Tech stack</h4><ul><li data-i18n="case.rh.s1">React and TypeScript front end</li><li data-i18n="case.rh.s2">Node, Express and SQLite behind it</li><li data-i18n="case.rh.s3">Shipped as a team server and a Windows app</li><li data-i18n="case.rh.s4">Automation: Selenium, pandas, Power Automate</li></ul></div></div>
+  <figure class="case-fig illus" role="img" aria-label="Illustration: a PDF or Word deliverable, reviewers' comments on it, and the list of discrepancies the app produces." data-i18n-attrs="aria-label:case.rh.figAlt">
+<div class="illus-row"><span class="illus-doc">PDF · Word</span><span class="illus-arrow" aria-hidden="true"></span><span class="illus-doc illus-notes"><span data-i18n="case.rh.i1">Comments</span></span><span class="illus-arrow" aria-hidden="true"></span><span class="illus-doc illus-list"><span data-i18n="case.rh.i2">Discrepancy list</span></span></div>
+<figcaption data-i18n="case.rh.figCap">Illustration of the workflow. The tool itself is internal to the agency.</figcaption></figure>
+  <details class="more case-more"><summary data-i18n="projects.more">More photos, figures and details</summary>
+        
+          
           <ul>
             <li data-i18n="more.rh.b1">Started by surveying about 10 engineering reviewers.</li>
             <li data-i18n="more.rh.b2">Built with React and TypeScript on the front, Node and Express with SQLite behind.</li>
@@ -644,21 +527,14 @@
           </ul>
           <p class="quiet" data-i18n="more.rh.note">No screenshots: the tool is internal to the agency.</p>
           <p class="tools" data-i18n="more.rh.tools">React, TypeScript, Node, Express, SQLite, Selenium, pandas, Power Automate</p>
-        </details>
-      </article>
+        
+</details>
+</article>
 
-      <article class="row" id="cadence">
-        <h3 data-i18n="more.cad.title">iOS app: AI coach for endurance athletes</h3>
-        <p class="row-meta"><span data-i18n="more.cad.ctx">iOS and web app</span> <span data-i18n="more.cad.when">2025 – present</span></p>
-        <p class="row-sum" data-i18n="more.cad.sum">Cadence: a web app that connects to Strava and generates training sessions, and an iOS app now in development.</p>
-        <figure class="row-video">
-          <video controls muted playsinline loop preload="none" poster="assets/img/cadence/tour-poster.jpg" width="700" height="1360"
-                 aria-label="A 15-second tour of the Cadence iOS app: Today, check-in, week and month plans, the coach proposing and applying a plan, and the profile. No sound." data-i18n-attrs="aria-label:more.cad.tourLabel">
-            <source src="assets/img/cadence/tour.mp4" type="video/mp4">
-            <a href="assets/img/cadence/tour.mp4" data-i18n="more.cad.tourFallback">Download the tour (MP4, 0.8 MB)</a>
-          </video>
-          <figcaption data-i18n="more.cad.tourCap">A 15-second tour of the iOS app. No sound.</figcaption>
-        </figure>
+<article class="case" id="cadence">
+  <div class="case-body"><ul class="chips"><li data-i18n="case.cd.c1">Personal project</li><li data-i18n="more.cad.when">2025 – present</li><li class="status" data-i18n="case.cd.c3">iOS app in development</li></ul><h3 data-i18n="more.cad.title">iOS app: AI coach for endurance athletes</h3><p class="lede" data-i18n="case.cd.lede">An AI coach that plans training around an athlete’s calendar and recovery. It started as a web app on Strava data; the iOS app is in development.</p><div class="stack"><h4 data-i18n="projects.stack">Tech stack</h4><ul><li data-i18n="case.cd.s1">Swift, iOS: the app, with an AI plan agent</li><li data-i18n="case.cd.s2">Apple Health and WHOOP data for recovery</li><li data-i18n="case.cd.s3">Python, Flask, Strava API: the first web app</li><li data-i18n="case.cd.s4">OpenAI API: training-session generation</li></ul></div></div>
+  <figure class="case-fig case-fig-phone"><a class="zoomable" href="assets/img/cadence/1-today.webp" data-w="1000" data-h="1250"><img src="assets/img/cadence/1-today.webp" width="1000" height="1250" loading="lazy" alt="The Today screen of the iOS app in a phone frame: sleep, body and training scores." data-i18n-attrs="alt:more.cad.c1alt"></a></figure>
+  <details class="more case-more"><summary data-i18n="projects.more">More photos, figures and details</summary>
         <div class="shots shots-phone" id="cadence-shots" data-zoom tabindex="0" role="group" aria-label="Cadence screenshots, scroll sideways" data-i18n-attrs="aria-label:more.cad.shotsLabel">
           <figure>
             <a href="assets/img/cadence/1-today.webp" data-w="1000" data-h="1250"><img src="assets/img/cadence/1-today.webp" width="1000" height="1250" loading="lazy" alt="The Cadence Today screen: a rest-day card, the morning check-in, the daily digest and three ring scores for sleep, body and training." data-i18n-attrs="alt:more.cad.c1alt"></a>
@@ -686,24 +562,32 @@
           </figure>
         </div>
         <p class="row-cap" data-i18n="more.cad.shotsNote">iOS Simulator screens, shown with the app’s built-in sample data.</p>
-        <p class="row-links"><a class="btn btn-small ext" href="https://cadencetrain.ca/" data-i18n="more.cad.cta">Visit cadencetrain.ca</a></p>
-        <details class="more">
-          <summary data-i18n="projects.details">Details</summary>
+        <figure class="row-video">
+          <video controls muted playsinline loop preload="none" poster="assets/img/cadence/tour-poster.jpg" width="700" height="1360"
+                 aria-label="A 15-second tour of the Cadence iOS app: Today, check-in, week and month plans, the coach proposing and applying a plan, and the profile. No sound." data-i18n-attrs="aria-label:more.cad.tourLabel">
+            <source src="assets/img/cadence/tour.mp4" type="video/mp4">
+            <a href="assets/img/cadence/tour.mp4" data-i18n="more.cad.tourFallback">Download the tour (MP4, 0.8 MB)</a>
+          </video>
+          <figcaption data-i18n="more.cad.tourCap">A 15-second tour of the iOS app. No sound.</figcaption>
+        </figure>
+        
+          
           <ul>
             <li data-i18n="more.cad.b1">V0 was a Flask web app with Strava OAuth and API, OpenAI-generated training sessions, and a schedule and calendar view.</li>
             <li data-i18n="more.cad.b3">Now co-building Cadence as an iOS app: an AI coach that drafts training plans around the athlete’s calendar and reads WHOOP or Apple Health data. Once it is on the App Store, its custom workouts will run on a smart trainer through my controller.</li>
             <li data-i18n="more.cad.b2">For product research, a Python and GPT-5 pipeline with map-reduce chunking turned 47 podcast and lecture transcripts into individual reports and cross-episode meta-analyses.</li>
           </ul>
           <p class="tools" data-i18n="more.cad.tools">Python, Flask, Strava API, OpenAI API, Swift (iOS)</p>
-        </details>
-      </article>
+        
+</details>
+</article>
 
-      <article class="row" id="patents">
-        <h3 data-i18n="more.pat.title">Patent classification with LLMs</h3>
-        <p class="row-meta"><span data-i18n="more.pat.ctx">Small script</span></p>
-        <p class="row-sum" data-i18n="more.pat.sum">A Python script that classifies patent records against a category definition using the OpenAI API.</p>
-        <p class="row-links"><a data-ico="github" href="https://github.com/abboudberoual/patent-classification-with-openAI" data-i18n="projects.source">Source on GitHub</a></p>
-      </article>
+<article class="case" id="patents">
+  <div class="case-body"><ul class="chips"><li data-i18n="case.pt.c1">Personal project</li><li data-i18n="case.pt.c2">October 2025</li></ul><h3 data-i18n="more.pat.title">Patent classification with LLMs</h3><p class="lede" data-i18n="more.pat.sum">A Python script that classifies patent records against a category definition using the OpenAI API.</p><div class="stack"><h4 data-i18n="projects.stack">Tech stack</h4><ul><li data-i18n="case.pt.s1">Python</li><li data-i18n="case.pt.s2">OpenAI API</li></ul></div><p class="actions"><a data-ico="github" href="https://github.com/abboudberoual/patent-classification-with-openAI" data-i18n="projects.source">Source on GitHub</a></p></div>
+  <figure class="case-fig illus" role="img" aria-label="Illustration: patent text goes to a language model with a category definition, which returns a category." data-i18n-attrs="aria-label:case.pt.figAlt">
+<div class="illus-row"><span class="illus-doc"><span data-i18n="case.pt.i1">Patent text</span></span><span class="illus-arrow" aria-hidden="true"></span><span class="illus-doc illus-notes"><span data-i18n="case.pt.i2">LLM + category definition</span></span><span class="illus-arrow" aria-hidden="true"></span><span class="illus-doc illus-list"><span data-i18n="case.pt.i3">Category</span></span></div></figure>
+  
+</article>
 
     </div>
   </div>
@@ -714,27 +598,20 @@
      ================================================================ -->
 <section class="section group" id="research" aria-labelledby="research-h">
   <div class="wrap">
-    <h2 class="section-h" id="research-h" data-i18n="groups.research">Research</h2>
+    <header class="chapter"><span class="chapter-n" aria-hidden="true">03</span><h2 class="section-h chapter-h" id="research-h" data-i18n="groups.research">Research</h2><p class="chapter-sub" data-i18n="case.ch.research">Energy, aviation and medical AI</p></header>
 
     <!-- EconomicSense article ------------------------------------ -->
-    <article class="project paper" id="article">
-      <div class="project-aside">
-        <p data-i18n="research.meta">EconomicSense Undergraduate Journal, Second Edition, pages 32–36. Research advisor: Prof. Hani Sarkis, PhD. Presented at the Second Edition ESJ Research Summit.</p>
-      </div>
-      <div class="project-main">
-        <h3 class="paper-title" lang="en">The Energy Transition Paradox and The Role of AI, Quantum Computing, and Mission-Oriented Industrial Policy in Navigating a Complex Landscape</h3>
-        <p class="lede" data-i18n="research.thesis">Electrification cuts emissions where energy is used, but it drives up electricity demand, which strains grids and raises emissions upstream. Clean supply is not scaling fast enough to cover the gap.</p>
-        <p class="paper-q" data-i18n="research.q"><span class="quiet">Research question:</span> how can strategic deep-technology development help scale clean energy fast enough to ensure that electrification truly reduces emissions?</p>
-        <p data-i18n="research.argument">The article argues that AI and quantum computing can speed up innovation and cut costs, but only inside a mission-oriented industrial strategy that lines up public investment, regulation and private innovation.</p>
-        <p class="actions"><a class="btn" data-ico="download" href="assets/Beroual_Energy_Transition_Paradox_ESJ.pdf" data-i18n="research.cta">Read the article (PDF, 1.1 MB)</a></p>
-
-        <figure class="paper-talk">
+<article class="case case-lg" id="article">
+  <div class="case-body"><ul class="chips"><li data-i18n="case.ar.c1">Published article</li><li data-i18n="case.ar.c2">EconomicSense Undergraduate Journal</li><li class="status is-on" data-i18n="case.ar.c3">Presented at the ESJ Research Summit</li></ul><h3 class="paper-title" lang="en">The Energy Transition Paradox and The Role of AI, Quantum Computing, and Mission-Oriented Industrial Policy in Navigating a Complex Landscape</h3><p class="lede" data-i18n="research.thesis">Electrification cuts emissions where energy is used, but it drives up electricity demand, which strains grids and raises emissions upstream. Clean supply is not scaling fast enough to cover the gap.</p><div class="stack"><h4 data-i18n="projects.methods">Methods</h4><ul><li data-i18n="case.ar.s1">Policy and literature review</li><li data-i18n="case.ar.s2">Energy data from Natural Resources Canada</li><li data-i18n="case.ar.s3">Advisor: Prof. Hani Sarkis, PhD</li></ul></div><p class="actions"><a class="btn" data-ico="download" href="assets/Beroual_Energy_Transition_Paradox_ESJ.pdf" data-i18n="research.cta">Read the article (PDF, 1.1 MB)</a></p></div>
+          <figure class="case-fig paper-talk">
           <a class="zoomable" href="assets/img/esj-summit-talk.webp" data-w="985" data-h="748">
             <img src="assets/img/esj-summit-talk.webp" width="985" height="748" loading="lazy" alt="Aboud speaking with a microphone during the Q&amp;A, in front of a screen showing the talk's title slide." data-i18n-attrs="alt:research.talkAlt">
           </a>
           <figcaption data-i18n="research.talkCap">Taking questions at the Second Edition ESJ Research Summit.</figcaption>
         </figure>
-
+  <details class="more case-more"><summary data-i18n="projects.more">More photos, figures and details</summary>
+        <p class="paper-q" data-i18n="research.q"><span class="quiet">Research question:</span> how can strategic deep-technology development help scale clean energy fast enough to ensure that electrification truly reduces emissions?</p>
+        <p data-i18n="research.argument">The article argues that AI and quantum computing can speed up innovation and cut costs, but only inside a mission-oriented industrial strategy that lines up public investment, regulation and private innovation.</p>
         <div class="paper-figs">
           <h4 data-i18n="research.figsH">Three figures the article starts from</h4>
           <ul class="figs">
@@ -745,61 +622,59 @@
           </ul>
           <p class="quiet" data-i18n="research.source">Source: Natural Resources Canada (2023), as cited in the article.</p>
         </div>
-      </div>
-    </article>
+<p class="quiet" data-i18n="research.meta">EconomicSense Undergraduate Journal, Second Edition, pages 32–36. Research advisor: Prof. Hani Sarkis, PhD. Presented at the Second Edition ESJ Research Summit.</p>
+</details>
+</article>
 
-    <div class="index">
+    <div class="cases">
 
-      <article class="row" id="hydrogen">
-        <h3 data-i18n="more.h2.title">Hydrogen for general-aviation airports</h3>
-        <p class="row-meta"><span data-i18n="more.h2.ctx">NSERC USRA research intern, Aircraft Systems Lab, Concordia</span> <span data-i18n="more.h2.when">May – Aug 2025</span></p>
-        <p class="row-sum" data-i18n="more.h2.sum">A dashboard of electricity and hydrogen indicators for the top 20 US general-aviation airports.</p>
-        <p class="row-links"><a data-ico="github" href="https://github.com/abboudberoual/hydrogen_aviation_dashboard" data-i18n="projects.source">Source on GitHub</a></p>
-        <!-- Redrawn with Matplotlib from the dashboard repo's own data files and functions
-             (data/emm_regions.kml, data/top_20_usa_ga_airports.kmz, get_electricity_kpis).
-             Regenerate from the repo; never redraw, recolour or crop by hand. -->
-        <div class="row-figs" data-zoom>
+<article class="case" id="hydrogen">
+  <div class="case-body"><ul class="chips"><li data-i18n="case.hy.c1">NSERC USRA research internship</li><li data-i18n="more.h2.when">May – Aug 2025</li></ul><h3 data-i18n="more.h2.title">Hydrogen for general-aviation airports</h3><p class="lede" data-i18n="case.hy.lede">Could the grid near small airports make clean hydrogen for aircraft? I built a dashboard of electricity and hydrogen indicators for the top 20 US general-aviation airports.</p><dl class="nums"><div><dd data-i18n="case.hy.n1">20</dd><dt data-i18n="case.hy.n1l">airports</dt></div><div><dd data-i18n="case.hy.n2">3</dd><dt data-i18n="case.hy.n2l">energy scenarios</dt></div><div><dd data-i18n="case.hy.n3">13</dd><dt data-i18n="case.hy.n3l">grid regions</dt></div></dl><div class="stack"><h4 data-i18n="projects.stack">Tech stack</h4><ul><li data-i18n="case.hy.s1">Python, pandas, GeoPandas</li><li data-i18n="case.hy.s2">Streamlit dashboard with pydeck and Altair</li><li data-i18n="case.hy.s3">Monte Carlo sensitivity analysis for a life cycle assessment</li></ul></div><p class="actions"><a data-ico="github" href="https://github.com/abboudberoual/hydrogen_aviation_dashboard" data-i18n="projects.source">Source on GitHub</a></p></div>
+          <div class="case-fig row-figs" data-zoom>
           <figure class="plot">
             <a href="assets/img/h2-map.webp" data-w="1600" data-h="992"><img src="assets/img/h2-map.webp" width="1600" height="992" loading="lazy" alt="Map of the contiguous United States divided into EIA electricity market regions, with 20 dots marking the top general-aviation airports." data-i18n-attrs="alt:more.h2.f1alt"></a>
             <figcaption data-i18n="more.h2.f1cap">The 20 airports and the electricity regions behind them.</figcaption>
           </figure>
+        </div>
+  <details class="more case-more"><summary data-i18n="projects.more">More photos, figures and details</summary>
+<div class="row-figs" data-zoom>
           <figure class="plot">
             <a href="assets/img/h2-intensity.webp" data-w="1600" data-h="864"><img src="assets/img/h2-intensity.webp" width="1600" height="864" loading="lazy" alt="Line chart of median grid CO₂ intensity in g/kWh from 2024 to 2050 for three EIA scenarios. All three start near 290 and fall; in 2050 the reference line ends at 79, low oil and gas at 42, high oil and gas at 95." data-i18n-attrs="alt:more.h2.f2alt"></a>
             <figcaption data-i18n="more.h2.f2cap">Grid CO₂ intensity near the airports: about 290 g/kWh in 2024, 42 to 95 by 2050 depending on the scenario.</figcaption>
           </figure>
-        </div>
-        <p class="row-cap" data-i18n="more.h2.figNote">Figures redrawn with Matplotlib from the dashboard's data and functions.</p>
-        <details class="more">
-          <summary data-i18n="projects.details">Details</summary>
+</div>
+        
+          
           <ul>
             <li data-i18n="more.h2.b1">Indicators by Electricity Market Module (EMM) region under three US Energy Information Administration scenarios: reference, high oil and gas, low oil and gas.</li>
             <li data-i18n="more.h2.b2">Monte Carlo sensitivity analysis for a life cycle assessment.</li>
           </ul>
           <p class="tools">Streamlit, pandas, GeoPandas, pydeck, Altair</p>
-        </details>
-      </article>
+        
+</details>
+</article>
 
-      <article class="row" id="ultrasound">
-        <h3 data-i18n="more.us.title">Training data for cardiac view classification</h3>
-        <p class="row-meta"><span data-i18n="more.us.ctx">Researcher, Healthcare for Extreme and Rural Environments (HERE)</span> <span data-i18n="more.us.when">Apr 2026 – present</span></p>
-        <p class="row-sum" data-i18n="more.us.sum">Training data, procedures and CAD for an AI that classifies cardiac ultrasound views.</p>
+<article class="case" id="ultrasound">
+  <div class="case-body"><ul class="chips"><li data-i18n="case.us.c1">Researcher, HERE lab</li><li data-i18n="more.us.when">Apr 2026 – present</li></ul><h3 data-i18n="more.us.title">Training data for cardiac view classification</h3><p class="lede" data-i18n="case.us.lede">An AI that recognises which standard view a heart ultrasound shows needs labelled examples. I labelled them and wrote the guides other labellers follow.</p><dl class="nums"><div><dd data-i18n="case.us.n1">3,000+</dd><dt data-i18n="case.us.n1l">ultrasounds labelled by view</dt></div></dl><div class="stack"><h4 data-i18n="projects.methods">Methods</h4><ul><li data-i18n="case.us.s1">Labelling by standard view</li><li data-i18n="case.us.s2">Visual labelling guides and a primer</li><li data-i18n="case.us.s3">SolidWorks: probe end-effector</li></ul></div><p class="actions"><a class="ext" href="https://www.heretech.ca/who-we-are" data-i18n="more.us.link">About HERE</a></p></div>
+  <figure class="case-fig"><a class="zoomable" href="assets/img/echo-primer.webp" data-w="1440" data-h="900"><img src="assets/img/echo-primer.webp" width="1440" height="900" loading="lazy" alt="Opening of the echocardiography primer I made, with a schematic of the heart." data-i18n-attrs="alt:case.us.figAlt"></a><figcaption data-i18n="case.us.figCap">The echocardiography primer I made. Schematics only, no patient images.</figcaption></figure>
+  <details class="more case-more"><summary data-i18n="projects.more">More photos, figures and details</summary>
         <div class="row-media" data-zoom>
           <a href="assets/img/echo-primer.webp" data-w="1440" data-h="900"><img src="assets/img/echo-primer.webp" width="1440" height="900" loading="lazy" alt="Opening of a web primer titled Echocardiography, from the wave to the diagnosis, with a schematic four-chamber view and a list of eight sections." data-i18n-attrs="alt:more.us.i1alt"></a>
           <a href="assets/img/echo-anatomy.webp" data-w="1600" data-h="1052"><img src="assets/img/echo-anatomy.webp" width="1600" height="1052" loading="lazy" alt="Primer section on heart structure: a four-chamber diagram and a diagram of blood flow through the heart and lungs." data-i18n-attrs="alt:more.us.i2alt"></a>
           <a href="assets/img/echo-plax.webp" data-w="1600" data-h="622"><img src="assets/img/echo-plax-thumb.webp" width="735" height="490" loading="lazy" alt="Cheat sheet with two schematic parasternal long-axis views, diastole and systole, each with five numbered things to check." data-i18n-attrs="alt:more.us.i3alt"></a>
         </div>
         <p class="row-cap" data-i18n="more.us.cap">Training material I made: an echocardiography primer and a systole and diastole cheat sheet. Schematics only, no patient images.</p>
-        <p class="row-links"><a class="ext" href="https://www.heretech.ca/who-we-are" data-i18n="more.us.link">About HERE</a></p>
-        <details class="more">
-          <summary data-i18n="projects.details">Details</summary>
+        
+          
           <ul>
             <li data-i18n="more.us.b1">Labelled more than 3,000 cardiac ultrasounds by standard view, and wrote the labelling guides new researchers use.</li>
             <li data-i18n="more.us.b2">Wrote a test procedure for probe contact pressure. The measurements have not been taken yet.</li>
             <li data-i18n="more.us.b3">Modelled the end-effector in SolidWorks.</li>
           </ul>
           <p class="tools" data-i18n="more.us.tools">SolidWorks, data labelling, test procedures</p>
-        </details>
-      </article>
+        
+</details>
+</article>
 
     </div>
   </div>

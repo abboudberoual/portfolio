@@ -193,7 +193,7 @@ window.I18N = {
         figAlt: 'Illustration&nbsp;: un livrable PDF ou Word, les commentaires des réviseurs et la liste des écarts produite par l’application.',
         c1: 'Stage à l’Agence spatiale canadienne',
         c2: '2026',
-        lede: 'Une application web où les ingénieurs rédigent et commentent les écarts de revue dans des livrables PDF et Word, au lieu de s’échanger des fichiers.',
+        lede: 'Une application web où les ingénieurs rédigent et commentent les écarts de revue dans des livrables PDF et Word.',
         n1: '~10',
         n1l: 'réviseurs sondés pour la définir',
         s1: 'Interface React et TypeScript',

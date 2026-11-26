@@ -16,7 +16,7 @@ assets/js/site.js       Language switch, theme switch, lightbox, L1 build slider
                         contents rail highlighting. Numbered blocks, one job each.
 assets/img/             Photos, print time-lapse (mp4 + poster), Lectern screenshots,
                         CAD views and renders (WebP), and:
-                        - figures made by the projects' own code: vtol-flight, vtol-montecarlo,
+                        - figures made by the projects' own code: vtol-flight, vtol-montecarlo, vtol-spread,
                           alchemy-sim, h2-map, h2-intensity (see rule 1);
                         - school logos on white: logo-concordia, logo-nus, logo-moncton
                           (no Canadian Space Agency logo: it is a protected Government of
@@ -196,6 +196,11 @@ The look is quiet and editorial: left-aligned, lots of whitespace, few boxes.
     maintenance, merchant dictionary, retry pass; weekly: orchestrator); data changes are
     committed only if the CI checks (validator and 17 unit tests) pass; code changes arrive
     as pull requests the founders approve. Do not add components to it.
+  - the VTOL program architecture (`#lander`): two `figure.flow` diagrams, "How I architected the
+    program" (shared library → simulator lane and thrust-stand lane) and "The agents that build it",
+    drawn from the scoudouc repo (README, ops/agent-operating-model.md, hardware/test-stand-v3,
+    firmware/test-stand), plus `vtol-spread.webp`, real simulator output (sim/examples/t010_spread.py).
+    Projects lead their build details with an "Architecture:" line where the repo shows one.
 - **Do not drift into:** cream + serif + terracotta; near-black + neon accent; purple/blue
   gradients; Inter or Space Grotesk; emoji; centred everything; rounded shadow cards;
   hatching, title blocks or other "engineering drawing" ornaments (the previous design).

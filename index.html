@@ -301,11 +301,11 @@
     <article class="project" id="lander">
       <div class="project-aside">
         <p class="status" data-i18n="vtol.status">Design phase</p>
-        <p data-i18n="vtol.role">Personal project<br>Python simulator and ESP32 test-stand firmware</p>
+        <p data-i18n="vtol.role">Personal project<br>Program architecture, simulator, thrust stand and agents</p>
       </div>
       <div class="project-main">
         <h3 data-i18n="vtol.title">Vertical rocket landing simulator</h3>
-        <p class="lede" data-i18n="vtol.summary">A 2D simulator for landing a small solid-fuel rocket under thrust. A solid motor cannot throttle, so nearly everything depends on when the landing burn starts.</p>
+        <p class="lede" data-i18n="vtol.summary">A small solid-fuel rocket meant to land upright under thrust. A solid motor cannot throttle, so I architected the program around one question: can the landing burn be timed precisely enough? A simulator, a thrust stand and scheduled AI agents all work from one sourced library.</p>
         <p class="actions">
           <!-- The landing-page URL is set in ONE place: VTOL_LANDING_URL at the top of assets/js/site.js.
                While it is empty nothing shows here (no placeholder); once set, this becomes the button. -->
@@ -326,6 +326,58 @@
           </figure>
         </div>
 
+        <!-- Program architecture, drawn in the page's own style from the repo (README, ops/agent-operating-model.md,
+             hardware/test-stand-v3, firmware/test-stand). Every label is text with a French twin. -->
+        <figure class="flow">
+          <h4 class="flow-h" data-i18n="vtol.archH">How I architected the program</h4>
+          <div class="flow-body">
+            <div class="flow-node flow-src">
+              <b data-i18n="vtol.a0">One shared library</b>
+              <span data-i18n="vtol.a0a">Motors, materials, vendors and rules as code, with two sources per value, validated in CI</span>
+            </div>
+            <ol class="flow-lane">
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.a1">Simulator</b><span data-i18n="vtol.a1a">2D rigid body at 1 ms steps, 200 Hz PID, servo lag and rate limits</span></div></li>
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.a2">Monte Carlo sweeps</b><span data-i18n="vtol.a2a">Motor-to-motor thrust spread and initial tilt</span></div></li>
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.a3">Decision records</b><span data-i18n="vtol.a3a">Weighted matrices; I make each call</span></div></li>
+            </ol>
+            <ol class="flow-lane">
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.a4">Thrust stand v3</b><span data-i18n="vtol.a4a">Aluminium extrusion tower and one 50 kg load cell, copied from stands that have fired</span></div></li>
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.a5">Parts as code</b><span data-i18n="vtol.a5a">Python scripts generate the STL files, bill of materials, drawings and hand checks</span></div></li>
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.a6">ESP32 recorder</b><span data-i18n="vtol.a6a">Arms, zeroes, triggers on thrust and logs to SD. It never fires the motor.</span></div></li>
+            </ol>
+          </div>
+          <figcaption data-i18n="vtol.archCap">Both lanes read the same library, and the simulator loads thrust curves from CSV, so the stand’s measured curves can replace the estimated ones.</figcaption>
+        </figure>
+
+        <figure class="flow">
+          <h4 class="flow-h" data-i18n="vtol.agH">The agents that build it</h4>
+          <div class="flow-body">
+            <div class="flow-node flow-src">
+              <b data-i18n="vtol.g0">Scheduled AI agents</b>
+              <span data-i18n="vtol.g0a">Nightly: simulator, library, code, procurement, retry pass</span>
+              <span data-i18n="vtol.g0b">Weekly: orchestrator</span>
+            </div>
+            <ol class="flow-lane">
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.g1">Cheapest capable tier</b><span data-i18n="vtol.g1a">Code first, then local models, Haiku and Sonnet; Opus for safety and decisions</span></div></li>
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.g2">CI checks</b><span data-i18n="vtol.g2a">17 simulator tests and library validation</span></div></li>
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.g3">Library data committed</b></div></li>
+            </ol>
+            <ol class="flow-lane">
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.g4">Approved tickets</b></div></li>
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.g5">Pull requests</b><span data-i18n="vtol.g5a">At most three a night, each on its own branch</span></div></li>
+              <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.g6">I merge</b><span data-i18n="vtol.g6a">Purchases, static fires and launches always wait for me</span></div></li>
+            </ol>
+          </div>
+          <figcaption data-i18n="vtol.agCap">Each ticket carries its goal, acceptance test and budget. Escalation to a larger model is mechanical: a model never decides it on its own.</figcaption>
+        </figure>
+
+        <p class="aside-note" data-i18n="vtol.result"><b>Simulation result.</b> With an integrating landing trigger, the simulator lands the rocket at about 1 m/s when the motor matches its data sheet. With realistic motor-to-motor spread it almost never lands: about 2% of flights at ±15%, and about 40% even at ±1%. Timing alone cannot work, so the next decision is a way to trim thrust after ignition.</p>
+        <!-- Real output of the simulator (repo: scoudouc, sim/examples/t010_spread.py, data/sim/t010_success_vs_spread.png). -->
+        <figure class="plot plot-solo">
+          <a class="zoomable" href="assets/img/vtol-spread.webp" data-w="720" data-h="480"><img src="assets/img/vtol-spread.webp" width="720" height="480" loading="lazy" alt="Line chart of landing success against motor-to-motor thrust spread for 660 g and 750 g vehicles: 100% at 0%, about 40% at 1%, under 10% from 5% on, near 0 at 15%, with a dashed 70% target line." data-i18n-attrs="alt:vtol.fig3alt"></a>
+          <figcaption data-i18n="vtol.fig3cap">Landing success against motor-to-motor thrust spread, 150 simulated flights per point, straight from the simulator. The dashed line is the 70% target.</figcaption>
+        </figure>
+
         <details class="more">
           <summary data-i18n="vtol.toyH">Try the landing problem</summary>
           <div class="toy" id="toy">
@@ -336,21 +388,21 @@
             <!-- The numbers in this note mirror the constants at the top of the toy block in site.js. -->
             <details class="more">
               <summary data-i18n="vtol.toyHowH">How the toy works</summary>
-              <p data-i18n="vtol.toyHow">A point mass falls from 40 m (the plot shows the last 27 m). At the trigger altitude a motor fires for a fixed 1.14 s and cannot throttle. Each trial draws a random thrust error and a random fixed tilt, with no attitude control. A trial counts as landed if it touches down slower than 2 m/s vertically and 1 m/s sideways. Set both spreads to zero and the fixed trigger lands every time; add spread and it stops working. These numbers come from this toy only. The project’s own result so far is the 0 of 100 first sweep described below.</p>
+              <p data-i18n="vtol.toyHow">A point mass falls from 40 m (the plot shows the last 27 m). At the trigger altitude a motor fires for a fixed 1.14 s and cannot throttle. Each trial draws a random thrust error and a random fixed tilt, with no attitude control. A trial counts as landed if it touches down slower than 2 m/s vertically and 1 m/s sideways. Set both spreads to zero and the fixed trigger lands every time; add spread and it stops working. These numbers come from this toy only. The project’s own results are the simulator figures above.</p>
             </details>
           </div>
         </details>
 
         <details class="more">
-          <summary data-i18n="projects.how">How it is built</summary>
+          <summary data-i18n="projects.how">Architecture and build</summary>
           <ul>
             <li data-i18n="vtol.b1">Python with NumPy and Matplotlib, stepping at 1 ms.</li>
             <li data-i18n="vtol.b2">A 200 Hz PID attitude loop with servo lag and rate limits.</li>
-            <li data-i18n="vtol.b3">Monte Carlo runs over ±15% thrust and ±5° tilt, with a landing-burn trigger and a pytest suite.</li>
+            <li data-i18n="vtol.b3">Monte Carlo sweeps over motor thrust spread and initial tilt, an integrating landing-burn trigger, and 17 pytest tests run in GitHub Actions.</li>
             <li data-i18n="vtol.b4">ESP32 test-stand firmware in C++ with PlatformIO.</li>
-            <li data-i18n="vtol.b5">The first Monte Carlo sweep landed 0 of 100 cases with the naive trigger. I am tuning it now.</li>
+            <li data-i18n="vtol.b5">Thrust stand v3 is generated by Python scripts (trimesh, Matplotlib): printed-part STL files, the bill of materials and costing, the numbered drawing and the strength hand checks.</li>
           </ul>
-          <p class="tools" data-i18n="vtol.tools">Python, NumPy, Matplotlib, pytest, C++, PlatformIO, ESP32</p>
+          <p class="tools" data-i18n="vtol.tools">Python, NumPy, Matplotlib, pytest, trimesh, C++, PlatformIO, ESP32, GitHub Actions, scheduled AI agents</p>
         </details>
       </div>
     </article>
@@ -420,8 +472,9 @@
         <details class="more">
           <summary data-i18n="projects.details">Details</summary>
           <ul>
+            <li data-i18n="more.vt.arch">Architecture: one repository with a shared, unit-tested TypeScript core (FTMS encoders, decoders and mode limits) under the web app, ESP32-S3 firmware for the hardware controller, and the printed case files.</li>
             <li data-i18n="more.vt.b1">Validated the control path first with a browser prototype that commanded an Elite Tuo trainer through a 30-minute ride test: power hold, step response, resistance scaling and reconnection.</li>
-            <li data-i18n="more.vt.b5">Built the web app with Vite, TypeScript and Web Bluetooth. It runs in Chrome and Edge on desktop and Chrome on Android, with a demo mode for visitors without a trainer. FTMS encoders and decoders live in a shared, unit-tested core package.</li>
+            <li data-i18n="more.vt.b5">Built the web app with Vite, TypeScript and Web Bluetooth. It runs in Chrome and Edge on desktop and Chrome on Android, with a demo mode for visitors without a trainer.</li>
             <li data-i18n="more.vt.b2">Designed a 150 × 92 mm wedge enclosure with an 11° viewing angle, with clearance checks, heat-set inserts and a fit-test coupon, then printed it: shell, bottom cover, display bezel, knob and LED bezels.</li>
             <li data-i18n="more.vt.b6">Hardware: ESP32-S3, a 1.28-inch round display, a rotary encoder, an illuminated hold button and three status LEDs. The electronics bill of materials is about $140 CAD.</li>
             <li data-i18n="more.vt.b7">Once Cadence is on the App Store, VT-1 will link with it, so Cadence’s custom workouts can be ridden through VT-1.</li>
@@ -509,7 +562,7 @@
         </figure>
 
         <details class="more">
-          <summary data-i18n="projects.how">How it is built</summary>
+          <summary data-i18n="projects.how">Architecture and build</summary>
           <ul>
             <li data-i18n="alchemy.b1">Pure-Python optimizer, a self-verifying simulator and a retroactive statement analyzer, with 17 unit tests and a data validator running in GitHub Actions.</li>
             <li data-i18n="alchemy.b2">A merchant dictionary of ordered regex rules that maps raw card descriptors to a merchant category code (MCC) and category. Order is precedence, so Uber Eats matches before Uber rides.</li>
@@ -567,7 +620,7 @@
             <li data-i18n="lectern.b3">Folders work like courses.</li>
             <li data-i18n="lectern.b4">Ask the video a question with your own Claude or OpenAI key. Answers cite clickable timestamps.</li>
             <li data-i18n="lectern.b5">Syncs to Notion and Obsidian; exports Markdown, Word and PDF.</li>
-            <li data-i18n="lectern.b6">Chrome Manifest V3 in vanilla JavaScript, with Playwright end-to-end tests.</li>
+            <li data-i18n="lectern.b6">Architecture: a Chrome Manifest V3 service worker captures transcripts and runs the sync; the side panel and the library page share one local data layer and modules for AI, Notion, Markdown and Word export. Vanilla JavaScript, no server, with Playwright end-to-end tests.</li>
           </ul>
           <p class="tools" data-i18n="lectern.tools">Chrome MV3, vanilla JS, Playwright, Notion and Obsidian sync</p>
         </details>

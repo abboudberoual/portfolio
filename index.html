@@ -69,20 +69,20 @@
           <li>
             <a class="nav-group" href="#hardware" data-i18n="groups.hardware">Hardware</a>
             <ul>
-              <li><a href="#l1-rocket" data-i18n="rail.l1">L1 high-power rocket</a></li>
-              <li><a href="#lander" data-i18n="rail.lander">Propulsive-landing rocket</a></li>
-              <li><a href="#aft-section" data-i18n="more.aft.title">Mach 3 aft section</a></li>
-              <li><a href="#vt-1" data-i18n="rail.vt">Smart trainer controller</a></li>
+              <li><a href="#l1-rocket" data-i18n="rail.l1">Level 1 certification flight</a></li>
+              <li><a href="#lander" data-i18n="rail.lander">Self-landing rocket</a></li>
+              <li><a href="#aft-section" data-i18n="rail.aft">Space Concordia structures</a></li>
+              <li><a href="#vt-1" data-i18n="rail.vt">Bike trainer controller</a></li>
             </ul>
           </li>
           <li>
             <a class="nav-group" href="#software" data-i18n="groups.software">Software</a>
             <ul>
-              <li><a href="#alchemy" data-i18n="rail.alchemy">Credit-card rewards routing</a></li>
+              <li><a href="#alchemy" data-i18n="rail.alchemy">Credit-card rewards startup</a></li>
               <li><a href="#lectern" data-i18n="rail.lectern">Lecture-notes extension</a></li>
-              <li><a href="#reviewhub" data-i18n="rail.reviewhub">Document review app</a></li>
-              <li><a href="#cadence" data-i18n="rail.cadence">AI endurance coach</a></li>
-              <li><a href="#patents" data-i18n="more.pat.title">Patent classification</a></li>
+              <li><a href="#reviewhub" data-i18n="rail.reviewhub">Document review app (CSA)</a></li>
+              <li><a href="#cadence" data-i18n="rail.cadence">AI endurance coach app</a></li>
+              <li><a href="#patents" data-i18n="more.pat.title">Patent classification with LLMs</a></li>
             </ul>
           </li>
           <li>
@@ -137,20 +137,20 @@
     <li>
       <a class="nav-group" href="#hardware" data-i18n="groups.hardware">Hardware</a>
       <ul>
-        <li><a href="#l1-rocket" data-i18n="rail.l1">L1 high-power rocket</a></li>
-        <li><a href="#lander" data-i18n="rail.lander">Propulsive-landing rocket</a></li>
-        <li><a href="#aft-section" data-i18n="more.aft.title">Mach 3 aft section</a></li>
-        <li><a href="#vt-1" data-i18n="rail.vt">Smart trainer controller</a></li>
+        <li><a href="#l1-rocket" data-i18n="rail.l1">Level 1 certification flight</a></li>
+        <li><a href="#lander" data-i18n="rail.lander">Self-landing rocket</a></li>
+        <li><a href="#aft-section" data-i18n="rail.aft">Space Concordia structures</a></li>
+        <li><a href="#vt-1" data-i18n="rail.vt">Bike trainer controller</a></li>
       </ul>
     </li>
     <li>
       <a class="nav-group" href="#software" data-i18n="groups.software">Software</a>
       <ul>
-        <li><a href="#alchemy" data-i18n="rail.alchemy">Credit-card rewards routing</a></li>
+        <li><a href="#alchemy" data-i18n="rail.alchemy">Credit-card rewards startup</a></li>
         <li><a href="#lectern" data-i18n="rail.lectern">Lecture-notes extension</a></li>
-        <li><a href="#reviewhub" data-i18n="rail.reviewhub">Document review app</a></li>
-        <li><a href="#cadence" data-i18n="rail.cadence">AI endurance coach</a></li>
-        <li><a href="#patents" data-i18n="more.pat.title">Patent classification</a></li>
+        <li><a href="#reviewhub" data-i18n="rail.reviewhub">Document review app (CSA)</a></li>
+        <li><a href="#cadence" data-i18n="rail.cadence">AI endurance coach app</a></li>
+        <li><a href="#patents" data-i18n="more.pat.title">Patent classification with LLMs</a></li>
       </ul>
     </li>
     <li>
@@ -227,7 +227,7 @@
         <p data-i18n="l1.role">Personal certification build<br>October 2026</p>
       </div>
       <div class="project-main">
-        <h3 data-i18n="l1.title">Level 1 high-power rocket</h3>
+        <h3 data-i18n="l1.title">High-power rocketry: Level 1 certification flight</h3>
         <p class="lede" data-i18n="l1.summary">I designed, built and flew a Level 1 certification rocket. It reached 2,100 ft on an H135 motor on 18 October 2026 and came back intact.</p>
 
         <!-- Build sequence. The list is the content; site.js turns it into a stepper. -->
@@ -304,7 +304,7 @@
         <p data-i18n="vtol.role">Personal project<br>Program architecture, simulator, thrust stand and agents</p>
       </div>
       <div class="project-main">
-        <h3 data-i18n="vtol.title">Propulsive-landing rocket program</h3>
+        <h3 data-i18n="vtol.title">Self-landing rocket: simulator and thrust stand</h3>
         <p class="lede" data-i18n="vtol.summary">A small solid-fuel rocket meant to land upright under thrust. A solid motor cannot throttle, so I architected the program around one question: can the landing burn be timed precisely enough? A simulator, a thrust stand and scheduled AI agents all work from one sourced library.</p>
         <p class="actions">
           <!-- The landing-page URL is set in ONE place: VTOL_LANDING_URL at the top of assets/js/site.js.
@@ -318,11 +318,11 @@
         <div class="plots">
           <figure class="plot">
             <a class="zoomable" href="assets/img/vtol-flight.webp" data-w="1600" data-h="1600"><img src="assets/img/vtol-flight.webp" width="1600" height="1600" loading="lazy" alt="Matplotlib figure with three stacked plots against time: tilt and gimbal angle, altitude, and speed, with the two motor burns shaded." data-i18n-attrs="alt:vtol.fig1alt"></a>
-            <figcaption data-i18n="vtol.fig1cap">One simulated flight, straight from the Python simulator: tilt and gimbal angle, altitude, and speed. The shaded areas are the two motor burns.</figcaption>
+            <figcaption data-i18n="vtol.fig1cap">One simulated flight: tilt, altitude and speed. Shaded: the two motor burns.</figcaption>
           </figure>
           <figure class="plot">
             <a class="zoomable" href="assets/img/vtol-montecarlo.webp" data-w="1600" data-h="640"><img src="assets/img/vtol-montecarlo.webp" width="1600" height="640" loading="lazy" alt="Matplotlib figure titled 0 of 100 success: touchdown speed against landing-motor thrust for 100 simulated cases, all above the dashed limit line, and apogee against boost-motor thrust." data-i18n-attrs="alt:vtol.fig2alt"></a>
-            <figcaption data-i18n="vtol.fig2cap">The first Monte Carlo sweep: 100 simulated cases, none under the touchdown-speed limit (the dashed line).</figcaption>
+            <figcaption data-i18n="vtol.fig2cap">First sweep: none of 100 simulated landings stayed under the speed limit (dashed).</figcaption>
           </figure>
         </div>
 
@@ -346,7 +346,7 @@
               <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.a6">ESP32 recorder</b><span data-i18n="vtol.a6a">Arms, zeroes, triggers on thrust and logs to SD. It never fires the motor.</span></div></li>
             </ol>
           </div>
-          <figcaption data-i18n="vtol.archCap">Both lanes read the same library, and the simulator loads thrust curves from CSV, so the stand’s measured curves can replace the estimated ones.</figcaption>
+          <figcaption data-i18n="vtol.archCap">The simulator and the test stand share one library of sourced data.</figcaption>
         </figure>
 
         <figure class="flow">
@@ -368,14 +368,14 @@
               <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="vtol.g6">I merge</b><span data-i18n="vtol.g6a">Purchases, static fires and launches always wait for me</span></div></li>
             </ol>
           </div>
-          <figcaption data-i18n="vtol.agCap">Each ticket carries its goal, acceptance test and budget. Escalation to a larger model is mechanical: a model never decides it on its own.</figcaption>
+          <figcaption data-i18n="vtol.agCap">Agents propose, tests check, I approve.</figcaption>
         </figure>
 
-        <p class="aside-note" data-i18n="vtol.result"><b>Simulation result.</b> With an integrating landing trigger, the simulator lands the rocket at about 1 m/s when the motor matches its data sheet. With realistic motor-to-motor spread it almost never lands: about 2% of flights at ±15%, and about 40% even at ±1%. Timing alone cannot work, so the next decision is a way to trim thrust after ignition.</p>
+        <p class="aside-note" data-i18n="vtol.result"><b>Simulation result.</b> A well-timed burn lands softly (about 1 m/s) only if the motor matches its data sheet. Real motors vary, so timing alone almost never works: about 2% of landings succeed at ±15% variation. Next step: trimming thrust after ignition.</p>
         <!-- Real output of the simulator (repo: scoudouc, sim/examples/t010_spread.py, data/sim/t010_success_vs_spread.png). -->
         <figure class="plot plot-solo">
           <a class="zoomable" href="assets/img/vtol-spread.webp" data-w="720" data-h="480"><img src="assets/img/vtol-spread.webp" width="720" height="480" loading="lazy" alt="Line chart of landing success against motor-to-motor thrust spread for 660 g and 750 g vehicles: 100% at 0%, about 40% at 1%, under 10% from 5% on, near 0 at 15%, with a dashed 70% target line." data-i18n-attrs="alt:vtol.fig3alt"></a>
-          <figcaption data-i18n="vtol.fig3cap">Landing success against motor-to-motor thrust spread, 150 simulated flights per point, straight from the simulator. The dashed line is the 70% target.</figcaption>
+          <figcaption data-i18n="vtol.fig3cap">Landing success falls fast as motors vary. Dashed: the 70% target.</figcaption>
         </figure>
 
         <details class="more">
@@ -410,7 +410,7 @@
     <div class="index">
 
       <article class="row" id="aft-section">
-        <h3 data-i18n="more.aft.title">Mach 3 aft section</h3>
+        <h3 data-i18n="more.aft.title">Space Concordia: solid rocket structures designer</h3>
         <p class="row-meta"><span data-i18n="more.aft.ctx">Space Concordia Solid Rocketry, structures team and payload liaison</span> <span data-i18n="more.aft.when">May 2026 – present</span> <span class="status" data-i18n="more.inProgress">In progress</span></p>
         <p class="row-sum" data-i18n="more.aft.sum">I am designing the carbon-fibre boat tail of a two-stage rocket that targets Mach 3.</p>
         <div class="row-media" data-zoom>
@@ -424,7 +424,7 @@
             <source src="assets/img/sc-tube-cut.mp4" type="video/mp4">
             <a href="assets/img/sc-tube-cut.mp4" data-i18n="more.aft.videoFallback">Download the clip (MP4, 0.5 MB)</a>
           </video>
-          <figcaption data-i18n="more.aft.videoCap">Cutting a tube section for the competition rocket in the shop. 12 seconds, no sound.</figcaption>
+          <figcaption data-i18n="more.aft.videoCap">Cutting a tube section in the shop. 12 seconds, no sound.</figcaption>
         </figure>
         <details class="more">
           <summary data-i18n="projects.details">Details</summary>
@@ -438,7 +438,7 @@
       </article>
 
       <article class="row" id="vt-1">
-        <h3 data-i18n="more.vt.title">Smart trainer controller: hardware and web app</h3>
+        <h3 data-i18n="more.vt.title">Smart bike trainer controller: hardware and web app</h3>
         <p class="row-meta"><span data-i18n="more.vt.ctx">Personal hardware and web project</span> <span data-i18n="more.vt.when">Oct 2026 – present</span> <span class="status" data-i18n="more.inProgress">In progress</span></p>
         <p class="row-sum" data-i18n="more.vt.sum">A one-screen controller for Bluetooth smart trainers: pick ERG, resistance or slope, turn the knob, pedal. It exists as an ESP32-S3 handheld with a round watt gauge, and as a web app you can try now.</p>
         <p class="row-links actions">
@@ -502,7 +502,7 @@
         <p data-i18n="alchemy.role">Co-founder<br>Canadian fintech</p>
       </div>
       <div class="project-main">
-        <h3 data-i18n="alchemy.title">Credit-card rewards routing</h3>
+        <h3 data-i18n="alchemy.title">Fintech startup: credit-card rewards routing</h3>
         <p class="lede" data-i18n="alchemy.summary">At checkout, Alchemy picks the best card from the wallet you already have. The browser extension comes first.</p>
         <p class="actions">
           <a class="btn ext" href="https://abboudberoual.github.io/alchemy-site/" data-i18n="alchemy.cta">Alchemy landing page</a>
@@ -529,13 +529,13 @@
           </ul>
         </div>
 
-        <p class="aside-note" data-i18n="alchemy.sim"><b>Simulation result.</b> Across 13 household profiles, routing beat each wallet’s best single card by $14 to $136 a year (median 8.8%, measured against a hindsight baseline) and beat default-card habit by $73 to $778 a year. These are simulated figures. Alchemy has no real users yet.</p>
+        <p class="aside-note" data-i18n="alchemy.sim"><b>Simulation result.</b> Across 13 households, routing earned $14 to $136 more a year than each wallet’s best card (median 8.8%), and $73 to $778 more than always using the default card. Simulated; no real users yet.</p>
 
         <!-- Real output of the Alchemy simulator (private repo, packages/engine/simulate.py), plotted with
              Matplotlib from its per-profile results. Regenerate from the repo; never redraw by hand. -->
         <figure class="plot plot-solo">
           <a class="zoomable" href="assets/img/alchemy-sim.webp" data-w="1600" data-h="1024"><img src="assets/img/alchemy-sim.webp" width="1600" height="1024" loading="lazy" alt="Horizontal bar chart of 13 spending profiles. For each, a dark bar shows the extra rewards per year from routing against the wallet's best single card, from $14 to $136, and a light bar shows the same against always using the default card, from $73 to $778." data-i18n-attrs="alt:alchemy.chartAlt"></a>
-          <figcaption data-i18n="alchemy.chartCap">Simulator output for the 13 spending profiles: extra rewards per year from routing, against the wallet's best single card and against always using the default card. Simulated, not real users.</figcaption>
+          <figcaption data-i18n="alchemy.chartCap">Extra rewards per year for each of the 13 simulated households.</figcaption>
         </figure>
 
         <!-- The agent operating model, drawn in the page's own style. Every label is text and has a French twin. -->
@@ -558,7 +558,7 @@
               <li><svg class="flow-arrow" viewBox="0 0 12 22" width="12" height="22" aria-hidden="true"><path d="M6 1v19M2 16l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="flow-node"><b data-i18n="alchemy.ops7">Founders approve</b></div></li>
             </ol>
           </div>
-          <figcaption data-i18n="alchemy.opsCap">Scheduled agents propose the changes. Data is committed only if the CI checks pass; code arrives as a pull request that the founders approve.</figcaption>
+          <figcaption data-i18n="alchemy.opsCap">Agents propose, tests check, the founders approve code.</figcaption>
         </figure>
 
         <details class="more">
@@ -582,7 +582,7 @@
         <p data-i18n="lectern.role">Chrome extension<br>Personal project</p>
       </div>
       <div class="project-main">
-        <h3><img src="assets/img/lectern/icon128.png" width="128" height="128" alt=""><span data-i18n="lectern.title">Note-taking extension for YouTube lectures</span></h3>
+        <h3><img src="assets/img/lectern/icon128.png" width="128" height="128" alt=""><span data-i18n="lectern.title">Chrome extension for YouTube lecture notes</span></h3>
         <p class="lede" data-i18n="lectern.summary">Published on the Chrome Web Store as Lectern. It runs entirely on your machine: no server, no account.</p>
         <p class="actions">
           <a class="btn ext" href="https://chromewebstore.google.com/detail/bhgemnaiogekegbnldhenbfnanngfbob?utm_source=item-share-cb" data-i18n="lectern.cta">Get it on Chrome</a>
@@ -630,7 +630,7 @@
     <div class="index">
 
       <article class="row" id="reviewhub">
-        <h3 data-i18n="more.rh.title">Engineering document review app</h3>
+        <h3 data-i18n="more.rh.title">Canadian Space Agency: engineering document review app</h3>
         <p class="row-meta"><span data-i18n="more.rh.ctx">Canadian Space Agency, Program Integration Intern</span> <span data-i18n="more.rh.when">Jan – Dec 2026, part-time from September</span> <span class="status" data-i18n="more.rh.status">Rollout under review</span></p>
         <p class="row-sum" data-i18n="more.rh.sum">A full-stack app for drafting and commenting on Review Item Discrepancies (RIDs) in PDF and Word deliverables.</p>
         <details class="more">
@@ -648,7 +648,7 @@
       </article>
 
       <article class="row" id="cadence">
-        <h3 data-i18n="more.cad.title">AI coach for endurance athletes</h3>
+        <h3 data-i18n="more.cad.title">iOS app: AI coach for endurance athletes</h3>
         <p class="row-meta"><span data-i18n="more.cad.ctx">iOS and web app</span> <span data-i18n="more.cad.when">2025 – present</span></p>
         <p class="row-sum" data-i18n="more.cad.sum">Cadence: a web app that connects to Strava and generates training sessions, and an iOS app now in development.</p>
         <figure class="row-video">
@@ -699,7 +699,7 @@
       </article>
 
       <article class="row" id="patents">
-        <h3 data-i18n="more.pat.title">Patent classification</h3>
+        <h3 data-i18n="more.pat.title">Patent classification with LLMs</h3>
         <p class="row-meta"><span data-i18n="more.pat.ctx">Small script</span></p>
         <p class="row-sum" data-i18n="more.pat.sum">A Python script that classifies patent records against a category definition using the OpenAI API.</p>
         <p class="row-links"><a data-ico="github" href="https://github.com/abboudberoual/patent-classification-with-openAI" data-i18n="projects.source">Source on GitHub</a></p>
@@ -765,7 +765,7 @@
           </figure>
           <figure class="plot">
             <a href="assets/img/h2-intensity.webp" data-w="1600" data-h="864"><img src="assets/img/h2-intensity.webp" width="1600" height="864" loading="lazy" alt="Line chart of median grid CO₂ intensity in g/kWh from 2024 to 2050 for three EIA scenarios. All three start near 290 and fall; in 2050 the reference line ends at 79, low oil and gas at 42, high oil and gas at 95." data-i18n-attrs="alt:more.h2.f2alt"></a>
-            <figcaption data-i18n="more.h2.f2cap">Median grid CO₂ intensity across the 13 regions that serve 19 of the airports, under three EIA scenarios, from the dashboard's data: about 290 g/kWh in 2024; in 2050, 79 (reference), 42 (low oil and gas) and 95 (high oil and gas).</figcaption>
+            <figcaption data-i18n="more.h2.f2cap">Grid CO₂ intensity near the airports: about 290 g/kWh in 2024, 42 to 95 by 2050 depending on the scenario.</figcaption>
           </figure>
         </div>
         <p class="row-cap" data-i18n="more.h2.figNote">Figures redrawn with Matplotlib from the dashboard's data and functions.</p>
@@ -788,7 +788,7 @@
           <a href="assets/img/echo-anatomy.webp" data-w="1600" data-h="1052"><img src="assets/img/echo-anatomy.webp" width="1600" height="1052" loading="lazy" alt="Primer section on heart structure: a four-chamber diagram and a diagram of blood flow through the heart and lungs." data-i18n-attrs="alt:more.us.i2alt"></a>
           <a href="assets/img/echo-plax.webp" data-w="1600" data-h="622"><img src="assets/img/echo-plax-thumb.webp" width="735" height="490" loading="lazy" alt="Cheat sheet with two schematic parasternal long-axis views, diastole and systole, each with five numbered things to check." data-i18n-attrs="alt:more.us.i3alt"></a>
         </div>
-        <p class="row-cap" data-i18n="more.us.cap">Training material I made: an echocardiography primer and a cheat sheet for telling systole from diastole in the parasternal long-axis view. Every diagram is a schematic; none is a patient image.</p>
+        <p class="row-cap" data-i18n="more.us.cap">Training material I made: an echocardiography primer and a systole and diastole cheat sheet. Schematics only, no patient images.</p>
         <p class="row-links"><a class="ext" href="https://www.heretech.ca/who-we-are" data-i18n="more.us.link">About HERE</a></p>
         <details class="more">
           <summary data-i18n="projects.details">Details</summary>

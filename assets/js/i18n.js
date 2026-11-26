@@ -74,15 +74,16 @@ window.I18N = {
     /* Sommaire : le rail de gauche (grands écrans) et le menu « Sommaire » (petits écrans).
        Les autres libellés du sommaire réutilisent les titres des projets (more.*.title). */
     rail: {
+      aft: 'Structures, Space Concordia',
       label: 'Sur cette page',
       contents: 'Sommaire',
-      lander: 'Fusée à atterrissage propulsif',
-      l1: 'Fusée de haute puissance L1',
-      alchemy: 'Aiguillage des récompenses de cartes',
+      lander: 'Fusée qui se pose seule',
+      l1: 'Vol de certification niveau 1',
+      alchemy: 'Jeune pousse de récompenses',
       lectern: 'Extension de notes de cours',
-      reviewhub: 'Application de revue de documents',
-      cadence: 'Entraîneur d’endurance par IA',
-      vt: 'Contrôleur de base d’entraînement',
+      reviewhub: 'Revue de documents (ASC)',
+      cadence: 'Application d’entraîneur par IA',
+      vt: 'Contrôleur de base vélo',
       article: 'Le paradoxe de la transition énergétique'
     },
 
@@ -132,7 +133,7 @@ window.I18N = {
     },
 
     alchemy: {
-      title: 'Aiguillage des récompenses de cartes de crédit',
+      title: 'Jeune pousse fintech&nbsp;: aiguillage des récompenses de cartes de crédit',
       status: 'Prélancement',
       role: 'Cofondateur<br>Fintech canadienne',
       summary: 'Au moment de payer, Alchemy choisit la meilleure carte parmi celles que vous avez déjà. L’extension de navigateur arrive en premier.',
@@ -153,13 +154,13 @@ window.I18N = {
       t2: 'issues de la communauté',
       t3: 'tirées de relevés',
       t4: 'de départ',
-      sim: '<b>Résultat de simulation.</b> Sur 13 profils de ménages, l’aiguillage a rapporté de 14&nbsp;$ à 136&nbsp;$ de plus par année que la meilleure carte unique de chaque portefeuille (médiane de 8,8&nbsp;%, mesurée par rapport à une référence établie a posteriori) et de 73&nbsp;$ à 778&nbsp;$ de plus par année que l’habitude de payer avec une carte par défaut. Ce sont des chiffres simulés. Alchemy n’a pas encore d’utilisateurs réels.',
+      sim: '<b>Résultat de simulation.</b> Sur 13 ménages, l’aiguillage rapporte de 14&nbsp;$ à 136&nbsp;$ de plus par année que la meilleure carte de chaque portefeuille (médiane 8,8&nbsp;%), et de 73&nbsp;$ à 778&nbsp;$ de plus que la carte par défaut. Résultats simulés; aucun utilisateur réel pour l’instant.',
       b1: 'Un optimiseur en Python pur, un simulateur autovérifiant et un analyseur rétroactif de relevés, avec 17 tests unitaires et un validateur de données exécutés dans GitHub Actions.',
       b2: 'Un dictionnaire de marchands fait de règles regex ordonnées, qui associe les descripteurs bruts des relevés à un code de catégorie de marchand (MCC) et à une catégorie. L’ordre fait la priorité&nbsp;: Uber Eats est reconnu avant les courses Uber.',
       b3: 'Des outils d’anonymisation et de regroupement des descripteurs, appliqués à environ 930 lignes de relevés anonymisées.',
       b4: 'Une extension Manifest V3 en TypeScript avec un coffre local pour les cartes, et un test Vitest qui prouve qu’aucun numéro de carte ne quitte le coffre.',
       chartAlt: 'Diagramme à barres horizontales de 13 profils de dépenses. Pour chacun, une barre foncée montre les récompenses supplémentaires par année obtenues par l’aiguillage par rapport à la meilleure carte unique du portefeuille, de 14&nbsp;$ à 136&nbsp;$, et une barre pâle montre la même chose par rapport à l’usage constant de la carte par défaut, de 73&nbsp;$ à 778&nbsp;$.',
-      chartCap: 'Sortie du simulateur pour les 13 profils de dépenses (graphique en anglais)&nbsp;: récompenses supplémentaires par année grâce à l’aiguillage, par rapport à la meilleure carte unique du portefeuille et par rapport à l’usage constant de la carte par défaut. Des chiffres simulés, pas des utilisateurs réels.',
+      chartCap: 'Récompenses supplémentaires par année pour chacun des 13 ménages simulés (graphique en anglais).',
       opsH: 'Le modèle d’exploitation des agents',
       ops1: 'Agents d’IA planifiés',
       ops1a: 'Chaque nuit&nbsp;: maintenance des données, dictionnaire de marchands, passe de reprise',
@@ -172,13 +173,13 @@ window.I18N = {
       ops5: 'Changements de code',
       ops6: 'Pull request',
       ops7: 'Approbation des fondateurs',
-      opsCap: 'Les agents planifiés proposent les changements. Les données ne sont enregistrées que si les vérifications d’intégration continue réussissent; le code arrive sous forme de pull request que les fondateurs approuvent.',
+      opsCap: 'Les agents proposent, les tests vérifient, les fondateurs approuvent le code.',
       b5: 'J’ai conçu le modèle d’exploitation des agents&nbsp;: des agents d’IA planifiés tournent chaque nuit (maintenance des données, dictionnaire de marchands, passe de reprise), sous un orchestrateur hebdomadaire. Les commits de données passent par les vérifications d’intégration continue; le code arrive sous forme de pull requests que les fondateurs approuvent.',
       tools: 'Python, TypeScript, Manifest V3, Vitest, GitHub Actions, agents d’IA planifiés'
     },
 
     lectern: {
-      title: 'Extension de prise de notes pour les cours sur YouTube',
+      title: 'Extension Chrome de notes pour les cours sur YouTube',
       status: 'En ligne',
       role: 'Extension Chrome<br>Projet personnel',
       summary: 'Offerte dans le Chrome Web Store sous le nom Lectern. Elle fonctionne entièrement sur votre ordinateur&nbsp;: aucun serveur, aucun compte.',
@@ -212,7 +213,7 @@ window.I18N = {
     l1: {
       status: 'A volé',
       role: 'Projet personnel de certification<br>Octobre 2026',
-      title: 'Fusée de haute puissance de niveau 1',
+      title: 'Fusée de haute puissance&nbsp;: vol de certification de niveau 1',
       summary: 'J’ai conçu, construit et fait voler une fusée de certification de niveau 1. Elle a atteint 2&nbsp;100&nbsp;pi avec un moteur H135 le 18 octobre 2026 et est revenue intacte.',
       buildH: 'La fabrication, de la table de pièces au champ de récupération',
       s1alt: 'Des pièces de fusée sur un établi&nbsp;: un tube de corps blanc, une ogive rouge en PETG, trois ailerons noirs en contreplaqué et une cloison en contreplaqué.',
@@ -267,7 +268,7 @@ window.I18N = {
       a5a: 'Des scripts Python génèrent les fichiers STL, la nomenclature, les dessins et les vérifications à la main',
       a6: 'Enregistreur ESP32',
       a6a: 'Arme, met à zéro, se déclenche sur la poussée et enregistre sur carte SD. Il n’allume jamais le moteur.',
-      archCap: 'Les deux voies lisent la même bibliothèque, et le simulateur charge ses courbes de poussée depuis un CSV&nbsp;: les courbes mesurées au banc pourront remplacer les courbes estimées.',
+      archCap: 'Le simulateur et le banc d’essai partagent une même bibliothèque de données sourcées.',
       agH: 'Les agents qui le construisent',
       g0: 'Agents d’IA planifiés',
       g0a: 'Chaque nuit&nbsp;: simulateur, bibliothèque, code, approvisionnement, passe de reprise',
@@ -282,17 +283,17 @@ window.I18N = {
       g5a: 'Trois par nuit au plus, chacune sur sa propre branche',
       g6: 'Je fusionne',
       g6a: 'Achats, essais statiques et lancements attendent toujours mon accord',
-      agCap: 'Chaque ticket porte son objectif, son test d’acceptation et son budget. Le passage à un plus gros modèle est mécanique&nbsp;: un modèle ne le décide jamais seul.',
-      result: '<b>Résultat de simulation.</b> Avec un déclencheur d’atterrissage intégrateur, le simulateur pose la fusée à environ 1&nbsp;m/s quand le moteur correspond à sa fiche technique. Avec une dispersion réaliste d’un moteur à l’autre, elle ne se pose presque jamais&nbsp;: environ 2&nbsp;% des vols à ±15&nbsp;%, et environ 40&nbsp;% même à ±1&nbsp;%. Le minutage seul ne suffit pas&nbsp;: la prochaine décision porte sur un moyen d’ajuster la poussée après l’allumage.',
+      agCap: 'Les agents proposent, les tests vérifient, j’approuve.',
+      result: '<b>Résultat de simulation.</b> Un allumage bien minuté pose la fusée en douceur (environ 1&nbsp;m/s) seulement si le moteur correspond à sa fiche technique. Les vrais moteurs varient&nbsp;: le minutage seul ne fonctionne presque jamais, avec environ 2&nbsp;% d’atterrissages réussis à ±15&nbsp;% de variation. Prochaine étape&nbsp;: ajuster la poussée après l’allumage.',
       fig3alt: 'Graphique du taux d’atterrissage réussi selon la dispersion de poussée d’un moteur à l’autre, pour des véhicules de 660&nbsp;g et 750&nbsp;g&nbsp;: 100&nbsp;% à 0&nbsp;%, environ 40&nbsp;% à 1&nbsp;%, moins de 10&nbsp;% à partir de 5&nbsp;%, près de 0 à 15&nbsp;%, avec une ligne cible pointillée à 70&nbsp;%.',
-      fig3cap: 'Taux d’atterrissage réussi selon la dispersion de poussée d’un moteur à l’autre, 150 vols simulés par point, tiré directement du simulateur (graphique en anglais). La ligne pointillée est la cible de 70&nbsp;%.',
-      title: 'Programme de fusée à atterrissage propulsif',
+      fig3cap: 'Le taux de réussite chute vite quand les moteurs varient. Pointillé&nbsp;: la cible de 70&nbsp;%.',
+      title: 'Fusée qui se pose seule&nbsp;: simulateur et banc de poussée',
       summary: 'Une petite fusée à propergol solide conçue pour se poser à la verticale sous poussée. Un moteur solide ne peut pas moduler sa poussée&nbsp;: j’ai donc architecturé le programme autour d’une question, à savoir si l’allumage d’atterrissage peut être minuté assez précisément. Un simulateur, un banc de poussée et des agents d’IA planifiés travaillent tous à partir d’une même bibliothèque sourcée.',
       landingCta: 'Page de présentation',
       fig1alt: 'Figure Matplotlib à trois graphiques superposés en fonction du temps&nbsp;: inclinaison et angle du cardan, altitude et vitesse, avec les deux poussées des moteurs en zones ombrées.',
-      fig1cap: 'Un vol simulé, tel que le produit le simulateur Python&nbsp;: inclinaison et angle du cardan, altitude et vitesse. Les zones ombrées sont les deux poussées des moteurs.',
+      fig1cap: 'Un vol simulé&nbsp;: inclinaison, altitude et vitesse. En ombré&nbsp;: les deux poussées du moteur.',
       fig2alt: 'Figure Matplotlib intitulée «&nbsp;0/100 success&nbsp;»&nbsp;: la vitesse à l’impact selon la poussée du moteur d’atterrissage pour 100 cas simulés, tous au-dessus de la ligne pointillée de la limite, et l’apogée selon la poussée du moteur d’ascension.',
-      fig2cap: 'Le premier balayage Monte Carlo&nbsp;: 100 cas simulés, aucun sous la limite de vitesse à l’impact (la ligne pointillée).',
+      fig2cap: 'Premier balayage&nbsp;: aucun des 100 atterrissages simulés sous la limite de vitesse (pointillé).',
       toyH: 'Essayez le problème de l’atterrissage',
       toyFlag: '<b>Modèle jouet.</b> Une illustration simplifiée en JavaScript, pas le simulateur Python du projet. Ses chiffres ne sont pas des résultats du projet.',
       toyNoJs: 'Avec JavaScript activé, ce panneau exécute un petit jouet Monte Carlo&nbsp;: une masse ponctuelle lâchée de 40&nbsp;m, avec une poussée de durée fixe qui commence à l’altitude de votre choix.',
@@ -325,7 +326,7 @@ window.I18N = {
     more: {
       inProgress: 'En cours',
       aft: {
-        title: 'Section arrière Mach 3',
+        title: 'Space Concordia&nbsp;: conception des structures d’une fusée à propergol solide',
         ctx: 'Space Concordia, division Solid Rocketry, équipe structures et liaison charge utile',
         when: 'Mai 2026 – aujourd’hui',
         sum: 'Je conçois le rétreint en fibre de carbone d’une fusée à deux étages qui vise Mach 3.',
@@ -337,11 +338,11 @@ window.I18N = {
         b5: 'Prochaine étape&nbsp;: l’analyse par éléments finis (FEA) des structures dans Siemens NX.',
         videoLabel: 'Coupe d’une section de tube pour la fusée de compétition à la scie à eau, 12&nbsp;secondes, sans son.',
         videoFallback: 'Télécharger la vidéo (MP4, 0,5&nbsp;Mo)',
-        videoCap: 'Coupe d’une section de tube pour la fusée de compétition, à l’atelier. 12&nbsp;secondes, sans son.',
+        videoCap: 'Coupe d’une section de tube à l’atelier. 12 secondes, sans son.',
         tools: 'Siemens NX, modélisation paramétrique, dessins de fabrication, fibre de carbone'
       },
       rh: {
-        title: 'Application de revue de documents d’ingénierie',
+        title: 'Agence spatiale canadienne&nbsp;: application de revue de documents d’ingénierie',
         ctx: 'Agence spatiale canadienne, stagiaire en intégration de programme',
         when: 'Janv. – déc. 2026, à temps partiel depuis septembre',
         status: 'Déploiement à l’étude',
@@ -355,7 +356,7 @@ window.I18N = {
         tools: 'React, TypeScript, Node, Express, SQLite, Selenium, pandas, Power Automate'
       },
       vt: {
-        title: 'Contrôleur de base d’entraînement intelligente&nbsp;: matériel et application web',
+        title: 'Contrôleur de base d’entraînement vélo&nbsp;: matériel et application web',
         ctx: 'Projet personnel, matériel et web',
         when: 'Oct. 2026 – aujourd’hui',
         sum: 'Un contrôleur à écran unique pour les bases d’entraînement intelligentes Bluetooth&nbsp;: on choisit ERG, résistance ou pente, on tourne la molette, on pédale. Il existe en version portative à ESP32-S3 avec un cadran de puissance rond, et en application web que vous pouvez essayer dès maintenant.',
@@ -383,7 +384,7 @@ window.I18N = {
         tools: 'ESP32-S3, Arduino, Bluetooth FTMS, Web Bluetooth, TypeScript, Vite, impression 3D, SolidWorks'
       },
       cad: {
-        title: 'Entraîneur par IA pour athlètes d’endurance',
+        title: 'Application iOS&nbsp;: entraîneur par IA pour athlètes d’endurance',
         ctx: 'Application iOS et web',
         when: '2025 – aujourd’hui',
         sum: 'Cadence&nbsp;: une application web qui se connecte à Strava et génère des séances d’entraînement, et une application iOS maintenant en développement.',
@@ -426,7 +427,7 @@ window.I18N = {
         f1alt: 'Carte des États-Unis contigus, divisée en régions du marché de l’électricité de l’EIA, avec 20 points qui marquent les principaux aéroports d’aviation générale.',
         f1cap: 'Les 20 aéroports et les régions électriques qui les alimentent (figure en anglais).',
         f2alt: 'Graphique linéaire de l’intensité médiane en CO₂ du réseau, en g/kWh, de 2024 à 2050, pour trois scénarios de l’EIA. Les trois courbes partent d’environ 290 et descendent; en 2050, le scénario de référence finit à 79, pétrole et gaz faibles à 42, pétrole et gaz élevés à 95.',
-        f2cap: 'Intensité médiane en CO₂ du réseau dans les 13 régions qui desservent 19 des aéroports, selon trois scénarios de l’EIA, d’après les données du tableau de bord&nbsp;: environ 290&nbsp;g/kWh en 2024; en 2050, 79 (référence), 42 (pétrole et gaz faibles) et 95 (pétrole et gaz élevés).',
+        f2cap: 'Intensité carbone du réseau près des aéroports&nbsp;: environ 290&nbsp;g/kWh en 2024, de 42 à 95 en 2050 selon le scénario.',
         figNote: 'Figures retracées avec Matplotlib à partir des données et des fonctions du tableau de bord.'
       },
       us: {
@@ -438,14 +439,14 @@ window.I18N = {
         i1alt: 'Début d’un guide web intitulé «&nbsp;Echocardiography, from the wave to the diagnosis&nbsp;», avec une vue schématique à quatre cavités et une liste de huit sections.',
         i2alt: 'Section du guide sur la structure du cœur&nbsp;: un schéma des quatre cavités et un schéma de la circulation du sang dans le cœur et les poumons.',
         i3alt: 'Aide-mémoire avec deux vues parasternales grand axe schématiques, en diastole et en systole, chacune avec cinq points numérotés à vérifier.',
-        cap: 'Du matériel de formation que j’ai créé (en anglais)&nbsp;: une introduction à l’échocardiographie et un aide-mémoire pour distinguer la systole de la diastole en vue parasternale grand axe. Tous les schémas sont des dessins; aucun n’est une image de patient.',
+        cap: 'Matériel de formation que j’ai créé&nbsp;: une introduction à l’échocardiographie et un aide-mémoire systole et diastole. Schémas seulement, aucune image de patient.',
         b1: 'Plus de 3&nbsp;000 échographies cardiaques étiquetées par vue standard, et rédaction des guides d’étiquetage qu’utilisent les nouveaux chercheurs.',
         b2: 'Rédaction d’une procédure d’essai pour la pression de contact de la sonde. Les mesures n’ont pas encore été prises.',
         b3: 'Effecteur terminal modélisé dans SolidWorks.',
         tools: 'SolidWorks, étiquetage de données, procédures d’essai'
       },
       pat: {
-        title: 'Classification de brevets',
+        title: 'Classification de brevets par grands modèles de langage',
         ctx: 'Petit script',
         sum: 'Un script Python qui classe des fiches de brevets selon la définition d’une catégorie, à l’aide de l’API d’OpenAI.'
       }

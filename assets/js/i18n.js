@@ -76,8 +76,13 @@ window.I18N = {
     rail: {
       label: 'Sur cette page',
       contents: 'Sommaire',
-      lander: 'Atterrissage vertical de fusée',
-      vt: 'Contrôleur VT-1',
+      lander: 'Fusée à atterrissage propulsif',
+      l1: 'Fusée de haute puissance L1',
+      alchemy: 'Aiguillage des récompenses de cartes',
+      lectern: 'Extension de notes de cours',
+      reviewhub: 'Application de revue de documents',
+      cadence: 'Entraîneur d’endurance par IA',
+      vt: 'Contrôleur de base d’entraînement',
       article: 'Le paradoxe de la transition énergétique'
     },
 
@@ -127,9 +132,10 @@ window.I18N = {
     },
 
     alchemy: {
+      title: 'Aiguillage des récompenses de cartes de crédit',
       status: 'Prélancement',
       role: 'Cofondateur<br>Fintech canadienne',
-      summary: 'Aiguillage automatique des récompenses de cartes de crédit. Au moment de payer, Alchemy choisit la meilleure carte parmi celles que vous avez déjà. L’extension de navigateur arrive en premier.',
+      summary: 'Au moment de payer, Alchemy choisit la meilleure carte parmi celles que vous avez déjà. L’extension de navigateur arrive en premier.',
       cta: 'Page de présentation d’Alchemy',
       private: 'Le dépôt de code est privé.',
       figuresLabel: 'Chiffres vérifiés sur les données',
@@ -172,9 +178,10 @@ window.I18N = {
     },
 
     lectern: {
+      title: 'Extension de prise de notes pour les cours sur YouTube',
       status: 'En ligne',
       role: 'Extension Chrome<br>Projet personnel',
-      summary: 'Une extension Chrome pour prendre des notes sur des cours diffusés sur YouTube. Elle est offerte dans le Chrome Web Store et fonctionne entièrement sur votre ordinateur&nbsp;: aucun serveur, aucun compte.',
+      summary: 'Offerte dans le Chrome Web Store sous le nom Lectern. Elle fonctionne entièrement sur votre ordinateur&nbsp;: aucun serveur, aucun compte.',
       cta: 'Ajouter à Chrome',
       shotsLabel: 'Captures d’écran de Lectern, à faire défiler de côté',
       s1alt: 'Le panneau latéral de Lectern à côté d’une vidéo de cours, avec un résumé et une liste de notes horodatées.',
@@ -205,7 +212,7 @@ window.I18N = {
     l1: {
       status: 'A volé',
       role: 'Projet personnel de certification<br>Octobre 2026',
-      title: 'Averell 1, fusée de haute puissance de niveau 1',
+      title: 'Fusée de haute puissance de niveau 1',
       summary: 'J’ai conçu, construit et fait voler une fusée de certification de niveau 1. Elle a atteint 2&nbsp;100&nbsp;pi avec un moteur H135 le 18 octobre 2026 et est revenue intacte.',
       buildH: 'La fabrication, de la table de pièces au champ de récupération',
       s1alt: 'Des pièces de fusée sur un établi&nbsp;: un tube de corps blanc, une ogive rouge en PETG, trois ailerons noirs en contreplaqué et une cloison en contreplaqué.',
@@ -279,7 +286,7 @@ window.I18N = {
       result: '<b>Résultat de simulation.</b> Avec un déclencheur d’atterrissage intégrateur, le simulateur pose la fusée à environ 1&nbsp;m/s quand le moteur correspond à sa fiche technique. Avec une dispersion réaliste d’un moteur à l’autre, elle ne se pose presque jamais&nbsp;: environ 2&nbsp;% des vols à ±15&nbsp;%, et environ 40&nbsp;% même à ±1&nbsp;%. Le minutage seul ne suffit pas&nbsp;: la prochaine décision porte sur un moyen d’ajuster la poussée après l’allumage.',
       fig3alt: 'Graphique du taux d’atterrissage réussi selon la dispersion de poussée d’un moteur à l’autre, pour des véhicules de 660&nbsp;g et 750&nbsp;g&nbsp;: 100&nbsp;% à 0&nbsp;%, environ 40&nbsp;% à 1&nbsp;%, moins de 10&nbsp;% à partir de 5&nbsp;%, près de 0 à 15&nbsp;%, avec une ligne cible pointillée à 70&nbsp;%.',
       fig3cap: 'Taux d’atterrissage réussi selon la dispersion de poussée d’un moteur à l’autre, 150 vols simulés par point, tiré directement du simulateur (graphique en anglais). La ligne pointillée est la cible de 70&nbsp;%.',
-      title: 'Simulateur d’atterrissage vertical de fusée',
+      title: 'Programme de fusée à atterrissage propulsif',
       summary: 'Une petite fusée à propergol solide conçue pour se poser à la verticale sous poussée. Un moteur solide ne peut pas moduler sa poussée&nbsp;: j’ai donc architecturé le programme autour d’une question, à savoir si l’allumage d’atterrissage peut être minuté assez précisément. Un simulateur, un banc de poussée et des agents d’IA planifiés travaillent tous à partir d’une même bibliothèque sourcée.',
       landingCta: 'Page de présentation',
       fig1alt: 'Figure Matplotlib à trois graphiques superposés en fonction du temps&nbsp;: inclinaison et angle du cardan, altitude et vitesse, avec les deux poussées des moteurs en zones ombrées.',
@@ -334,6 +341,7 @@ window.I18N = {
         tools: 'Siemens NX, modélisation paramétrique, dessins de fabrication, fibre de carbone'
       },
       rh: {
+        title: 'Application de revue de documents d’ingénierie',
         ctx: 'Agence spatiale canadienne, stagiaire en intégration de programme',
         when: 'Janv. – déc. 2026, à temps partiel depuis septembre',
         status: 'Déploiement à l’étude',
@@ -347,11 +355,11 @@ window.I18N = {
         tools: 'React, TypeScript, Node, Express, SQLite, Selenium, pandas, Power Automate'
       },
       vt: {
-        title: 'VT-1, contrôleur de base d’entraînement intelligente',
+        title: 'Contrôleur de base d’entraînement intelligente&nbsp;: matériel et application web',
         ctx: 'Projet personnel, matériel et web',
         when: 'Oct. 2026 – aujourd’hui',
         sum: 'Un contrôleur à écran unique pour les bases d’entraînement intelligentes Bluetooth&nbsp;: on choisit ERG, résistance ou pente, on tourne la molette, on pédale. Il existe en version portative à ESP32-S3 avec un cadran de puissance rond, et en application web que vous pouvez essayer dès maintenant.',
-        cta: 'Ouvrir l’application web VT-1',
+        cta: 'Ouvrir l’application web',
         i1alt: 'Rendu du VT-1&nbsp;: un boîtier en biseau avec un cadran de puissance rond, un sélecteur de mode, un bouton et une grande molette.',
         i2alt: 'Vue CAO de la coque imprimée, de dessus, avec les ouvertures pour l’écran, la molette et les commandes.',
         i3alt: 'Vue CAO de la coque, de dessous, avec quatre bossages de coin pour les inserts.',
@@ -368,16 +376,17 @@ window.I18N = {
         b2: 'Un boîtier en biseau de 150&nbsp;×&nbsp;92&nbsp;mm, incliné à 11° pour la lecture, avec vérifications de dégagement, inserts filetés posés à chaud et éprouvette d’ajustement, puis imprimé&nbsp;: coque, couvercle inférieur, collerette d’écran, molette et collerettes de voyants.',
         b6: 'Matériel&nbsp;: ESP32-S3, écran rond de 1,28&nbsp;po, encodeur rotatif, bouton de maintien lumineux et trois voyants d’état. La nomenclature de l’électronique revient à environ 140&nbsp;$&nbsp;CA.',
         b4: 'Prochaine étape&nbsp;: l’essai du micrologiciel sur banc.',
-        b7: 'Une fois Cadence offert dans l’App Store, VT-1 s’y connectera pour que les séances personnalisées de Cadence puissent se faire avec VT-1.',
+        b7: 'Une fois l’entraîneur par IA offert dans l’App Store, le contrôleur s’y connectera pour que ses séances personnalisées puissent se faire sur la base d’entraînement.',
         app1alt: 'L’application web VT-1 sur un téléphone, en mode ERG&nbsp;: un cadran rond avec une cible de 150&nbsp;watts, la puissance, la cadence et le temps en direct, et des boutons moins et plus.',
         app2alt: 'L’application web VT-1 sur un téléphone, en mode pente, réglée à 4&nbsp;% de pente.',
         appCap: 'L’application web en mode démo sur un téléphone&nbsp;: ERG avec une cible de 150&nbsp;W, puis pente à +4&nbsp;%.',
         tools: 'ESP32-S3, Arduino, Bluetooth FTMS, Web Bluetooth, TypeScript, Vite, impression 3D, SolidWorks'
       },
       cad: {
-        ctx: 'Entraîneur par IA pour athlètes d’endurance',
+        title: 'Entraîneur par IA pour athlètes d’endurance',
+        ctx: 'Application iOS et web',
         when: '2025 – aujourd’hui',
-        sum: 'Cadence est un entraîneur par IA pour les athlètes d’endurance&nbsp;: une application web qui se connecte à Strava et génère des séances d’entraînement, et une application iOS maintenant en développement.',
+        sum: 'Cadence&nbsp;: une application web qui se connecte à Strava et génère des séances d’entraînement, et une application iOS maintenant en développement.',
         cta: 'Visiter cadencetrain.ca',
         c1t: 'Aujourd’hui',
         c1: 'Un résumé quotidien avec des scores pour le sommeil, le corps et l’entraînement.',
@@ -403,7 +412,7 @@ window.I18N = {
         shotsLabel: 'Captures d’écran de Cadence, défiler horizontalement',
         shotsNote: 'Écrans du simulateur iOS, avec les données d’exemple intégrées à l’application.',
         b1: 'La V0 était une application web Flask avec l’authentification OAuth et l’API de Strava, des séances d’entraînement générées par OpenAI et une vue horaire et calendrier.',
-        b3: 'Je codéveloppe maintenant l’application iOS de Cadence&nbsp;: un entraîneur par IA qui prépare des plans d’entraînement en fonction du calendrier de l’athlète et lit les données WHOOP ou Apple Santé. Une fois offerte dans l’App Store, ses séances personnalisées pourront se faire sur une base d’entraînement intelligente grâce à VT-1.',
+        b3: 'Je codéveloppe maintenant l’application iOS de Cadence&nbsp;: un entraîneur par IA qui prépare des plans d’entraînement en fonction du calendrier de l’athlète et lit les données WHOOP ou Apple Santé. Une fois offerte dans l’App Store, ses séances personnalisées pourront se faire sur une base d’entraînement intelligente grâce à mon contrôleur.',
         b2: 'Pour la recherche produit, un pipeline Python et GPT-5 avec découpage map-reduce a transformé 47 transcriptions de balados et de cours en rapports individuels et en méta-analyses couvrant plusieurs épisodes.',
         tools: 'Python, Flask, API Strava, API OpenAI, Swift (iOS)'
       },
@@ -469,7 +478,7 @@ window.I18N = {
       w1org: 'Agence spatiale canadienne',
       w1url: 'https://www.asc-csa.gc.ca/fra/',
       w1role: 'Stagiaire en intégration de programme',
-      w1note: 'Création de ReviewHub et d’outils d’automatisation internes. À temps partiel depuis septembre.',
+      w1note: 'Création d’une application de revue de documents d’ingénierie et d’outils d’automatisation internes. À temps partiel depuis septembre.',
       w2when: 'Avr. 2025 – mai 2026',
       w2role: 'Associé en investissement',
       w2note: 'Programme national de formation en capital de risque, avec un taux d’admission de moins de 15&nbsp;%. Plus de 50 entreprises en démarrage évaluées.',

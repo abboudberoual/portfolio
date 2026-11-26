@@ -34,8 +34,8 @@ Page order: header, hero (name, one line, photo), then three groups, then Experi
 
 | Group (`<section class="section group">`) | Featured (`<article class="project">`) | Index (`<article class="row">` in `.index`) |
 |---|---|---|
-| Hardware `#hardware` | Averell 1 `#l1-rocket`, landing simulator `#lander` | Mach 3 aft section `#aft-section`, VT-1 `#vt-1` |
-| Software `#software` | Alchemy `#alchemy`, Lectern `#lectern` | ReviewHub `#reviewhub`, Cadence `#cadence`, patents `#patents` |
+| Hardware `#hardware` | L1 high-power rocket `#l1-rocket`, propulsive-landing rocket program `#lander` | Mach 3 aft section `#aft-section`, smart trainer controller `#vt-1` |
+| Software `#software` | credit-card rewards routing `#alchemy`, lecture-notes extension `#lectern` | document review app `#reviewhub`, AI endurance coach `#cadence`, patents `#patents` |
 | Research `#research` | energy transition paradox article `#article` | hydrogen for general-aviation airports `#hydrogen`, cardiac view classification data `#ultrasound` |
 
 Inside a group the featured projects come first, then the compact index. Hardware leads the
@@ -90,6 +90,10 @@ included) for placeholder words and for text addressed to the owner; fix any hit
    Any Alchemy example shown must use fictional cards and merchants.
    Do not name Yanis Djeridi (or any collaborator) on the page, and do not add "my idea" /
    "mon idée" credit lines (owner's request, Nov 2026).
+   **Titles and contents labels are descriptive, never internal names** (owner's request,
+   Nov 2026): no "Scoudouc" anywhere visible; Alchemy, Lectern, Cadence, ReviewHub, VT-1 and
+   Averell 1 do not appear as titles or rail labels (the product name may appear once in the
+   body where it is needed, e.g. the store listing or landing-page link). The ids stay as they are.
 4. **The page is published (it is on the owner's LinkedIn). No placeholders, ever.** Nothing
    visible may say "coming soon", "à venir", "TBD", "TODO", "[X]", "pending", "placeholder", or
    show an empty frame or dummy text. If something is not ready, leave it out entirely and add it

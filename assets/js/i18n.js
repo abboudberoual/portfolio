@@ -238,8 +238,7 @@ window.I18N = {
         n3: '13',
         n3l: 'régions de réseau',
         s1: 'Python, pandas, GeoPandas',
-        s2: 'Tableau de bord Streamlit avec pydeck et Altair',
-        s3: 'Analyse de sensibilité Monte Carlo pour une analyse du cycle de vie'
+        s2: 'Tableau de bord Streamlit avec pydeck et Altair'
       },
       us: {
         c1: 'Chercheur, laboratoire HERE',
@@ -632,7 +631,6 @@ window.I18N = {
         when: 'Mai – août 2025',
         sum: 'Un tableau de bord d’indicateurs sur l’électricité et l’hydrogène pour les 20 principaux aéroports d’aviation générale des États-Unis.',
         b1: 'Des indicateurs par région du Electricity Market Module (EMM), selon trois scénarios de l’Energy Information Administration des États-Unis&nbsp;: référence, pétrole et gaz élevés, pétrole et gaz faibles.',
-        b2: 'Une analyse de sensibilité Monte Carlo pour une analyse du cycle de vie.',
         f1alt: 'Carte des États-Unis contigus, divisée en régions du marché de l’électricité de l’EIA, avec 20 points qui marquent les principaux aéroports d’aviation générale.',
         f1cap: 'Les 20 aéroports et les régions électriques qui les alimentent (figure en anglais).',
         f2alt: 'Graphique linéaire de l’intensité médiane en CO₂ du réseau, en g/kWh, de 2024 à 2050, pour trois scénarios de l’EIA. Les trois courbes partent d’environ 290 et descendent; en 2050, le scénario de référence finit à 79, pétrole et gaz faibles à 42, pétrole et gaz élevés à 95.',
